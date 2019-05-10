@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../Imports/easyAnalysis/Elements/HelpButton.qml</file>
+        <file>../Imports/easyAnalysis/Elements/qmldir</file>
+        <file>../Imports/easyAnalysis/Logic/Math.js</file>
+        <file>../Imports/easyAnalysis/Logic/qmldir</file>
+        <file>../Imports/easyAnalysis/qmldir</file>
+        <file>../Imports/easyAnalysis/Style.qml</file>
+        <file>../Imports/easyDiffraction/qmldir</file>
+        <file>../Imports/easyDiffraction/Settings.qml</file>
+        <file>../Qml/main.qml</file>
+        <file>../Qml/qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>
