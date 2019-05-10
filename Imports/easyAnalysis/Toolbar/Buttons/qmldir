@@ -1,0 +1,7 @@
+module easyAnalysis.Toolbar.Buttons
+Home 1.0 Home.qml
+ExperimentalData 1.0 ExperimentalData.qml
+SampleModel 1.0 SampleModel.qml
+InstrumentModel 1.0 InstrumentModel.qml
+AnalysisAndModeling 1.0 AnalysisAndModeling.qml
+Summary 1.0 Summary.qml
