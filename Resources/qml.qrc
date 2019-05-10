@@ -10,5 +10,17 @@
         <file>../Imports/easyDiffraction/Settings.qml</file>
         <file>../Qml/main.qml</file>
         <file>../Qml/qtquickcontrols2.conf</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/AnalysisAndModeling.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/ExperimentalData.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/Home.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/InstrumentModel.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/qmldir</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/SampleModel.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Buttons/Summary.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Button.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/HorisontalBorder.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/qmldir</file>
+        <file>../Imports/easyAnalysis/Toolbar/Spacer.qml</file>
+        <file>../Imports/easyAnalysis/Toolbar/Toolbar.qml</file>
     </qresource>
 </RCC>

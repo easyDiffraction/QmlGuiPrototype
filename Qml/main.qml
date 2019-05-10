@@ -23,12 +23,10 @@ ApplicationWindow {
 
         GenericToolbar.Toolbar {}
 
-
-
         StackLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            currentIndex: tabBar.currentIndex
+            //currentIndex: tabBar.currentIndex
 
             Rectangle {
                 color: "white"
