@@ -28,7 +28,10 @@ ColumnLayout{
         GenericToolbarButtons.InstrumentModel{}
         GenericToolbar.Spacer {}
 
-        GenericToolbarButtons.AnalysisAndModeling{}
+        GenericToolbarButtons.Linking{}
+        GenericToolbar.Spacer {}
+
+        GenericToolbarButtons.Analysis{}
         GenericToolbar.Spacer {}
 
         GenericToolbarButtons.Summary{}
