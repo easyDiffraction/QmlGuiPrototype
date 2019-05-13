@@ -11,9 +11,9 @@ import easyDiffraction 1.0 as Specific
 ApplicationWindow {
     visible: true
 
-    width: Generic.Style.appWindowWidth
-    height: Generic.Style.appWindowHeight
-    color: Generic.Style.appBackgroundColor
+    minimumWidth: Generic.Style.appWindowWidth
+    minimumHeight: Generic.Style.appWindowHeight
+    color: Generic.Style.appBkgColor
 
     title: Specific.Settings.appName
 
