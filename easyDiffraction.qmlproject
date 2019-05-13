@@ -14,16 +14,11 @@ Project {
         directory: "."
     }
 
-    /* Include Qt Quick Controls Configuration File */
+    /* Include Qt Quick Controls Configuration File & Module Definition qmldir Files*/
     Files {
-        filter: "*.conf"
-        files: ["qtquickcontrols2.conf"]
-    }
-
-    /* Include Module Definition qmldir Files */
-    Files {
-        directory: "."
-        filter: "qmldir"
+        filter: "qtquickcontrols2.conf;qmldir"
+        //directory: "."
+        //files: ["qtquickcontrols2.conf"]
     }
 
     /* Include other files from current directory and subdirectories */
