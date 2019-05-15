@@ -1,0 +1,4 @@
+module easyAnalysis.ContentArea.Buttons
+GoNext 1.0 GoNext.qml
+Help 1.0 Help.qml
+SaveState 1.0 SaveState.qml

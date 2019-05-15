@@ -13,7 +13,7 @@ ColumnLayout {
 
     GenericContentArea.Button {
         Layout.fillWidth: true
-        checked: true
+        highlighted: true
         text: "Create New Project"
         icon.source: "../../../Icons/Notes.svg"
         ToolTip.text: qsTr("Create new project")

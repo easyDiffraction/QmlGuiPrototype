@@ -14,7 +14,7 @@ ColumnLayout {
         Layout.fillWidth: true
         //width: parent.width
         text: "Online Help"
-        icon.source: "../../../Icons/Question.svg" // https://www.iconfinder.com/icons/3671842/question_icon
+        icon.source: "../../../Icons/Question.svg" // https://www.flaticon.com/free-icon/question-mark-on-a-circular-black-background_25400
         ToolTip.text: qsTr("Get online help for this page")
     }
 

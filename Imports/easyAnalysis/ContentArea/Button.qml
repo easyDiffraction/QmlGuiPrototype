@@ -31,7 +31,7 @@ Button {
     function backgroundColor() {
         if (!button.enabled)
             return Generic.Style.buttonBkgDisabledColor
-        var color1 = button.checked ? Generic.Style.buttonBkgCheckedColor : Generic.Style.buttonBkgEnabledColor
+        var color1 = button.highlighted ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.buttonBkgEnabledColor
         var color2 = Generic.Style.buttonBkgBlendColor
         var alpha = button.down ? Generic.Style.buttonBkgBlendAlpha : 0.0
         return Color.blend(color1, color2, alpha)

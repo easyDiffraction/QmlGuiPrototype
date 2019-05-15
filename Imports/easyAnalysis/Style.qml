@@ -41,7 +41,7 @@ QtObject {
 
     readonly property color buttonBkgDisabledColor: "#aaa"
     readonly property color buttonBkgEnabledColor: "#666"
-    readonly property color buttonBkgCheckedColor: "dodgerblue"
+    readonly property color buttonBkgHighlightedColor: "dodgerblue"
     readonly property color buttonBkgBlendColor: "white"
     readonly property real buttonBkgBlendAlpha: 0.25
 
