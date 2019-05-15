@@ -1,0 +1,3 @@
+module easyAnalysis.ContentArea
+Button 1.0 Button.qml
+ContentArea 1.0 ContentArea.qml

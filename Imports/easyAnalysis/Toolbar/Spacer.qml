@@ -5,7 +5,7 @@ import easyAnalysis 1.0 as Generic
 // TabButton is used to be able to see this component inside the TabBar area
 TabButton {
     enabled: false
-    width: 3*Generic.Style.toolbarSpacerSize
+    width: 2*Generic.Style.toolbarSpacerSize
 
     background: Rectangle { color: "transparent" }
 

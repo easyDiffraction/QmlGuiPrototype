@@ -1,2 +1,3 @@
 module easyAnalysis.Elements
-HelpButton 1.0 HelpButton.qml
+ParametersTable 1.0 ParametersTable.qml
+HorizontalBorder 1.0 HorizontalBorder.qml
