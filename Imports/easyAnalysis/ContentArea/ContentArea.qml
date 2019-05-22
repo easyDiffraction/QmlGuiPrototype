@@ -9,15 +9,13 @@ StackLayout {
     //Layout.fillWidth: true
     //Layout.fillHeight: true
 
-
-
     currentIndex: Generic.Variables.toolbarCurrentIndex
 
-    GenericContentAreaPages.Home {}
-    GenericContentAreaPages.ExperimentalData {}
+    //GenericContentAreaPages.Home {}
+    //GenericContentAreaPages.ExperimentalData {}
     GenericContentAreaPages.SampleModel {}
-    GenericContentAreaPages.InstrumentModel {}
-    GenericContentAreaPages.Linking {}
-    GenericContentAreaPages.Analysis {}
-    GenericContentAreaPages.Summary {}
+    //GenericContentAreaPages.InstrumentModel {}
+    //GenericContentAreaPages.Linking {}
+    //GenericContentAreaPages.Analysis {}
+    //GenericContentAreaPages.Summary {}
 }
