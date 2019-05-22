@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.12
 import easyAnalysis 1.0 as Generic
 
 Rectangle {
-    Layout.fillWidth: true
-    height: Generic.Style.appBorderThickness
+    Layout.fillHeight: true
+    width: Generic.Style.appBorderThickness
     color: Generic.Style.appBorderColor
 }
