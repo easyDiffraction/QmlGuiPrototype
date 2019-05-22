@@ -6,7 +6,9 @@ import easyAnalysis.Elements 1.0 as GenericElements
 import easyAnalysis.Sidebar 1.0 as GenericSidebar
 
 ColumnLayout {
-    default property alias content: stack.children
+    property var controlsContent: null
+    property var settingsContent: null
+
     spacing: 0
 
     // Sidebar including its TabBar
@@ -25,6 +27,18 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
         currentIndex: tabbar.currentIndex
+
+        // Controls Tab
+        Item {
+            id: controls
+            children: controlsContent
+        }
+
+        // Settings Tab
+        Item {
+            id: settings
+            children: settingsContent
+        }
     }
 
 }
