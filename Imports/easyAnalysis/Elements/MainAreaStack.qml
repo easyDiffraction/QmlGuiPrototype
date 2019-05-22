@@ -5,8 +5,8 @@ import easyAnalysis 1.0 as Generic
 import easyAnalysis.Elements 1.0 as GenericElements
 
 RowLayout {
-    property var tabBarContent: null
     property alias mainAreaContent: mainArea.children
+    property var tabBarContent: null
     property var sideBarContent: null
 
     spacing: 0
