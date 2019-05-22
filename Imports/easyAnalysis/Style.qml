@@ -11,12 +11,21 @@ QtObject {
 
     readonly property int appWindowWidth: 1340
     readonly property int appWindowHeight: 736
-    readonly property int appBorderWidth: 1
+    readonly property int appBorderThickness: 1
     readonly property color appBkgColor: "#f5f5f5"
     readonly property color appBorderColor: "gainsboro"
 
     readonly property int buttonHeight: 34
     readonly property int buttonRadius: 4
+
+    // Content Area
+    readonly property int contentAreaTabbarHeight: 34
+
+    // Main Area
+    readonly property int mainAreaWidth: appWindowWidth - appBorderThickness - sidebarWidth
+
+    // Sidebar
+    readonly property int sidebarWidth: 518
 
     // Table
     property int tableRowHeight: 32
