@@ -6,3 +6,6 @@ MainAreaStack 1.0 MainAreaStack.qml
 ParametersTable 1.0 ParametersTable.qml
 SidebarStack 1.0 SidebarStack.qml
 VerticalBorder 1.0 VerticalBorder.qml
+ColoredCell 1.0 ColoredCell.qml
+TransparentComboBox 1.0 TransparentComboBox.qml
+SidebarButton 1.0 SidebarButton.qml
