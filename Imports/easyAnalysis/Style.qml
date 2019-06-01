@@ -9,7 +9,7 @@ QtObject {
     readonly property string appDate: "12 May 2019"
     readonly property string appUrl: "https://github.com/easyDiffraction/QmlGuiPrototype"
 
-    readonly property int appWindowWidth: 1340
+    readonly property int appWindowWidth: 1280
     readonly property int appWindowHeight: 736
     readonly property int appBorderThickness: 1
     readonly property color appBkgColor: "#f5f5f5"
@@ -25,19 +25,22 @@ QtObject {
     readonly property int mainAreaWidth: appWindowWidth - appBorderThickness - sidebarWidth
 
     // Sidebar
-    readonly property int sidebarWidth: 518
+    readonly property int sidebarWidth: 554//518
 
     // Table
     property int tableRowHeight: 32
+    property int tableColumnSpacing: 16
     property int tableFontPointSize: 13
 
     property string tableRowColor: "white"
     property string tableAlternateRowColor: "#f5f5f5"
     property string tableHighlightRowColor: "dodgerblue"
-    property string tableHeaderRowColor: "#e5e5e5"
+    property string tableHeaderRowColor: "#e7e7e7"
+    property string tableColumnBorderColor: "#e8e8e8"
 
     property string tableTextColor: "black"
     property string tableHighlightTextColor: "white"
+    property string tableHighlightBorderColor: Qt.lighter(tableHighlightRowColor, 1.2)
 
     // Toolbar
     readonly property int toolbarButtonHeight: 40
