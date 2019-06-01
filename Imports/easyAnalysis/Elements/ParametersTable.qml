@@ -1,17 +1,19 @@
 import QtQuick 2.12
 import QtQuick.Controls 1.4
-import QtQuick.Controls 2.12 as Controls2
-import QtQuick.Controls.Styles 1.4
+//import QtQuick.Controls 2.12 as Controls2
 import QtQuick.Layouts 1.12
 import easyAnalysis 1.0 as Generic
 
 TableView {
     //property int selectRow: -1
     property bool customFrameVisible: true
-    property string columnSpacing: "     "
+    property int visibleRowsCount: 5
+    //property string background: value
 
     id: tableView
     clip: true
+    Layout.fillWidth: true
+    implicitHeight: (visibleRowsCount + 1) * Generic.Style.tableRowHeight + Generic.Style.appBorderThickness // add 1 row for header
 
     // Custom frame
     frameVisible: false
@@ -24,78 +26,110 @@ TableView {
 
     // Header
     headerDelegate: Rectangle {
-        implicitWidth: headerText.implicitWidth
+        implicitWidth: headerLayout.implicitWidth
         height: Generic.Style.tableRowHeight
         color: Generic.Style.tableHeaderRowColor
-        Text {
-            id: headerText
-            //width: parent.width
-            height: parent.height
-            horizontalAlignment: styleData.textAlignment
-            verticalAlignment: Text.AlignVCenter
-            font.pointSize: Generic.Style.tableFontPointSize
-            text: columnSpacing + styleData.value
+
+        RowLayout {
+            id: headerLayout
+            anchors.fill: parent
+            spacing: 0
+
+            // Vertical spacer
+            Item { width: Generic.Style.tableColumnSpacing/2 }
+
+            // Content
+            Text {
+                Layout.fillWidth: true
+                horizontalAlignment: styleData.textAlignment
+                font.pointSize: Generic.Style.tableFontPointSize
+                text: styleData.value
+            }
+
+            // Vertical spacer
+            Item { width: Generic.Style.tableColumnSpacing/2 }
+
+            // Vertical border
+            Rectangle {
+                Layout.fillHeight: true
+                width: Generic.Style.appBorderThickness
+                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.appBorderColor
+                color: Generic.Style.appBorderColor
+            }
         }
-        /*
-        Rectangle {
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 1
-            anchors.topMargin: 1
-            width: 1
-            color: "red"
-        }*/
     }
 
     // Row
     rowDelegate: Rectangle {
         height: Generic.Style.tableRowHeight
+        Layout.fillHeight: true
         color: {
-            if (styleData.selected)
-                return Generic.Style.tableHighlightRowColor
+            ///if (styleData.selected)
+            ///    return Generic.Style.tableHighlightRowColor
             return styleData.alternate ? Generic.Style.tableAlternateRowColor : Generic.Style.tableRowColor
         }
-        //border.color: "red"
     }
 
-    // Item
+    // Cell
     itemDelegate: Rectangle {
-        implicitWidth: itemText.implicitWidth
+        implicitWidth: cellLayout.implicitWidth
         color: "transparent"
-        Text {
-            id: itemText
-            anchors.verticalCenter: parent.verticalCenter
-            horizontalAlignment: styleData.textAlignment
-            font.pointSize: Generic.Style.tableFontPointSize
-            color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
-            text: columnSpacing + styleData.value
-        }
-        //border.color: "red"
-    }
 
-    // Adjust columns widths
-    Component.onCompleted: resizeColumnsToContents()
+        RowLayout {
+            id: cellLayout
+            anchors.fill: parent
+            spacing: 0
 
-    /*
-    // Item
-    itemDelegate: Item {
-        Text {
-            //width: parent.width
-            height: parent.height
-            horizontalAlignment: styleData.textAlignment
-            verticalAlignment: Text.AlignVCenter
-            font.pointSize: Generic.Style.tableFontPointSize
-            color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
-            text: styleData.value
-        }
-        Component.onCompleted: {
-            if (selectRow > -1) {
-                tableView.currentRow = selectRow
-                tableView.selection.select(tableView.currentRow)
+            // Vertical spacer
+            Item { width: Generic.Style.tableColumnSpacing/2 }
+
+            // Content
+            TextEdit {
+                Layout.fillWidth: true
+                font.pointSize: Generic.Style.tableFontPointSize
+                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
+                color: Generic.Style.tableTextColor
+                text: styleData.value
+            }
+
+            // Vertical spacer
+            Item { width: Generic.Style.tableColumnSpacing/2 }
+
+            // Vertical border
+            Rectangle {
+                Layout.fillHeight: true
+                width: Generic.Style.appBorderThickness
+                ///color: styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
+                color: Generic.Style.tableColumnBorderColor
             }
         }
     }
-    */
+
+    // Adjust columns widths
+    Component.onCompleted: {
+        resizeColumnsToContents()
+
+        // sum column widths and number of resizable columns
+        let sumColumnsWidth = 0
+        let resizableColumnsCount = 0
+        for (let i = 0; i < columnCount; i++){
+            sumColumnsWidth += getColumn(i).width
+            if (getColumn(i).resizable) {
+                resizableColumnsCount += 1
+            }
+        }
+
+        // increase columns width
+        const extenderWidth = Math.round((tableView.width - sumColumnsWidth) / resizableColumnsCount)
+        for (let i = 0; i < columnCount; i++){
+            if (getColumn(i).resizable) {
+                getColumn(i).width += extenderWidth
+            }
+        }
+
+        // adjust last column width
+        const rest = tableView.width - sumColumnsWidth - extenderWidth*resizableColumnsCount
+        getColumn(columnCount-1).width += rest
+    }
 
 }
