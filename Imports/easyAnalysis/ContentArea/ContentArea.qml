@@ -11,10 +11,10 @@ StackLayout {
 
     currentIndex: Generic.Variables.toolbarCurrentIndex
 
-    //GenericContentAreaPages.Home {}
-    //GenericContentAreaPages.ExperimentalData {}
+    GenericContentAreaPages.Home {}
+    GenericContentAreaPages.ExperimentalData {}
     GenericContentAreaPages.SampleModel {}
-    //GenericContentAreaPages.InstrumentModel {}
+    GenericContentAreaPages.InstrumentModel {}
     //GenericContentAreaPages.Linking {}
     //GenericContentAreaPages.Analysis {}
     //GenericContentAreaPages.Summary {}

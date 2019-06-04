@@ -46,11 +46,13 @@ ColumnLayout {
                     message: "Click here to add or import a new phase."
                     toY: (addButton.y + addButton.height + importButton.y) / 2
 
-                    GenericContentAreaButtons.Add { id: addButton2 }
-                    GenericContentAreaButtons.Import { id: importButton2 }
+                    visible: Generic.Variables.toolbarCurrentIndex == 2 ? true : false
+
+                    GenericContentAreaButtons.Add { id: addButtonClone }
+                    GenericContentAreaButtons.Import { id: importButtonClone }
                     Component.onCompleted: {
-                        GenericLogic.Copy.copyButton(addButton, addButton2)
-                        GenericLogic.Copy.copyButton(importButton, importButton2)
+                        GenericLogic.Copy.copyButton(addButton, addButtonClone)
+                        GenericLogic.Copy.copyButton(importButton, importButtonClone)
                     }
                 }
             }

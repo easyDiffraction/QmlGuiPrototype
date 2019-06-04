@@ -15,12 +15,25 @@ Column {
         AppUrlArea { anchors.fill: parent }
     }
 
-    Text {
+    RowLayout {
         anchors.horizontalCenter: parent.horizontalCenter
-        font.family: Generic.Style.titleFontFamily
-        font.pointSize: 32
-        text: Generic.Style.appName
-        AppUrlArea { anchors.fill: parent }
+        spacing: 0
+
+        Text {
+            font.family: Generic.Style.titleThinFontFamily
+            font.pointSize: 32
+            text: Generic.Style.appLeftName
+            color: "black"
+            AppUrlArea { anchors.fill: parent }
+        }
+
+        Text {
+            font.family: Generic.Style.titleThickFontFamily
+            font.pointSize: 32
+            text: Generic.Style.appRightName
+            color: "#444"
+            AppUrlArea { anchors.fill: parent }
+        }
     }
 
     Text {

@@ -5,6 +5,8 @@ import QtQuick.Controls 1.4 as Controls1
 import easyAnalysis 1.0 as Generic
 import easyAnalysis.Elements 1.0 as GenericElements
 import easyAnalysis.ContentArea 1.0 as GenericContentArea
+import easyAnalysis.ContentArea.Buttons 1.0 as GenericContentAreaButtons
+import easyAnalysis.Logic 1.0 as GenericLogic
 
 ColumnLayout {
     Layout.preferredWidth: 1
@@ -12,11 +14,25 @@ ColumnLayout {
     spacing: 20
 
     GenericContentArea.Button {
+        id: createButton
         Layout.fillWidth: true
         highlighted: true
         text: "Create New Project"
         icon.source: "../../../Icons/Notes.svg"
         ToolTip.text: qsTr("Create new project")
+    }
+
+    GenericElements.GuideWindow {
+        id: guidWindow
+        message: "Click here to create a new project."
+        toY: createButton.y + createButton.height/2
+
+        visible: Generic.Variables.toolbarCurrentIndex == 0 ? true : false
+
+        GenericContentArea.Button { id: createButtonClone; }
+        Component.onCompleted: {
+            GenericLogic.Copy.copyButton(createButton, createButtonClone)
+        }
     }
 
     GenericContentArea.Button {

@@ -19,7 +19,7 @@ Dialog {
 
     id: dialog
 
-    visible: true
+    //visible: true
     modal: true
     padding: 0
 

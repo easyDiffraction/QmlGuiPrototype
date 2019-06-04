@@ -4,9 +4,11 @@ import QtQuick 2.12
 QtObject {
 
     // Application
-    readonly property string appName: "easyDiffraction"
-    readonly property string appVersion: "0.1.0"
-    readonly property string appDate: "12 May 2019"
+    readonly property string appLeftName: "easy"
+    readonly property string appRightName: "Diffraction"
+    readonly property string appName: appLeftName + appRightName
+    readonly property string appVersion: "0.1.1"
+    readonly property string appDate: "4 Jun 2019"
     readonly property string appUrl: "https://github.com/easyDiffraction/QmlGuiPrototype"
 
     readonly property int appWindowWidth: 1280
@@ -71,11 +73,16 @@ QtObject {
     readonly property color buttonIconHighlightedColor: "white"
 
     // Fonts
-    property FontLoader titleFontLoader: FontLoader {
-        id: titleFontLoader
+    property FontLoader titleThinFontLoader: FontLoader {
+        id: titleThinFontLoader
         source: "Fonts/encode-sans/EncodeSansSemiCondensed-ExtraLight.ttf"
     }
-    readonly property alias titleFontFamily: titleFontLoader.name
+    readonly property alias titleThinFontFamily: titleThinFontLoader.name
+    property FontLoader titleThickFontLoader: FontLoader {
+        id: titleThickFontLoader
+        source: "Fonts/encode-sans/EncodeSansSemiCondensed-Regular.ttf"
+    }
+    readonly property alias titleThickFontFamily: titleThickFontLoader.name
     property FontLoader versionFontLoader: FontLoader {
         id: versionFontLoader
         source: "Fonts/encode-sans/EncodeSansExpanded-ExtraLight.ttf"

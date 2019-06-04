@@ -4,4 +4,6 @@ function copyButton(from, to) {
     to.width = from.width
     to.height = from.height
     to.text = from.text
+    to.icon.source = from.icon.source
+    to.highlighted = from.highlighted
 }
