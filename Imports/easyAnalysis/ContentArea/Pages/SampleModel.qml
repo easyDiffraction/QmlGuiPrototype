@@ -3,27 +3,28 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import easyAnalysis.Elements 1.0 as GenericElements
 import easyAnalysis.MainArea 1.0 as GenericMainArea
-import easyAnalysis.MainArea.Pages 1.0 as GenericMainAreaPages
-import easyAnalysis.Sidebar.Pages 1.0 as GenericSidebarPages
+import easyAnalysis.MainArea.Pages.SampleModel 1.0 as GenericMainAreaSampleModel
+import easyAnalysis.Sidebar.Pages.SampleModel 1.0 as GenericSidebarSampleModel
 
-GenericElements.MainAreaStack {
+GenericElements.ContentAreaStack {
 
     tabBarContent: TabBar {
         id: tabBar
-        //AsElements.TabbarButton { text: qsTr("Structure") }
-        GenericMainArea.TabButton { text: qsTr("Structure"); tabbarWidth: mainArea.width }
+        GenericMainArea.TabButton { text: qsTr("Structure View"); tabbarWidth: mainArea.width } // fix width
+        GenericMainArea.TabButton { text: qsTr("Text View (CIF)"); tabbarWidth: mainArea.width } // fix width
     }
 
     mainAreaContent: StackLayout {
         id: mainArea
-        //currentIndex: tabBar.currentIndex
-        GenericMainAreaPages.SampleModel {}
+        currentIndex: tabBar.currentIndex
+        GenericMainAreaSampleModel.StructureView { }
+        GenericMainAreaSampleModel.TextView {  }
     }
 
     sideBarContent: StackLayout {
-        //currentIndex: tabBar.currentIndex
-        //AsSidebar.Sample_Parameters {}
-        GenericSidebarPages.SampleModel {}
+        currentIndex: tabBar.currentIndex
+        GenericSidebarSampleModel.StructureView { }
+        GenericSidebarSampleModel.TextView { }
     }
 
 }
