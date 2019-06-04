@@ -9,6 +9,7 @@ import easyAnalysis.Sidebar.Pages.InstrumentModel 1.0 as GenericSidebarInstrumen
 GenericElements.ContentAreaStack {
 
     tabBarContent: TabBar {
+        spacing: 0
         id: tabBar
         GenericMainArea.TabButton { text: qsTr("Web View"); tabbarWidth: mainArea.width } // fix width
     }

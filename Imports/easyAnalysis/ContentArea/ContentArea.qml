@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import easyAnalysis 1.0 as Generic
+import easyAnalysis.ContentArea 1.0 as GenericContentArea
 import easyAnalysis.ContentArea.Pages 1.0 as GenericContentAreaPages
 
 StackLayout {
@@ -12,10 +13,30 @@ StackLayout {
     currentIndex: Generic.Variables.toolbarCurrentIndex
 
     GenericContentAreaPages.Home {}
+
+    // -------
+    GenericContentArea.Spacer {}
+    // -------
+
     GenericContentAreaPages.ExperimentalData {}
     GenericContentAreaPages.SampleModel {}
     GenericContentAreaPages.InstrumentModel {}
-    //GenericContentAreaPages.Linking {}
-    //GenericContentAreaPages.Analysis {}
-    //GenericContentAreaPages.Summary {}
+
+    // -------
+    GenericContentArea.Spacer {}
+    // -------
+
+    GenericContentAreaPages.Linking {}
+
+    // -------
+    GenericContentArea.Spacer {}
+    // -------
+
+    GenericContentAreaPages.Analysis {}
+
+    // -------
+    GenericContentArea.Spacer {}
+    // -------
+
+    GenericContentAreaPages.Summary {}
 }

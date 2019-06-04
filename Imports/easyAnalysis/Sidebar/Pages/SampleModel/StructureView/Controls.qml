@@ -45,7 +45,7 @@ ColumnLayout {
                     message: "Click here to add or import a new phase."
                     toY: (addButton.y + addButton.height + importButton.y) / 2
 
-                    visible: Generic.Variables.toolbarCurrentIndex == 2 ? true : false
+                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.SampleModelIndex ? true : false
 
                     GenericContentAreaButtons.Add { id: addButtonClone }
                     GenericContentAreaButtons.Import { id: importButtonClone }
@@ -176,7 +176,13 @@ ColumnLayout {
         collapsible: false
         showBorder: false
         content: GenericElements.RowLayout {
-            GenericContentAreaButtons.GoNext { text: "Next step: Instrument Model" }
+            GenericContentAreaButtons.GoNext {
+                text: "Next step: Instrument Model"
+                ToolTip.text: qsTr("Go to the next step: Instrument Model description")
+                onClicked: {
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+                }
+            }
             GenericContentAreaButtons.SaveState {}
             GenericContentAreaButtons.Help {}
         }

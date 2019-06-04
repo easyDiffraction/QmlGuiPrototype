@@ -18,30 +18,51 @@ ColumnLayout{
         Layout.fillWidth: true
         Layout.leftMargin: Generic.Style.toolbarSpacing
         Layout.rightMargin: Generic.Style.toolbarSpacing
-
         background: Rectangle { color: "transparent" }
 
+        currentIndex: Generic.Variables.toolbarCurrentIndex
+
         GenericToolbarButtons.Home {
-            onClicked: {
-                console.log(Generic.Variables.toolbarCurrentIndex)
-                Generic.Variables.toolbarCurrentIndex = 0
-                console.log(Generic.Variables.toolbarCurrentIndex)
-            }
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.HomeIndex
         }
-        GenericToolbar.Spacer {}
 
-        GenericToolbarButtons.ExperimentalData { onClicked: Generic.Variables.toolbarCurrentIndex = 1 }
-        GenericToolbarButtons.SampleModel{ onClicked: Generic.Variables.toolbarCurrentIndex = 2 }
-        GenericToolbarButtons.InstrumentModel{ onClicked: Generic.Variables.toolbarCurrentIndex = 3 }
-        GenericToolbar.Spacer {}
+        // -------
+        GenericToolbar.Spacer { }
+        // -------
 
-        GenericToolbarButtons.Linking{ onClicked: Generic.Variables.toolbarCurrentIndex = 4 }
-        GenericToolbar.Spacer {}
+        GenericToolbarButtons.ExperimentalData {
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
+        }
+        GenericToolbarButtons.SampleModel {
+            onClicked: Generic.Variables.toolbarCurrentIndex  = Generic.Variables.SampleModelIndex
+        }
+        GenericToolbarButtons.InstrumentModel {
+            onClicked:  Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+        }
 
-        GenericToolbarButtons.Analysis{ onClicked: Generic.Variables.toolbarCurrentIndex = 5 }
+        // -------
         GenericToolbar.Spacer {}
+        // -------
 
-        GenericToolbarButtons.Summary{ onClicked: Generic.Variables.toolbarCurrentIndex = 6 }
+        GenericToolbarButtons.Linking {
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.LinkingIndex
+        }
+
+        // -------
+        GenericToolbar.Spacer {}
+        // -------
+
+        GenericToolbarButtons.Analysis {
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.AnalysisIndex
+        }
+
+        // -------
+        GenericToolbar.Spacer {}
+        // -------
+
+        GenericToolbarButtons.Summary {
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.SummaryIndex
+        }
     }
 
     GenericElements.HorizontalBorder {}

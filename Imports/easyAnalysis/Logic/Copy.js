@@ -6,4 +6,8 @@ function copyButton(from, to) {
     to.text = from.text
     to.icon.source = from.icon.source
     to.highlighted = from.highlighted
+
+    to.ToolTip.text = ""
+    //to.enabled = false
+    //to.onPressed = from.onPressed
 }

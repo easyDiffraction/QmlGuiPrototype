@@ -46,7 +46,7 @@ ColumnLayout {
                     message: "Click here to add or import a new instrument."
                     toY: (addButton.y + addButton.height + importButton.y) / 2
 
-                    visible: Generic.Variables.toolbarCurrentIndex == 3 ? true : false
+                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.InstrumentModelIndex ? true : false
 
                     GenericContentAreaButtons.Add { id: addButtonClone }
                     GenericContentAreaButtons.Import { id: importButtonClone }
@@ -134,7 +134,13 @@ ColumnLayout {
         collapsible: false
         showBorder: false
         content: GenericElements.RowLayout {
-            GenericContentAreaButtons.GoNext { text: "Next step: Linking table" }
+            GenericContentAreaButtons.GoNext {
+                text: "Next step: Linking table"
+                ToolTip.text: qsTr("Go to the next step: Linking table")
+                onClicked: {
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.LinkingIndex
+                }
+            }
             GenericContentAreaButtons.SaveState {}
             GenericContentAreaButtons.Help {}
         }

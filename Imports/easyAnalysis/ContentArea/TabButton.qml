@@ -20,6 +20,7 @@ TabButton {
     background: Rectangle {
         implicitHeight: Generic.Style.contentAreaTabbarHeight
         color: backgroundColor()
+        //border.color: "red"
     }
 
     function backgroundColor() {

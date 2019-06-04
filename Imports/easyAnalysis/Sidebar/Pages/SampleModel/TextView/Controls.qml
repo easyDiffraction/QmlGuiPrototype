@@ -162,7 +162,13 @@ ColumnLayout {
         collapsible: false
         showBorder: false
         content: GenericElements.RowLayout {
-            GenericContentAreaButtons.GoNext { text: "Next step: Instrument Model" }
+            GenericContentAreaButtons.GoNext {
+                text: "Next step: Instrument Model"
+                ToolTip.text: qsTr("Go to the next step: Instrument Model description")
+                onClicked: {
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+                }
+            }
             GenericContentAreaButtons.SaveState {}
             GenericContentAreaButtons.Help {}
         }

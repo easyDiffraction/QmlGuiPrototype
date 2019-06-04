@@ -6,4 +6,7 @@ GenericToolbar.Button {
     icon.source: "../../Icons/Storage.svg" // https://www.iconfinder.com/icons/352145/storage_icon
     text: qsTr("Experimental Data") // Measured data?
     ToolTip.text: qsTr("Experimental data page")
+
+    //withSeparator: true
+
 }

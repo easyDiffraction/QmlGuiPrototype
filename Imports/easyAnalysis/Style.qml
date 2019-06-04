@@ -12,7 +12,7 @@ QtObject {
     readonly property string appUrl: "https://github.com/easyDiffraction/QmlGuiPrototype"
 
     readonly property int appWindowWidth: 1280
-    readonly property int appWindowHeight: 800
+    readonly property int appWindowHeight: 700//800
     readonly property int appBorderThickness: 1
     readonly property color appBkgColor: "#f5f5f5"
     readonly property color appBorderColor: "gainsboro"

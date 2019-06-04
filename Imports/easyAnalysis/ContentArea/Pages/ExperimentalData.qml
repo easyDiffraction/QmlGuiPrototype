@@ -9,6 +9,7 @@ import easyAnalysis.Sidebar.Pages.ExperimentalData 1.0 as GenericSidebarSampleMo
 GenericElements.ContentAreaStack {
 
     tabBarContent: TabBar {
+        spacing: 0
         id: tabBar
         GenericMainArea.TabButton { text: qsTr("Plot View"); tabbarWidth: mainArea.width } // fix width
         GenericMainArea.TabButton { text: qsTr("Table View"); tabbarWidth: mainArea.width } // fix width
@@ -19,8 +20,8 @@ GenericElements.ContentAreaStack {
         id: mainArea
         currentIndex: tabBar.currentIndex
         GenericMainAreaSampleModel.PlotView { }
-        GenericMainAreaSampleModel.TableView {  }
-        GenericMainAreaSampleModel.TextView {  }
+        GenericMainAreaSampleModel.TableView { }
+        GenericMainAreaSampleModel.TextView { }
     }
 
     sideBarContent: StackLayout {

@@ -24,7 +24,7 @@ Rectangle {
 
     function fileContent () {
         const xhr = new XMLHttpRequest
-        xhr.open("GET", "../../../DiffractionData/cecual_vesta.cif", false)
+        xhr.open("GET", "../../../DiffractionData/cecual.dat", false)
         xhr.send()
         return xhr.responseText
     }

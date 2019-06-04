@@ -53,18 +53,29 @@ Dialog {
         onPaint:{
             let ctx = canvas.getContext('2d');
             ctx.fillStyle = Qt.rgba(0.9, 0.9, 0.9, 1)
+            ctx.strokeStyle = "#999"
+            ctx.lineWidth = 1.5
 
+            // background
             ctx.beginPath()
-
             ctx.moveTo(0, 0)
             ctx.lineTo(0, height)
             ctx.lineTo(width - arrowWidth, height)
             ctx.lineTo(width - arrowWidth, height/2 + arrowHeight/2)
             ctx.lineTo(width, height/2 )
             ctx.lineTo(width - arrowWidth, height/2 - arrowHeight/2)
-            ctx.lineTo(width - arrowWidth, 0);
+            ctx.lineTo(width - arrowWidth, 0)
+            ctx.fill()
 
-            ctx.fill();
+            // cross
+            ctx.beginPath()
+            ctx.moveTo(10, 10)
+            ctx.lineTo(20, 20)
+            ctx.moveTo(20, 10)
+            ctx.lineTo(10, 20)
+            ctx.stroke()
+
+
         }
 
         ColumnLayout {

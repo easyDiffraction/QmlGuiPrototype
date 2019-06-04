@@ -7,7 +7,7 @@ import easyAnalysis 1.0 as Generic
 TableView {
     property bool customFrameVisible: true
     property bool selectable: false
-    property int selectedRow: 0
+    property int selectedRow: -1
     property int visibleRowsCount: Math.min(model.count, Generic.Style.maxVisibleRowsCount)
 
     id: tableView
@@ -35,6 +35,14 @@ TableView {
             anchors.fill: parent
             spacing: 0
 
+            // Vertical border
+            Rectangle {
+                Layout.fillHeight: true
+                width: Generic.Style.appBorderThickness
+                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.appBorderColor
+                color: Generic.Style.appBorderColor
+            }
+
             // Vertical spacer
             Item { width: Generic.Style.tableColumnSpacing/2 }
 
@@ -49,13 +57,7 @@ TableView {
             // Vertical spacer
             Item { width: Generic.Style.tableColumnSpacing/2 }
 
-            // Vertical border
-            Rectangle {
-                Layout.fillHeight: true
-                width: Generic.Style.appBorderThickness
-                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.appBorderColor
-                color: Generic.Style.appBorderColor
-            }
+
         }
     }
 
@@ -80,6 +82,14 @@ TableView {
             anchors.fill: parent
             spacing: 0
 
+            // Vertical border
+            Rectangle {
+                Layout.fillHeight: true
+                width: Generic.Style.appBorderThickness
+                color: selectable && styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
+                //color: Generic.Style.tableColumnBorderColor
+            }
+
             // Vertical spacer
             Item { width: Generic.Style.tableColumnSpacing/2 }
 
@@ -94,13 +104,7 @@ TableView {
             // Vertical spacer
             Item { width: Generic.Style.tableColumnSpacing/2 }
 
-            // Vertical border
-            Rectangle {
-                Layout.fillHeight: true
-                width: Generic.Style.appBorderThickness
-                color: selectable && styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
-                //color: Generic.Style.tableColumnBorderColor
-            }
+
         }
     }
 

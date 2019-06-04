@@ -20,6 +20,9 @@ ColumnLayout {
         text: "Create New Project"
         icon.source: "../../../Icons/Notes.svg"
         ToolTip.text: qsTr("Create new project")
+        onClicked: {
+            Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
+        }
     }
 
     GenericElements.GuideWindow {
@@ -27,9 +30,9 @@ ColumnLayout {
         message: "Click here to create a new project."
         toY: createButton.y + createButton.height/2
 
-        visible: Generic.Variables.toolbarCurrentIndex == 0 ? true : false
+        visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.HomeIndex ? true : false
 
-        GenericContentArea.Button { id: createButtonClone; }
+        GenericContentArea.Button { id: createButtonClone }
         Component.onCompleted: {
             GenericLogic.Copy.copyButton(createButton, createButtonClone)
         }

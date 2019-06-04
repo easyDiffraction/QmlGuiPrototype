@@ -18,6 +18,7 @@ ColumnLayout {
     // Sidebar including its TabBar
     TabBar {
         id: tabbar
+        spacing: 0
         GenericSidebar.TabButton { text: qsTr("Basic controls") }
         GenericSidebar.TabButton { text: qsTr("Advanced controls") }
     }
