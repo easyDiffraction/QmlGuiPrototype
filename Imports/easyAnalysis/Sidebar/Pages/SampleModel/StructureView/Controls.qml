@@ -49,8 +49,8 @@ ColumnLayout {
                     GenericContentAreaButtons.Add { id: addButton2 }
                     GenericContentAreaButtons.Import { id: importButton2 }
                     Component.onCompleted: {
-                        GenericLogic.Clone.copyButton(addButton, addButton2)
-                        GenericLogic.Clone.copyButton(importButton, importButton2)
+                        GenericLogic.Copy.copyButton(addButton, addButton2)
+                        GenericLogic.Copy.copyButton(importButton, importButton2)
                     }
                 }
             }
