@@ -14,7 +14,7 @@ TabButton {
         display: button.display
         text: button.text
         font: button.font
-        color: button.enabled ? Generic.Style.buttonTextEnabledColor : Generic.Style.buttonTextDisabledColor
+        color: textColor() //button.enabled ? Generic.Style.buttonTextEnabledColor : Generic.Style.buttonTextDisabledColor
     }
 
     background: Rectangle {
@@ -29,6 +29,18 @@ TabButton {
         var color2 = Generic.Style.buttonBkgBlendColor
         var alpha = button.down ? Generic.Style.buttonBkgBlendAlpha : 0.0
         return Color.blend(color1, color2, alpha)
+    }
+
+    function iconColor() {
+        if (!button.enabled)
+            return Generic.Style.buttonIconDisabledColor
+        return button.checked ? Generic.Style.buttonIconHighlightedColor : Generic.Style.buttonIconEnabledColor
+    }
+
+    function textColor() {
+        if (!button.enabled)
+            return Generic.Style.buttonTextDisabledColor
+        return button.checked ? Generic.Style.buttonTextHighlightedColor : Generic.Style.buttonTextEnabledColor
     }
 }
 
