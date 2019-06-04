@@ -1,11 +1,15 @@
 module easyAnalysis.Elements
 CheckBox 1.0 CheckBox.qml
+ColumnLayout 1.0 ColumnLayout.qml
+RowLayout 1.0 RowLayout.qml
+GridLayout 1.0 GridLayout.qml
 GroupBox 1.0 GroupBox.qml
 HorizontalBorder 1.0 HorizontalBorder.qml
-MainAreaStack 1.0 MainAreaStack.qml
+ContentAreaStack 1.0 ContentAreaStack.qml
 ParametersTable 1.0 ParametersTable.qml
 SidebarStack 1.0 SidebarStack.qml
 VerticalBorder 1.0 VerticalBorder.qml
 ColoredCell 1.0 ColoredCell.qml
-TransparentComboBox 1.0 TransparentComboBox.qml
-SidebarButton 1.0 SidebarButton.qml
+CellComboBox 1.0 CellComboBox.qml
+ComboBox 1.0 ComboBox.qml
+GuideWindow 1.0 GuideWindow.qml

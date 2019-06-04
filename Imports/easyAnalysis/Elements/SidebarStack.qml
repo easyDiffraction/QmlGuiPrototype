@@ -6,16 +6,20 @@ import easyAnalysis.Elements 1.0 as GenericElements
 import easyAnalysis.Sidebar 1.0 as GenericSidebar
 
 ColumnLayout {
-    property var controlsContent: null
-    property var settingsContent: null
+    //property var controlsContent: null
+    //property var settingsContent: null
+    property alias controlsContent: controls.children
+    property alias settingsContent: settings.children
+
+    id: stackLayout
 
     spacing: 0
 
     // Sidebar including its TabBar
     TabBar {
         id: tabbar
-        GenericSidebar.TabButton { text: qsTr("Controls") }
-        GenericSidebar.TabButton { text: qsTr("Settings") }
+        GenericSidebar.TabButton { text: qsTr("Basic controls") }
+        GenericSidebar.TabButton { text: qsTr("Advanced controls") }
     }
 
     // TabBar bottom border
@@ -24,20 +28,25 @@ ColumnLayout {
     // Sidebar without TabBar
     StackLayout {
         id: stack
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+        // doesn't work with Layout.fillWidth: true; switched to width: parent.width
+        //Layout.fillWidth: true
+        //Layout.fillHeight: true
+        width: parent.width
+        height: parent.height
         currentIndex: tabbar.currentIndex
 
         // Controls Tab
         Item {
             id: controls
-            children: controlsContent
+            Layout.fillWidth: true
+            Layout.fillHeight: true
         }
 
         // Settings Tab
         Item {
             id: settings
-            children: settingsContent
+            Layout.fillWidth: true
+            Layout.fillHeight: true
         }
     }
 

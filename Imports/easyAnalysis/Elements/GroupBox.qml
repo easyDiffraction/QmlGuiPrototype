@@ -1,17 +1,20 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
+import QtQuick.Controls.impl 2.12
 import easyAnalysis 1.0 as Generic
 import easyAnalysis.Elements 1.0 as GenericElements
 
 Column {
-    property string title: "Collapsible Group"
+    property string title: ""
+    property bool collapsible: true
     property bool collapsed: false
     property bool showBorder: true
     property alias content: layout.children
 
-    //Layout.fillWidth: true
-    width: parent.width
+    Layout.fillWidth: true
+    //width: parent.width
+    Layout.alignment: Qt.AlignTop
     spacing: 0
 
     /////////////
@@ -19,9 +22,24 @@ Column {
     /////////////
     Button {
         id: titleArea
-        leftPadding: 5
+        visible: title ? true : false
+        leftPadding: Generic.Style.sidebarGroupIndicatorIconSize
         text: title
-        icon.source: collapsed ? "../Icons/RightTriangleArrow.svg" : "../Icons/DownTriangleArrow.svg"
+        font.weight: Font.DemiBold
+        icon.width: Generic.Style.sidebarGroupIndicatorIconSize
+        icon.height: Generic.Style.sidebarGroupIndicatorIconSize
+        icon.source: iconSource() //collapsed ? "../Icons/RightTriangleArrow.svg" : "../Icons/DownTriangleArrow.svg"
+        icon.color: Generic.Style.sidebarGroupTitleColor
+
+        contentItem: IconLabel {
+            spacing: titleArea.spacing
+            mirrored: titleArea.mirrored
+            display: titleArea.display
+            icon: titleArea.icon
+            text: titleArea.text
+            font: titleArea.font
+            color: Generic.Style.sidebarGroupTitleColor
+        }
 
         background: Rectangle {
             implicitHeight: 40
@@ -33,13 +51,15 @@ Column {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                if (collapsed) {
-                    collapsed = false
-                    contentArea.height = groupBox.height
-                }
-                else {
-                    collapsed = true
-                    contentArea.height = 0
+                if (collapsible) {
+                    if (collapsed) {
+                        collapsed = false
+                        contentArea.height = groupBox.height
+                    }
+                    else {
+                        collapsed = true
+                        contentArea.height = 0
+                    }
                 }
             }
         }
@@ -89,4 +109,12 @@ Column {
         color: Generic.Style.appBorderColor
     }
 
+    //////////
+    // Helpers
+    //////////
+    function iconSource() {
+        if (!collapsible)
+            return "../Icons/Circle.svg"
+        return collapsed ? "../Icons/RightTriangleArrow.svg" : "../Icons/DownTriangleArrow.svg"
+    }
 }

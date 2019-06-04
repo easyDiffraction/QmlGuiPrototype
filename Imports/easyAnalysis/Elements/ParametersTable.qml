@@ -6,21 +6,27 @@ import easyAnalysis 1.0 as Generic
 
 TableView {
     //property int selectRow: -1
+    property bool selectable: false
     property bool customFrameVisible: true
-    property int visibleRowsCount: 5
+    property int visibleRowsCount: Math.min(model.count, Generic.Style.maxVisibleRowsCount)
     //property string background: value
 
     id: tableView
     clip: true
     Layout.fillWidth: true
+    //implicitWidth: parent.width
+
+    //width: 600
     implicitHeight: (visibleRowsCount + 1) * Generic.Style.tableRowHeight + Generic.Style.appBorderThickness // add 1 row for header
+
+
 
     // Custom frame
     frameVisible: false
     Rectangle {
         anchors.fill: parent
         color: "transparent"
-        border.color: Generic.Style.tableHeaderRowColor
+        border.color: Generic.Style.appBorderColor
         border.width: customFrameVisible ? 1 : 0
     }
 
@@ -64,8 +70,8 @@ TableView {
         height: Generic.Style.tableRowHeight
         Layout.fillHeight: true
         color: {
-            ///if (styleData.selected)
-            ///    return Generic.Style.tableHighlightRowColor
+            if (selectable && styleData.selected)
+                return Generic.Style.tableHighlightRowColor
             return styleData.alternate ? Generic.Style.tableAlternateRowColor : Generic.Style.tableRowColor
         }
     }
@@ -87,8 +93,7 @@ TableView {
             TextEdit {
                 Layout.fillWidth: true
                 font.pointSize: Generic.Style.tableFontPointSize
-                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
-                color: Generic.Style.tableTextColor
+                color: selectable && styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
                 text: styleData.value
             }
 
@@ -99,14 +104,15 @@ TableView {
             Rectangle {
                 Layout.fillHeight: true
                 width: Generic.Style.appBorderThickness
-                ///color: styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
-                color: Generic.Style.tableColumnBorderColor
+                color: selectable && styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
+                //color: Generic.Style.tableColumnBorderColor
             }
         }
     }
 
     // Adjust columns widths
     Component.onCompleted: {
+        // First, resize with default Qt function
         resizeColumnsToContents()
 
         // sum column widths and number of resizable columns
@@ -130,6 +136,10 @@ TableView {
         // adjust last column width
         const rest = tableView.width - sumColumnsWidth - extenderWidth*resizableColumnsCount
         getColumn(columnCount-1).width += rest
+
+        // select 1st row, if table is selectable
+        if (selectable)
+            tableView.selection.select(0)
     }
 
 }

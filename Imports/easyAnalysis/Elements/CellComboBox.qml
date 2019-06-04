@@ -37,18 +37,18 @@ RowLayout {
             onPaint: {
                 context.reset();
 
-                context.moveTo(0, height / 3);
-                context.lineTo(width / 2, 0);
-                context.lineTo(width, height / 3);
-                context.closePath();
+                context.moveTo(0, height / 3)
+                context.lineTo(width / 2, 0)
+                context.lineTo(width, height / 3)
+                context.closePath()
 
-                context.moveTo(0, height * 2 / 3);
-                context.lineTo(width / 2, height);
+                context.moveTo(0, height * 2 / 3)
+                context.lineTo(width / 2, height)
                 context.lineTo(width, height * 2 / 3);
                 context.closePath();
 
-                context.fillStyle = Generic.Style.buttonBkgEnabledColor;
-                context.fill();
+                context.fillStyle = Generic.Style.buttonIconEnabledColor
+                context.fill()
             }
         }
 
@@ -147,8 +147,6 @@ RowLayout {
 }
 
 */
-
-
 
 /*
 
