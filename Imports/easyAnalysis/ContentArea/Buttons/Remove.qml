@@ -5,13 +5,16 @@ import easyAnalysis.ContentArea 1.0 as GenericContentArea
 import easyAnalysis 1.0 as Generic
 
 Item {
-    implicitHeight: Generic.Style.tableRowHeight - 2 * button.anchors.margins
+    implicitHeight: Generic.Style.tableRowHeight
     implicitWidth: implicitHeight
 
     GenericContentArea.Button {
         id: button
         anchors.fill: parent
         anchors.margins: 2
+        anchors.leftMargin: 3
+        anchors.rightMargin: 4
+        padding: 0
         icon.source: "../../Icons/Minus.svg" // https://www.flaticon.com/free-icon/minus-sign-inside-a-black-circle_25336
         ToolTip.text: qsTr("Remove this row from the table")
     }

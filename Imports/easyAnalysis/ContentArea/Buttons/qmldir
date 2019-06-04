@@ -1,5 +1,9 @@
 module easyAnalysis.ContentArea.Buttons
+Add 1.0 Add.qml
+Export 1.0 Export.qml
 GoNext 1.0 GoNext.qml
 Help 1.0 Help.qml
+Import 1.0 Import.qml
 Remove 1.0 Remove.qml
+RemoveAll 1.0 RemoveAll.qml
 SaveState 1.0 SaveState.qml
