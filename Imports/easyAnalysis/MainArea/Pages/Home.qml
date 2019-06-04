@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import easyAnalysis.ContentArea.Pages.Home 1.0 as GenericHomePage
+import easyAnalysis.MainArea.Pages.Home 1.0 as GenericHomePage
 
 Item {
     //width: parent.width
