@@ -20,7 +20,6 @@ ColumnLayout {
         content: GenericElements.ColumnLayout {
             // Table
             GenericElements.ParametersTable {
-                id: structureview
                 selectable: true
                 model: ListModel {
                     ListElement { num:"1"; name:"CeCuAl3"; note:"RT #13744 ThCr2Si2 type" }

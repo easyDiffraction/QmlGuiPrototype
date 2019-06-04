@@ -5,21 +5,15 @@ import QtQuick.Layouts 1.12
 import easyAnalysis 1.0 as Generic
 
 TableView {
-    //property int selectRow: -1
-    property bool selectable: false
     property bool customFrameVisible: true
+    property bool selectable: false
+    property int selectedRow: 0
     property int visibleRowsCount: Math.min(model.count, Generic.Style.maxVisibleRowsCount)
-    //property string background: value
 
     id: tableView
     clip: true
     Layout.fillWidth: true
-    //implicitWidth: parent.width
-
-    //width: 600
     implicitHeight: (visibleRowsCount + 1) * Generic.Style.tableRowHeight + Generic.Style.appBorderThickness // add 1 row for header
-
-
 
     // Custom frame
     frameVisible: false
@@ -139,7 +133,7 @@ TableView {
 
         // select 1st row, if table is selectable
         if (selectable)
-            tableView.selection.select(0)
+            tableView.selection.select(selectedRow)
     }
 
 }
