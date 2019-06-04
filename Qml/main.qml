@@ -21,8 +21,8 @@ ApplicationWindow {
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
-
         GenericToolbar.Toolbar {}
         GenericContentArea.ContentArea {}
     }
+
 }
