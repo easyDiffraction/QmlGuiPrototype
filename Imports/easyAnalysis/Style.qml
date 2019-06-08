@@ -11,8 +11,8 @@ QtObject {
     readonly property string appDate: "4 Jun 2019"
     readonly property string appUrl: "https://github.com/easyDiffraction/QmlGuiPrototype"
 
-    readonly property int appWindowWidth: 1280
-    readonly property int appWindowHeight: 700//800
+    readonly property int appWindowWidth: 1400
+    readonly property int appWindowHeight: 760//800
     readonly property int appBorderThickness: 1
     readonly property color appBkgColor: "#f5f5f5"
     readonly property color appBorderColor: "gainsboro"
@@ -25,12 +25,16 @@ QtObject {
 
     // Main Area
     readonly property int mainAreaWidth: appWindowWidth - appBorderThickness - sidebarWidth
+    readonly property color mainAreaTabBorderColor: "#ccc"
+
+    // Colors
+    readonly property color blueColor: "#0099ff"//"#2293de"//"#1c8fdc"
 
     // Sidebar
-    readonly property int sidebarWidth: 554//518
+    readonly property int sidebarWidth: 605//554//518
     readonly property int sidebarGroupInnerSpacing: 10
     readonly property int sidebarGroupIndicatorIconSize: 10
-    readonly property color sidebarGroupTitleColor: "dodgerblue"
+    readonly property color sidebarGroupTitleColor: blueColor
     readonly property color sidebarLabelColor: "#555"
 
     // Table
@@ -41,11 +45,12 @@ QtObject {
 
     readonly property color tableRowColor: "white"
     readonly property color tableAlternateRowColor: "#f7f7f7"
-    readonly property color tableHighlightRowColor: "dodgerblue" //Qt.lighter("dodgerblue", 1.7)
-    readonly property color tableHeaderRowColor: "#e7e7e7"
+    readonly property color tableHighlightRowColor: blueColor //Qt.lighter("dodgerblue", 1.7)
+    readonly property color tableHeaderRowColor: "#eee"
     readonly property color tableColumnBorderColor: "#e8e8e8"
 
     readonly property color tableTextColor: "black"
+    readonly property color tableDisabledTextColor: "#888"
     readonly property color tableHighlightTextColor: "white"
     readonly property color tableHighlightBorderColor: Qt.lighter(tableHighlightRowColor, 1.2)
 
@@ -58,19 +63,27 @@ QtObject {
     readonly property color toolbarSpacerColor: appBorderColor//"#addButton"
     readonly property color toolbarBkgColor: "transparent"
 
-    readonly property color buttonBkgDisabledColor: "#aaa"
-    readonly property color buttonBkgEnabledColor: "#e7e7e7"//"#666"
-    readonly property color buttonBkgHighlightedColor: "dodgerblue"
+    readonly property color buttonBkgDisabledColor: "#e1e1e1"
+    readonly property color buttonBkgEnabledColor: "#e1e1e1"//"#666"
+    readonly property color buttonBkgHighlightedColor: blueColor
+    readonly property color buttonBkgFinishedColor: Qt.lighter(blueColor, 1.9) //!!!!
     readonly property color buttonBkgBlendColor: "white"
     readonly property real buttonBkgBlendAlpha: 0.25
 
-    readonly property color buttonTextDisabledColor: "#eee"
+    readonly property color buttonTextDisabledColor: "#999"
     readonly property color buttonTextEnabledColor: "#222"//"white"
     readonly property color buttonTextHighlightedColor: "white"
+    readonly property color buttonTextFinishedColor: Qt.darker(blueColor, 1.5) //!!!!
 
-    readonly property color buttonIconDisabledColor: "#ddd"
+    readonly property color buttonIconDisabledColor: "#bbb"
     readonly property color buttonIconEnabledColor: "#555"//"white"
     readonly property color buttonIconHighlightedColor: "white"
+    readonly property color buttonIconFinishedColor: Qt.darker(blueColor, 1.2) //!!!!
+
+    readonly property color buttonBorderDisabledColor: appBorderColor
+    readonly property color buttonBorderEnabledColor: appBorderColor
+    readonly property color buttonBorderHighlightedColor: buttonBkgHighlightedColor
+    readonly property color buttonBorderFinishedColor: Qt.lighter(blueColor, 1.7) //!!!!
 
     // Fonts
     property FontLoader titleThinFontLoader: FontLoader {
