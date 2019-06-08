@@ -9,11 +9,11 @@ GenericContentArea.TabButton {
     property int tabbarWidth: Generic.Style.mainAreaWidth
     width: tabbarWidth / 4 - 1
 
-    // Vertical borde on the left
+    // Vertical border on the left
     Rectangle {
         width: parent.checked ? 0 : 1
         height: parent.height
-        color: Generic.Style.appBorderColor
+        color: Generic.Style.mainAreaTabBorderColor
     }
 }
 

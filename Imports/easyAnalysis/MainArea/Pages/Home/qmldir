@@ -1,6 +1,5 @@
 module easyAnalysis.ContentArea.Pages.Home
 AppInfo 1.0 AppInfo.qml
-AppUrlArea 1.0 AppUrlArea.qml
 LeftColumn 1.0 LeftColumn.qml
 MiddleColumn 1.0 MiddleColumn.qml
 RightColumn 1.0 RightColumn.qml

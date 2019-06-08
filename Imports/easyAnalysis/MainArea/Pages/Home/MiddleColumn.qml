@@ -14,33 +14,17 @@ ColumnLayout {
     spacing: 20
 
     GenericContentArea.Button {
-        id: createButton
+        //id: openExampleButton
         Layout.fillWidth: true
-        highlighted: true
+        //highlighted: true
         text: "Create New Project"
         icon.source: "../../../Icons/Notes.svg"
         ToolTip.text: qsTr("Create new project")
-        onClicked: {
-            Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
-        }
-    }
-
-    GenericElements.GuideWindow {
-        id: guidWindow
-        message: "Click here to create a new project."
-        toY: createButton.y + createButton.height/2
-
-        visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.HomeIndex ? true : false
-
-        GenericContentArea.Button { id: createButtonClone }
-        Component.onCompleted: {
-            GenericLogic.Copy.copyButton(createButton, createButtonClone)
-        }
     }
 
     GenericContentArea.Button {
         Layout.fillWidth: true
-        text: "Run Without Project"
+        text: "Run Without Creating Project"
         icon.source: "../../../Icons/TextFile.svg" // https://www.flaticon.com/free-icon/text-file_25642
         ToolTip.text: qsTr("Run without project")
     }
@@ -48,10 +32,23 @@ ColumnLayout {
     GenericElements.HorizontalBorder {}
 
     GenericContentArea.Button {
+        id: openExampleButton
         Layout.fillWidth: true
-        text: "Open Existing Project"
+        text: "Open Example Project"
+        highlighted: true
+        icon.source: "../../../Icons/Fitting.svg"
+        ToolTip.text: qsTr("Open example project")
+        onClicked: {
+            Generic.Variables.homePageFinished = true
+            Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
+        }
+    }
+
+    GenericContentArea.Button {
+        Layout.fillWidth: true
+        text: "Open Previously Saved Project"
         icon.source: "../../../Icons/Upload.svg" // https://www.flaticon.com/free-icon/upload_25635
-        ToolTip.text: qsTr("Open existing project")
+        ToolTip.text: qsTr("Open previously saved project")
     }
 
     Text {
@@ -63,7 +60,7 @@ ColumnLayout {
 
     GenericElements.ParametersTable {
         Layout.fillWidth: true
-        Layout.fillHeight: true
+        //Layout.fillHeight: true
         model: ListModel {
             ListElement { number:"1"; name:"SiO_experiment";  path:"~/Exp/ESS/2019-03/";  cdate:"11.04.2019" }
             ListElement { number:"2"; name:"Simulation_test"; path:"~/Exp/ESS/2019-02/";  cdate:"02.04.2019" }
@@ -78,5 +75,23 @@ ColumnLayout {
         Controls1.TableViewColumn { title:"Path";           role:"path" }
         Controls1.TableViewColumn { title:"Creation date";  role:"cdate" }
     }
+
+    GenericElements.GuideWindow {
+        id: guidWindow
+        //message: "Click here to create a new project."
+        message: "Click here to open an example project."
+        toY: openExampleButton.y + openExampleButton.height/2
+
+        visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.HomeIndex ? true : false
+
+        GenericContentArea.Button {
+            id: openExampleButtonClone
+            //onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
+        }
+        Component.onCompleted: {
+            GenericLogic.Copy.copyButton(openExampleButton, openExampleButtonClone)
+        }
+    }
+
 
 }

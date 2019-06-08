@@ -12,7 +12,7 @@ Column {
         width: 100
         fillMode: Image.PreserveAspectFit
         source: "../../../Icons/App/App.svg"
-        AppUrlArea { anchors.fill: parent }
+        ///AppUrlArea { anchors.fill: parent }
     }
 
     RowLayout {
@@ -24,7 +24,7 @@ Column {
             font.pointSize: 32
             text: Generic.Style.appLeftName
             color: "black"
-            AppUrlArea { anchors.fill: parent }
+            ///AppUrlArea { anchors.fill: parent }
         }
 
         Text {
@@ -32,7 +32,7 @@ Column {
             font.pointSize: 32
             text: Generic.Style.appRightName
             color: "#444"
-            AppUrlArea { anchors.fill: parent }
+            ///AppUrlArea { anchors.fill: parent }
         }
     }
 
@@ -41,7 +41,7 @@ Column {
         font.family: Generic.Style.versionFontFamily
         font.pointSize: 13
         text: "Version %1 (%2)".arg(Generic.Style.appVersion).arg(Generic.Style.appDate)
-        AppUrlArea { anchors.fill: parent }
+        ///AppUrlArea { anchors.fill: parent }
     }
 
 }

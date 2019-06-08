@@ -4,6 +4,6 @@ import easyAnalysis 1.0 as Generic
 import easyAnalysis.Elements 1.0 as GenericElements
 
 GenericElements.ChartView {
-    showObs: true
-    showCalc: false
+    showObs: false
+    showCalc: true
 }

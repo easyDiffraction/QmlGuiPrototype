@@ -15,6 +15,7 @@ Rectangle {
     }
 
     GenericElements.ParametersTable {
+        customFrameVisible: false
         anchors.fill: parent
         model: listModel
         Controls1.TableViewColumn { role:"x";  title:"TOF";   resizable: false; width: Generic.Style.mainAreaWidth / 4 - 1 }

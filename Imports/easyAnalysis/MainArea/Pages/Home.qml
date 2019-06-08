@@ -8,16 +8,24 @@ Item {
     //Layout.fillWidth: true
     //Layout.fillHeight: true
 
+
+
+
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 30
+        //width: parent.width
+        //anchors.verticalCenter: parent.verticalCenter
         spacing: 30
+
+
+        Item { Layout.fillHeight: true }
 
         //Item { height: 50 }
         //Rectangle { height: 50; width: 30; color: "red" }
         //Rectangle { height: 20; width: 130; color: "green" }
         //Rectangle { height: 50; width: 80; color: "blue" }
-        GenericHomePage.AppInfo {}
+///        GenericHomePage.AppInfo {}
 
         RowLayout {
             Layout.fillWidth: true
@@ -35,6 +43,9 @@ Item {
             GenericHomePage.RightColumn {}
 
         }
+
+        Item { Layout.fillHeight: true }
+
     }
 
 }
@@ -133,9 +144,9 @@ Column {
                 text: "Run Without Project"
                 icon.source: "../../Resources/Icons/Button_Open-File.svg"
                 onClicked: {
-                    dataButtonEnabled = true
-                    sampleButtonEnabled = true
-                    instrumentButtonEnabled = true
+                    dataPageFinished = true
+                    samplePageFinished = true
+                    instrumentPageFinished = true
                     messageDialogWithoutProject.open()
                 }
             }
@@ -145,9 +156,9 @@ Column {
                 selectExisting: false
                 //folder: StandardPaths.writableLocation(StandardPaths.DocumentsLocation)
                 onAccepted: {
-                    dataButtonEnabled = true
-                    sampleButtonEnabled = true
-                    instrumentButtonEnabled = true
+                    dataPageFinished = true
+                    samplePageFinished = true
+                    instrumentPageFinished = true
                     messageDialogCreateProject.open()
                 }
             }
@@ -209,7 +220,7 @@ Column {
 
             AsElements.SidebarButton {
                 width: parent.width
-                enabled: dataButtonEnabled
+                enabled: dataPageFinished
                 text: "Save Project As..."
                 icon.source: "../../Resources/Icons/Download.svg"
             }
