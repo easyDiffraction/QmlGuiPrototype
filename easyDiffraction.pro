@@ -1,3 +1,7 @@
+TEMPLATE = app
+TARGET = easyDiffraction
+ICON = Imports/easyAnalysis/Icons/App/App.icns
+
 QT += qml quick charts
 
 CONFIG += c++11
