@@ -13,22 +13,31 @@ ComboBox {
         //width: parent.width
         //implicitWidth: modelWidth + 2*canvas.width
         //implicitHeight: 40
-        implicitWidth: 200
+        //implicitWidth: 200
         implicitHeight: Generic.Style.tableRowHeight
 
-
-
-        color: control.down ? Generic.Style.appBorderColor : Generic.Style.tableHeaderRowColor
+        color: backgroundColor()
         border.color: Generic.Style.appBorderColor
         border.width: Generic.Style.appBorderThickness
         //visible: !control.flat || control.down
     }
 
-
-
-
+    function backgroundColor() {
+        if (!control.enabled)
+            return Generic.Style.buttonBkgDisabledColor
+        var color1 = Generic.Style.buttonBkgEnabledColor
+        var color2 = Generic.Style.buttonBkgBlendColor
+        var alpha = control.down ? Generic.Style.buttonBkgBlendAlpha : 0.0
+        return Color.blend(color1, color2, alpha)
+    }
 
 }
+
+
+
+
+
+
 
 
 
