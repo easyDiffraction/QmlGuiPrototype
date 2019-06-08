@@ -6,8 +6,8 @@ import easyAnalysis 1.0 as Generic
 Button {
     id: button
 
-    icon.width: Generic.Style.buttonHeight / 2
-    icon.height: Generic.Style.buttonHeight / 2
+    icon.width: Generic.Style.buttonHeight / 1.75
+    icon.height: Generic.Style.buttonHeight / 1.75
     icon.color: iconColor() //button.enabled ? Generic.Style.buttonIconEnabledColor : Generic.Style.buttonIconDisabledColor
 
     ToolTip.visible: ToolTip.text !== "" ? hovered : false
@@ -25,7 +25,7 @@ Button {
     background: Rectangle {
         implicitHeight: Generic.Style.buttonHeight
         color: backgroundColor()
-        border.color: Generic.Style.appBorderColor
+        border.color: button.highlighted ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.appBorderColor
         radius: Generic.Style.toolbarButtonRadius
     }
 

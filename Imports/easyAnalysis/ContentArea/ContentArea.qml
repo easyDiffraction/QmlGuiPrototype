@@ -15,27 +15,27 @@ StackLayout {
     GenericContentAreaPages.Home {}
 
     // -------
-    GenericContentArea.Spacer {}
+    //GenericContentArea.Spacer {}
     // -------
 
     GenericContentAreaPages.ExperimentalData {}
-    GenericContentAreaPages.SampleModel {}
     GenericContentAreaPages.InstrumentModel {}
+    GenericContentAreaPages.SampleModel {}
 
     // -------
-    GenericContentArea.Spacer {}
+    //GenericContentArea.Spacer {}
     // -------
 
     GenericContentAreaPages.Linking {}
 
     // -------
-    GenericContentArea.Spacer {}
+    //GenericContentArea.Spacer {}
     // -------
 
     GenericContentAreaPages.Analysis {}
 
     // -------
-    GenericContentArea.Spacer {}
+    //GenericContentArea.Spacer {}
     // -------
 
     GenericContentAreaPages.Summary {}
