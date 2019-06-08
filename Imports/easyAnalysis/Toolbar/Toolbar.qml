@@ -27,40 +27,46 @@ ColumnLayout{
         }
 
         // -------
-        GenericToolbar.Spacer { }
+        ///GenericToolbar.Spacer { }
         // -------
 
         GenericToolbarButtons.ExperimentalData {
+            enabled: Generic.Variables.homePageFinished
             onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.ExperimentalDataIndex
         }
-        GenericToolbarButtons.SampleModel {
-            onClicked: Generic.Variables.toolbarCurrentIndex  = Generic.Variables.SampleModelIndex
-        }
         GenericToolbarButtons.InstrumentModel {
-            onClicked:  Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+            enabled: Generic.Variables.dataPageFinished
+            onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+        }
+        GenericToolbarButtons.SampleModel {
+            enabled: Generic.Variables.instrumentPageFinished
+            onClicked: Generic.Variables.toolbarCurrentIndex  = Generic.Variables.SampleModelIndex
         }
 
         // -------
-        GenericToolbar.Spacer {}
+        ///GenericToolbar.Spacer {}
         // -------
 
         GenericToolbarButtons.Linking {
+            enabled: Generic.Variables.samplePageFinished
             onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.LinkingIndex
         }
 
         // -------
-        GenericToolbar.Spacer {}
+        ///GenericToolbar.Spacer {}
         // -------
 
         GenericToolbarButtons.Analysis {
+            enabled: Generic.Variables.linkingPageFinished
             onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.AnalysisIndex
         }
 
         // -------
-        GenericToolbar.Spacer {}
+        ///GenericToolbar.Spacer {}
         // -------
 
         GenericToolbarButtons.Summary {
+            enabled: Generic.Variables.analysisPageFinished
             onClicked: Generic.Variables.toolbarCurrentIndex = Generic.Variables.SummaryIndex
         }
     }

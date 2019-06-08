@@ -6,6 +6,7 @@ import easyAnalysis 1.0 as Generic
 
 TabButton {
     //property bool withSeparator: false
+    ///property bool finished: false
 
     id: button
     //leftPadding: withSeparator ? 20 : 0
@@ -59,7 +60,7 @@ TabButton {
             Layout.fillWidth: true
             implicitHeight: Generic.Style.toolbarButtonHeight
             color: backgroundColor()
-            border.color: Generic.Style.appBorderColor
+            border.color: borderColor()
             radius: Generic.Style.toolbarButtonRadius
         }
 
@@ -71,8 +72,10 @@ TabButton {
     function backgroundColor() {
         if (!button.enabled)
             return Generic.Style.buttonBkgDisabledColor
-        //var color1 = button.checked ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.buttonBkgEnabledColor
-        var color1 = button.checked ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.buttonBkgEnabledColor
+        var color1 = button.checked ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.buttonBkgFinishedColor
+        //var color1 = button.finished ? Generic.Style.buttonBkgFinishedColor : Generic.Style.buttonBkgEnabledColor
+        //if (button.checked)
+        //    color1 = Generic.Style.buttonBkgHighlightedColor
         var color2 = Generic.Style.buttonBkgBlendColor
         var alpha = button.down ? Generic.Style.buttonBkgBlendAlpha : 0.0
         return Color.blend(color1, color2, alpha)
@@ -81,13 +84,31 @@ TabButton {
     function iconColor() {
         if (!button.enabled)
             return Generic.Style.buttonIconDisabledColor
-        return button.checked ? Generic.Style.buttonIconHighlightedColor : Generic.Style.buttonIconEnabledColor
+        //if (button.finished)
+        //    return Generic.Style.buttonIconFinishedColor
+        if (button.checked)
+            return Generic.Style.buttonIconHighlightedColor
+        return Generic.Style.buttonIconFinishedColor
     }
 
     function textColor() {
         if (!button.enabled)
             return Generic.Style.buttonTextDisabledColor
-        return button.checked ? Generic.Style.buttonTextHighlightedColor : Generic.Style.buttonTextEnabledColor
+        //if (button.finished)
+        //    return Generic.Style.buttonTextFinishedColor
+        if (button.checked)
+            return Generic.Style.buttonTextHighlightedColor
+        return Generic.Style.buttonTextFinishedColor
+    }
+
+    function borderColor() {
+        if (!button.enabled)
+            return Generic.Style.buttonBorderDisabledColor
+        //if (button.finished)
+        //    return Generic.Style.buttonBorderFinishedColor
+        if (button.checked)
+            return Generic.Style.buttonBorderHighlightedColor
+        return Generic.Style.buttonBorderFinishedColor
     }
 }
 
