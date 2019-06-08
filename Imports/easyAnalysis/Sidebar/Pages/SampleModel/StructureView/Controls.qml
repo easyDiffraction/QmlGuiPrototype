@@ -28,7 +28,7 @@ ColumnLayout {
                 Controls1.TableViewColumn { role:"num";     title:"No.";    resizable: false }
                 Controls1.TableViewColumn { role:"name";    title:"Name";   resizable: false }
                 Controls1.TableViewColumn { role:"note";    title:"Note" }
-                Controls1.TableViewColumn { title:"Del"; resizable: false; delegate: GenericContentAreaButtons.Remove {} }
+                Controls1.TableViewColumn { role:"remove";  title:"Remove"; resizable: false }
             }
 
             // Buttons
@@ -103,22 +103,22 @@ ColumnLayout {
         content: GenericElements.ColumnLayout {
             GenericElements.ParametersTable {
                 model: ListModel {
-                    ListElement { num:"1"; label:" Ce1"; atom:"Ce"; color:"#408002"; x:"0.00000"; y:"0.00000"; z:"0.00000"; occ:"1.00000" }
-                    ListElement { num:"2"; label:" Cu1"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.92491" }
-                    ListElement { num:"3"; label:" Al1"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.07509" }
-                    ListElement { num:"4"; label:" Cu2"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.04446" }
-                    ListElement { num:"5"; label:" Al2"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.95553" }
-                    ListElement { num:"6"; label:" Al3"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.50000"; z:"0.24981"; occ:"1.00000" }
+                    ListElement { num:"1"; label:"Ce1"; atom:"Ce"; color:"#408002"; x:"0.00000"; y:"0.00000"; z:"0.00000"; occ:"1.00000" }
+                    ListElement { num:"2"; label:"Cu1"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.92491" }
+                    ListElement { num:"3"; label:"Al1"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.07509" }
+                    ListElement { num:"4"; label:"Cu2"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.04446" }
+                    ListElement { num:"5"; label:"Al2"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.95553" }
+                    ListElement { num:"6"; label:"Al3"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.50000"; z:"0.24981"; occ:"1.00000" }
                 }
                 Controls1.TableViewColumn { role:"num";     title:"No.";    resizable: false }
                 Controls1.TableViewColumn { role:"label";   title:"Label";  resizable: false }
                 Controls1.TableViewColumn { role:"atom";    title:"Atom";   resizable: false }
-                Controls1.TableViewColumn { role:"color";   title:"Color";  resizable: false; delegate: GenericElements.ColoredCell { cellColor: styleData.value } }
+                Controls1.TableViewColumn { role:"color";   title:"Color";  resizable: false }
                 Controls1.TableViewColumn { role:"x";       title:"x" }
                 Controls1.TableViewColumn { role:"y";       title:"y" }
                 Controls1.TableViewColumn { role:"z";       title:"z" }
                 Controls1.TableViewColumn { role:"occ";     title:"Occ" }
-                Controls1.TableViewColumn { title:"Del"; resizable: false; delegate: GenericContentAreaButtons.Remove {} }
+                Controls1.TableViewColumn { role:"remove";  title:"Remove"; resizable: false }
             }
         }
     }
@@ -177,10 +177,11 @@ ColumnLayout {
         showBorder: false
         content: GenericElements.RowLayout {
             GenericContentAreaButtons.GoNext {
-                text: "Next step: Instrument Model"
-                ToolTip.text: qsTr("Go to the next step: Instrument Model description")
+                text: "Next step: Linking table"
+                ToolTip.text: qsTr("Go to the next step: Linking table")
                 onClicked: {
-                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
+                    Generic.Variables.samplePageFinished = true
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.LinkingIndex
                 }
             }
             GenericContentAreaButtons.SaveState {}

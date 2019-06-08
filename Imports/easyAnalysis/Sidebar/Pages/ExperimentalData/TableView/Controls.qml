@@ -31,10 +31,10 @@ ColumnLayout {
                     ListElement { num:"6"; fname: "cecual_03_test.dat"; fpath:"~/Experiments/Test/2018-03/cecual/" }
                     ListElement { num:"7"; fname: "cecual_04_test.dat"; fpath:"~/Experiments/Test/2018-03/cecual/" }
                 }
-                Controls1.TableViewColumn { role:"num";   title:"No.";  resizable: false }
-                Controls1.TableViewColumn { role:"fname"; title:"Name"; resizable: false }
-                Controls1.TableViewColumn { role:"fpath"; title:"Path" }
-                Controls1.TableViewColumn { title:"Del"; resizable: false; delegate: GenericContentAreaButtons.Remove {} }
+                Controls1.TableViewColumn { role:"num";    title:"No.";  resizable: false }
+                Controls1.TableViewColumn { role:"fname";  title:"Name"; resizable: false }
+                Controls1.TableViewColumn { role:"fpath";  title:"Path" }
+                Controls1.TableViewColumn { role:"remove"; title:"Remove"; resizable: false }
             }
 
             // Buttons
@@ -73,10 +73,11 @@ ColumnLayout {
         showBorder: false
         content: GenericElements.RowLayout {
             GenericContentAreaButtons.GoNext {
-                text: "Next step: Sample Model"
-                ToolTip.text: qsTr("Go to the next step: Sample Model description")
+                text: "Next step: Instrument Model"
+                ToolTip.text: qsTr("Go to the next step: Instrument Model description")
                 onClicked: {
-                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.SampleModelIndex
+                    Generic.Variables.dataPageFinished = true
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.InstrumentModelIndex
                 }
             }
             GenericContentAreaButtons.SaveState {}

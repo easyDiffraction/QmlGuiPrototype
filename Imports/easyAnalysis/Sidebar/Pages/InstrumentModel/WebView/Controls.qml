@@ -29,7 +29,7 @@ ColumnLayout {
                 Controls1.TableViewColumn { role:"num";     title:"No.";    resizable: false }
                 Controls1.TableViewColumn { role:"name";    title:"Name";   resizable: false }
                 Controls1.TableViewColumn { role:"note";    title:"Note" }
-                Controls1.TableViewColumn { title:"Del"; resizable: false; delegate: GenericContentAreaButtons.Remove {} }
+                Controls1.TableViewColumn { role:"remove"; title:"Remove"; resizable: false }
             }
 
             // Buttons
@@ -135,10 +135,11 @@ ColumnLayout {
         showBorder: false
         content: GenericElements.RowLayout {
             GenericContentAreaButtons.GoNext {
-                text: "Next step: Linking table"
-                ToolTip.text: qsTr("Go to the next step: Linking table")
+                text: "Next step: Sample Model"
+                ToolTip.text: qsTr("Go to the next step: Sample Model description")
                 onClicked: {
-                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.LinkingIndex
+                    Generic.Variables.instrumentPageFinished = true
+                    Generic.Variables.toolbarCurrentIndex = Generic.Variables.SampleModelIndex
                 }
             }
             GenericContentAreaButtons.SaveState {}
