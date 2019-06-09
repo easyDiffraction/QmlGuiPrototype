@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    engine.addImportPath(":/Imports");
+    engine.addImportPath("qrc:/Imports");
     engine.load(QUrl(QLatin1String("qrc:Qml/main.qml")));
 
     if (engine.rootObjects().isEmpty())

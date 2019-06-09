@@ -9,6 +9,7 @@ import easyAnalysis.ContentArea.Buttons 1.0 as GenericContentAreaButtons
 import easyAnalysis.Logic 1.0 as GenericLogic
 
 ColumnLayout {
+
     Layout.preferredWidth: 1
     Layout.alignment: Qt.AlignTop
     spacing: 20
@@ -92,6 +93,5 @@ ColumnLayout {
             GenericLogic.Copy.copyButton(openExampleButton, openExampleButtonClone)
         }
     }
-
 
 }

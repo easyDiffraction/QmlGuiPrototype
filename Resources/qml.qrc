@@ -115,7 +115,6 @@
         <file>../Imports/easyAnalysis/MainArea/Pages/ExperimentalData/TableView.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/ExperimentalData/TextView.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/Home/AppInfo.qml</file>
-        <file>../Imports/easyAnalysis/MainArea/Pages/Home/AppUrlArea.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/Home/LeftColumn.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/Home/MiddleColumn.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/Home/qmldir</file>
@@ -125,11 +124,8 @@
         <file>../Imports/easyAnalysis/MainArea/Pages/SampleModel/qmldir</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/SampleModel/StructureView.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/SampleModel/TextView.qml</file>
-        <file>../Imports/easyAnalysis/MainArea/Pages/Analysis.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/Home.qml</file>
-        <file>../Imports/easyAnalysis/MainArea/Pages/Linking.qml</file>
         <file>../Imports/easyAnalysis/MainArea/Pages/qmldir</file>
-        <file>../Imports/easyAnalysis/MainArea/Pages/Summary.qml</file>
         <file>../Imports/easyAnalysis/MainArea/qmldir</file>
         <file>../Imports/easyAnalysis/MainArea/TabButton.qml</file>
         <file>../Imports/easyAnalysis/Sidebar/Pages/ExperimentalData/PlotView/Controls.qml</file>
@@ -164,5 +160,51 @@
         <file>../Imports/easyAnalysis/Toolbar/Buttons/Analysis.qml</file>
         <file>../Imports/easyAnalysis/Toolbar/Buttons/Linking.qml</file>
         <file>../Imports/easyAnalysis/Variables.qml</file>
+        <file>../Imports/easyAnalysis/ContentArea/Buttons/Accept.qml</file>
+        <file>../Imports/easyAnalysis/ContentArea/Buttons/ParameterType.qml</file>
+        <file>../Imports/easyAnalysis/ContentArea/Buttons/PausePlay.qml</file>
+        <file>../Imports/easyAnalysis/DiffractionData/cecual_half-full.txt</file>
+        <file>../Imports/easyAnalysis/DiffractionData/cecual_quater-full.txt</file>
+        <file>../Imports/easyAnalysis/Elements/AppUrlArea.qml</file>
+        <file>../Imports/easyAnalysis/Elements/ChartView.qml</file>
+        <file>../Imports/easyAnalysis/Elements/DifferenceChartView.qml</file>
+        <file>../Imports/easyAnalysis/Elements/IntroWindow.qml</file>
+        <file>../Imports/easyAnalysis/Elements/LineSeries.qml</file>
+        <file>../Imports/easyAnalysis/Icons/App/App.rc</file>
+        <file>../Imports/easyAnalysis/Icons/Accept.svg</file>
+        <file>../Imports/easyAnalysis/Icons/Diamond.svg</file>
+        <file>../Imports/easyAnalysis/Icons/PausePlay.svg</file>
+        <file>../Imports/easyAnalysis/Icons/UploadExample.svg</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Analysis/Constraints.qml</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Analysis/Fitting.qml</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Analysis/qmldir</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Analysis/Simulation.qml</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Linking/JobsTable.qml</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Linking/qmldir</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Summary/Logbook.qml</file>
+        <file>../Imports/easyAnalysis/MainArea/Pages/Summary/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Constraints/Controls.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Constraints/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Constraints/Settings.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Fitting/Controls.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Fitting/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Fitting/Settings.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Simulation/Controls.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Simulation/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Simulation/Settings.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Constraints.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Fitting.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Analysis/Simulation.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Linking/JobsTable/Controls.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Linking/JobsTable/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Linking/JobsTable/Settings.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Linking/JobsTable.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Linking/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook/Controls.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook/qmldir</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook/Settings.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook.qml</file>
+        <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/qmldir</file>
     </qresource>
 </RCC>

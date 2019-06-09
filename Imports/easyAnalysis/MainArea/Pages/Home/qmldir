@@ -1,4 +1,4 @@
-module easyAnalysis.ContentArea.Pages.Home
+module easyAnalysis.MainArea.Pages.Home
 AppInfo 1.0 AppInfo.qml
 LeftColumn 1.0 LeftColumn.qml
 MiddleColumn 1.0 MiddleColumn.qml
