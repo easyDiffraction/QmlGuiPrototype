@@ -2,7 +2,7 @@ TEMPLATE = app
 TARGET = easyDiffraction
 ICON = Imports/easyAnalysis/Icons/App/App.icns
 
-QT += quick qml charts
+QT += quick svg charts
 CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use
