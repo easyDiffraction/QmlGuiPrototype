@@ -1,6 +1,6 @@
 pragma Singleton
 import QtQuick 2.12
-import QtCharts 2.12
+import QtCharts 2.3
 import easyAnalysis.Elements 1.0 as GenericElements
 
 QtObject {

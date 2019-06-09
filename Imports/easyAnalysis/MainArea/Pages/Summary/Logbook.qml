@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls 1.4 as Controls1
 import QtQuick.Layouts 1.12
-import QtCharts 2.12
+import QtCharts 2.3
 import easyAnalysis 1.0 as Generic
 import easyAnalysis.Elements 1.0 as GenericElements
 
