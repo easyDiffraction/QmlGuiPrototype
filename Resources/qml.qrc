@@ -206,5 +206,6 @@
         <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook/Settings.qml</file>
         <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/Logbook.qml</file>
         <file>../Imports/easyAnalysis/Sidebar/Pages/Summary/qmldir</file>
+        <file>../Qml/main_.qml</file>
     </qresource>
 </RCC>
