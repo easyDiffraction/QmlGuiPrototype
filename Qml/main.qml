@@ -1,6 +1,7 @@
-import QtQml 2.12
+//import QtQml 2.12
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Controls 1.4 as Controls1
 import QtQuick.Controls.impl 2.12
 import QtQuick.Layouts 1.12
 import Qt.labs.platform 1.0 as QtLabs
@@ -33,6 +34,7 @@ ApplicationWindow {
     property int appVersionFontSize: 16
     property int repeatFontSize: 14
     property int continueFontSize: 24
+
 
     Dialog {
         id: dialog
@@ -175,24 +177,7 @@ ApplicationWindow {
                     //animo.start()
                 }
             }
-            /*
-            Button {
-                id: continueButton
-                //anchors.horizontalCenter: parent.horizontalCenter
-                //anchors.bottom: parent.bottom
-                text: "Continue"
-                contentItem: IconLabel {
-                    text: continueButton.text
-                    font.family: Generic.Style.titleThinFontFamily
-                    font.pointSize: repeatFontSize
-                    color: "#666"
-                }
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked: dialog.close()
-            }
-            */
+
 
         }
 
@@ -249,6 +234,9 @@ ApplicationWindow {
 
 
 
+
+
+
     QtLabs.MenuBar {
 
         QtLabs.Menu {
@@ -288,6 +276,9 @@ ApplicationWindow {
             }
         }
     }
+
+
+
 
     /*
     Action {
