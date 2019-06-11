@@ -177,6 +177,24 @@ ApplicationWindow {
                     //animo.start()
                 }
             }
+            /*
+            Button {
+                id: skipButton
+                text: "Skip"
+                contentItem: IconLabel {
+                    text: skipButton.text
+                    font.family: Generic.Style.titleThinFontFamily
+                    font.pointSize: repeatFontSize
+                    color: "#666"
+                }
+                background: Rectangle {
+                    color: "transparent"
+                }
+                onClicked: {
+                    //animationDuration = 0
+                }
+            }
+            */
 
 
         }
@@ -262,7 +280,18 @@ ApplicationWindow {
                 text: qsTr("Show Application Intro")
                 checkable: true
                 checked: Generic.Variables.showIntro
-                onTriggered: Generic.Variables.showIntro = checked
+                onTriggered: {
+                    Generic.Variables.showIntro = checked
+                    if (checked) {
+                        //dialog.close()
+                        // reset!
+                        //dialog.open()
+                        //animo.restart()
+                        //if (Generic.Variables.toolbarCurrentIndex !== Generic.Variables.HomeIndex) {
+                        //    Generic.Variables.toolbarCurrentIndex = Generic.Variables.HomeIndex
+                        //}
+                    }
+                }
             }
             QtLabs.MenuItem {
                 text: qsTr("&Show User Guides")

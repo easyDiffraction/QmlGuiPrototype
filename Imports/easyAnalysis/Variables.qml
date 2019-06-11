@@ -40,8 +40,8 @@ QtObject {
     property LineSeries yPreCalcSeries: LineSeries {useOpenGL: true}
 
     // Main
-    property bool showIntro: false//true
-    property bool showGuide: false//true
+    property bool showIntro: true
+    property bool showGuide: true
 
     // Intro page
     property int introAnimationDuration: 1000
