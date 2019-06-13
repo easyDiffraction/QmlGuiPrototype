@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.impl 2.12
 import QtQuick.Layouts 1.12
+import Qt.labs.settings 1.0
 import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.Toolbar 1.0 as GenericAppToolbar
 import easyDiffraction 1.0 as Specific
@@ -19,6 +20,8 @@ Dialog {
     width: parent.width
     height: parent.height
     background: Rectangle { color: "white" }
+
+    Component.onCompleted: animo.restart()
 
     Column {
         anchors.centerIn: parent
@@ -158,7 +161,7 @@ Dialog {
 
     SequentialAnimation {
         id: animo
-        running: true
+        //running: true
         PauseAnimation {
             //duration: 2*animationDuration
         }
