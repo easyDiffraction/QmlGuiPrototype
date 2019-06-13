@@ -4,7 +4,7 @@ import QtQuick 2.12
 QtObject {
 
     // Application
-    readonly property int appWindowWidth: 1400
+    readonly property int appWindowWidth: 1280
     readonly property int appWindowHeight: 760//800
     readonly property int appBorderThickness: 1
     readonly property color appBkgColor: "#f5f5f5"
