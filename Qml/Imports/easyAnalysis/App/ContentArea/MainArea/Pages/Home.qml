@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.12
 import easyAnalysis.App.ContentArea.MainArea.Pages.Home 1.0 as GenericHomePage
 
 Item {
+    id: container
 
     ColumnLayout {
         anchors.fill: parent
@@ -18,7 +19,7 @@ Item {
 
             GenericHomePage.LeftColumn {}
             GenericHomePage.MiddleColumn {}
-            GenericHomePage.RightColumn {}
+            GenericHomePage.RightColumn { dialogParent: container }
         }
 
         Item { Layout.fillHeight: true }

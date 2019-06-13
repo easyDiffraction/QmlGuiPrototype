@@ -8,6 +8,8 @@ import easyAnalysis.App.Elements 1.0 as GenericAppElements
 import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 ColumnLayout {
+    property alias dialogParent: settingsDialog.parent
+
     //Layout.fillWidth: true
     Layout.preferredWidth: 1
     Layout.alignment: Qt.AlignTop
@@ -37,6 +39,8 @@ ColumnLayout {
     Dialog {
         id: settingsDialog
         title: "Application settings"
+
+        anchors.centerIn: parent
 
         modal: true
         background: Rectangle { color: "white" }
