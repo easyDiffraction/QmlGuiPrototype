@@ -55,10 +55,10 @@ Dialog {
             anchors.horizontalCenter: parent.horizontalCenter
             height: diffraction.height
             width: making.width + diffraction.width + dam.width + easy.width
-            Text { id: making;      text: "Making ";                        opacity: 0; x: 0; font.family: Generic.Style.introCondensedFontFamily; font.weight: Font.ExtraLight; font.pointSize: appNameFontSize; color: "#444" }
-            Text { id: diffraction; text: "diffraction";                    opacity: 0; x: making.width; font.family: Generic.Style.introCondensedFontFamily; font.pointSize: appNameFontSize; color: "#666" }
-            Text { id: dam;         text: " data analysis and modelling ";  opacity: 0; x: making.width + diffraction.width; font.family: Generic.Style.introCondensedFontFamily; font.weight: Font.Thin; font.pointSize: appNameFontSize; color: "#444" }
-            Text { id: easy;        text: "easy";                           opacity: 0; x: making.width + diffraction.width + dam.width; font.family: Generic.Style.introCondensedFontFamily; font.pointSize: appNameFontSize; color: "#666" }
+            Text { id: making;      text: "Making ";                        opacity: 0; x: 0; font.family: Generic.Style.introFontFamily; font.weight: Font.ExtraLight; font.pointSize: appNameFontSize; color: "#444" }
+            Text { id: diffraction; text: "diffraction";                    opacity: 0; x: making.width; font.family: Generic.Style.introFontFamily; font.pointSize: appNameFontSize; color: "#666" }
+            Text { id: dam;         text: " data analysis and modelling ";  opacity: 0; x: making.width + diffraction.width; font.family: Generic.Style.introFontFamily; font.weight: Font.ExtraLight; font.pointSize: appNameFontSize; color: "#444" }
+            Text { id: easy;        text: "easy";                           opacity: 0; x: making.width + diffraction.width + dam.width; font.family: Generic.Style.introFontFamily; font.pointSize: appNameFontSize; color: "#666" }
         }
 
         // Application version
@@ -117,7 +117,7 @@ Dialog {
             text: "Repeat"
             contentItem: IconLabel {
                 text: repeatButton.text
-                font.family: Generic.Style.introCondensedFontFamily
+                font.family: Generic.Style.introFontFamily
                 font.pointSize: repeatFontSize
                 color: "#666"
             }
@@ -142,6 +142,7 @@ Dialog {
         diffraction.color = "#666"
 
         easy.font.weight = Font.Normal
+        //easy.font.family = Generic.Style.introFontFamily
         diffraction.text = "diffraction"
 
         making.x = 0
@@ -185,7 +186,8 @@ Dialog {
         }
         ParallelAnimation {
             // font change
-            PropertyAnimation { target: easy; property: "font.weight"; to:    Font.ExtraLight; duration: animationDuration*0.1 }
+            PropertyAnimation { target: easy; property: "font.weight"; to: Font.ExtraLight; duration: animationDuration*0.1 }
+            //PropertyAnimation { target: easy; property: "font.family"; to: Generic.Style.introFontFamily; duration: animationDuration*0.1 }
             // text change
             PropertyAnimation { target: diffraction; property: "text"; to: "Diffraction"; duration: animationDuration*0.1 }
             // mooving
