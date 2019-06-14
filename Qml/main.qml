@@ -23,6 +23,9 @@ ApplicationWindow {
     x: (Screen.width - width) / 2
     y: (Screen.height - height) / 2
 
+    font.family: Generic.Style.fontFamily
+    font.pointSize: Generic.Style.fontPointSize
+
     // Persistent application settings
     //Settings {
         //property alias x: window.x

@@ -82,19 +82,26 @@ QtObject {
     readonly property string dummyIconPath: "dummy.svg"
 
     // Fonts
-    //readonly property string introCondensedFontFamily: encodeSansCondensedRegular.name
-    //property FontLoader encodeSansCondensedExtraLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansCondensed-ExtraLight.ttf" }
-    //property FontLoader encodeSansCondensedRegular: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansCondensed-Regular.ttf" }
     readonly property string introCondencedThinFontFamily: encodeSansCondensedExtraLight.name
     readonly property string introCondencedRegularFontFamily: encodeSansCondensedRegular.name
+    readonly property string introThinFontFamily: encodeSansExtraLight.name
     readonly property string introExpandedThinFontFamily: encodeSansExpandedExtraLight.name
+    readonly property string fontFamily: ptSansWebRegular.name
+    readonly property string monoFontFamily: ptMono.name
     property FontLoader encodeSansCondensedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-ExtraLight.ttf" }
     property FontLoader encodeSansCondensedRegular: FontLoader { source: "Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Regular.ttf" }
+    property FontLoader encodeSansExtraLight: FontLoader { source: "Resources/Fonts/EncodeSans/EncodeSans-ExtraLight.ttf" }
     property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraLight.ttf" }
+    property FontLoader robotoRegular: FontLoader { source: "Resources/Fonts/Roboto/Roboto-Regular.ttf" }
+    property FontLoader robotoBold: FontLoader { source: "Resources/Fonts/Roboto/Roboto-Bold.ttf" } // font.bold: true
+    property FontLoader ptSansWebRegular: FontLoader { source: "Resources/Fonts/PtSans/PT_Sans-Web-Regular.ttf" }
+    property FontLoader ptSansWebBold: FontLoader { source: "Resources/Fonts/PtSans/PT_Sans-Web-Bold.ttf" } // font.bold: true
+    property FontLoader ptMono: FontLoader { source: "Resources/Fonts/PtMono/PTM55FT.ttf" }
 
     // Text
     readonly property string systemFontFamily: text.font.family
     readonly property int systemFontPointSize: text.font.pointSize
+    readonly property int fontPointSize: systemFontPointSize + 1
     property Text text: Text {}
 
 }

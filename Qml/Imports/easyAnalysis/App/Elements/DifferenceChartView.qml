@@ -20,6 +20,8 @@ Column {
         antialiasing: true // conflicts with useOpenGL: true in ScatterSeries
         //smooth: true
 
+        titleFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
+
         ValueAxis {
             id: axisX
             min: 15000
@@ -31,6 +33,8 @@ Column {
             //tickCount: 5
             labelFormat: "%.0f"
             titleText: "TOF"
+            labelsFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
+            titleFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
         }
 
         ValueAxis {
@@ -43,6 +47,8 @@ Column {
             //tickInterval: 1e+2
             labelFormat: "%.0e"
             titleText: "Yobs"
+            labelsFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
+            titleFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
         }
 
         AreaSeries {

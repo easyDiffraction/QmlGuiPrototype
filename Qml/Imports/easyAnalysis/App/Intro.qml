@@ -22,8 +22,8 @@ Dialog {
 
     Component.onCompleted: {
         animo.restart()
-        console.log("systemFontPointSize: ", Generic.Style.systemFontPointSize)
-        console.log("systemFontPointSize: ", Generic.Style.systemFontFamily)
+        //console.log("systemFontPointSize: ", Generic.Style.systemFontPointSize)
+        //console.log("systemFontPointSize: ", Generic.Style.systemFontFamily)
     }
 
     Column {
@@ -87,6 +87,7 @@ Dialog {
                 width: 0
                 font.pointSize: repeatFontSize
                 font.bold: true
+                //font.family: Generic.Style.fontFamily
                 text: ""
                 ToolTip.text: "Simulation of diffraction data"
                 onClicked: checked = true
@@ -99,6 +100,7 @@ Dialog {
                 width: 0
                 font.pointSize: repeatFontSize
                 font.bold: true
+                //font.family: Generic.Style.fontFamily
                 text: ""
                 ToolTip.text: "Fitting of diffraction data"
                 onClicked: {
@@ -117,7 +119,7 @@ Dialog {
             text: "Repeat"
             contentItem: IconLabel {
                 text: repeatButton.text
-                font.family: Generic.Style.introCondencedRegularFontFamily
+                font.family: Generic.Style.introThinFontFamily
                 font.pointSize: repeatFontSize
                 color: "#666"
             }

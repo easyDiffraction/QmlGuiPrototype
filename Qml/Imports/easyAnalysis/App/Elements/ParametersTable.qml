@@ -80,6 +80,8 @@ Controls1.TableView {
             Text {
                 Layout.fillWidth: true
                 horizontalAlignment: styleData.textAlignment
+                font.family: Generic.Style.fontFamily
+                font.pointSize: Generic.Style.fontPointSize
                 //font.pointSize: Generic.Style.tableFontPointSize
                 text: textSelector()
                 function textSelector() {
@@ -131,7 +133,6 @@ Controls1.TableView {
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
             }
 
-
             // Icon
             Image {
                 id: icon
@@ -158,6 +159,8 @@ Controls1.TableView {
             // TextEdit
             TextEdit {
                 Layout.fillWidth: true
+                font.family: Generic.Style.fontFamily
+                font.pointSize: Generic.Style.fontPointSize
                 //font.pointSize: Generic.Style.tableFontPointSize
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
                 enabled: styleData.role === "num" || styleData.value[0] === "&" ? false : true
