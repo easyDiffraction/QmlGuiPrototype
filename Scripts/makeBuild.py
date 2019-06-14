@@ -7,7 +7,7 @@ from functions import *
 from variables import *
 
 # Get script arguments
-branch = sys.argv[1] if len(sys.argv) > 1 else ''
+branch = sys.argv[1] if len(sys.argv) > 1 else 'windows_mingw'
 
 # Re-create release folder
 RecreateDir(RELEASE_DIR)
@@ -24,7 +24,7 @@ if Os() == 'mac':
     compiler = 'make'# -j' # -j$(nproc)
 elif Os() == 'win':
     if branch == 'windows_mingw':
-        spec = '-spec win32-g++ "CONFIG+=x86"'
+        spec = '-spec win32-g++ "CONFIG+=qtquickcompiler"'
         compiler = 'mingw32-make'# -j' # -j%NUMBER_OF_PROCESSORS%
     elif branch == 'windows_msvc':
         spec = '-spec win32-msvc "CONFIG+=x64"'
