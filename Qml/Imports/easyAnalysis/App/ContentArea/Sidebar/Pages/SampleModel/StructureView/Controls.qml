@@ -45,7 +45,7 @@ ColumnLayout {
                     message: "Click here to add or import a new phase."
                     toY: (addButton.y + addButton.height + importButton.y) / 2
 
-                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.SampleModelIndex ? true : false
+                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.SampleModelIndex ? true : false
 
                     GenericAppContentAreaButtons.Add { id: addButtonClone }
                     GenericAppContentAreaButtons.Import { id: importButtonClone }

@@ -94,7 +94,7 @@ ColumnLayout {
                     message: "Click here to start or stop fitting."
                     toY: pausePlayButton.y + pausePlayButton.height / 2
 
-                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.AnalysisIndex ? true : false
+                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.AnalysisIndex ? true : false
 
                     GenericAppContentAreaButtons.Add { id: pausePlayButtonClone }
                     Component.onCompleted: {

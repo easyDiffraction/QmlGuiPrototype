@@ -83,7 +83,7 @@ ColumnLayout {
         message: "Click here to open an example project."
         toY: openExampleButton.y + openExampleButton.height/2
 
-        visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.HomeIndex ? true : false
+        visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.HomeIndex ? true : false
 
         GenericAppContentArea.Button {
             id: openExampleButtonClone

@@ -30,7 +30,7 @@ ColumnLayout {
                     message: "Click here to add a new job."
                     toY: addButton.y + addButton.height / 2
 
-                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.LinkingIndex ? true : false
+                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.LinkingIndex ? true : false
 
                     GenericAppContentAreaButtons.Add { id: addButtonClone }
                     Component.onCompleted: {

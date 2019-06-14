@@ -78,7 +78,7 @@ ApplicationWindow {
 
         // Load persistent settings
         console.log("---- load Generic.Variables.showIntro", Generic.Variables.showIntro)
-        Generic.Variables.showIntro = settings.value("showIntro", Generic.Variables.showIntro)
+        Generic.Variables.showIntro = Boolean(settings.value("showIntro", Generic.Variables.showIntro))
         Generic.Variables.showGuide = settings.value("showGuide", Generic.Variables.showGuide)
         Generic.Variables.appWindowWidth = settings.value("appWindowWidth", Generic.Variables.appWindowWidth)
         Generic.Variables.appWindowHeight = settings.value("appWindowHeight", Generic.Variables.appWindowHeight)
@@ -90,7 +90,7 @@ ApplicationWindow {
     Component.onDestruction: {
         // Save persistent settings
         settings.setValue("showIntro", Generic.Variables.showIntro)
-        settings.setValue("showGuide", Generic.Variables.showGuide)
+        settings.setValue("showGuide", Generic.Variables.showGuideCheckBoxChecked)
         settings.setValue("appWindowWidth", window.width)
         settings.setValue("appWindowHeight", window.height)
         settings.setValue("appWindowX", window.x)
