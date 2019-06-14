@@ -82,19 +82,23 @@ QtObject {
     readonly property string dummyIconPath: "dummy.svg"
 
     // Fonts
-    property FontLoader titleThinFontLoader: FontLoader {
-        id: titleThinFontLoader
-        source: "Resources/Fonts/encode-sans/EncodeSansSemiCondensed-ExtraLight.ttf"
-    }
-    readonly property alias titleThinFontFamily: titleThinFontLoader.name
-    property FontLoader titleThickFontLoader: FontLoader {
-        id: titleThickFontLoader
-        source: "Resources/Fonts/encode-sans/EncodeSansSemiCondensed-Regular.ttf"
-    }
-    readonly property alias titleThickFontFamily: titleThickFontLoader.name
-    property FontLoader versionFontLoader: FontLoader {
-        id: versionFontLoader
-        source: "Resources/Fonts/encode-sans/EncodeSansExpanded-ExtraLight.ttf"
-    }
-    readonly property alias versionFontFamily: versionFontLoader.name
+    readonly property string introExpandedFontFamily: encodeSansExpandedRegular.name
+    property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/encodesansexpanded/EncodeSansExpanded-ExtraLight.ttf" }
+    property FontLoader encodeSansExpandedRegular: FontLoader { source: "Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Regular.ttf" }
+    readonly property string introCondensedFontFamily: encodeSansSemiCondensedRegular.name
+    //property FontLoader encodeSansSemiCondensedThin: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Thin.ttf" }
+    property FontLoader encodeSansSemiCondensedExtraLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraLight.ttf" }
+    //property FontLoader encodeSansSemiCondensedLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Light.ttf" }
+    property FontLoader encodeSansSemiCondensedRegular: FontLoader { id: encodeSansSemiCondensedRegular; source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Regular.ttf" }
+    //property FontLoader encodeSansSemiCondensedMedium: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Medium.ttf" }
+    //property FontLoader encodeSansSemiCondensedSemiBold: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-SemiBold.ttf" }
+    //property FontLoader encodeSansSemiCondensedBold: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Bold.ttf" }
+    //property FontLoader encodeSansSemiCondensedExtraBold: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraBold.ttf" }
+    //property FontLoader encodeSansSemiCondensedBlack: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Black.ttf" }
+
+    // Text
+    readonly property int systemFontPointSize: text.font.pointSize
+    property Text text: Text {}
+
 }
+
