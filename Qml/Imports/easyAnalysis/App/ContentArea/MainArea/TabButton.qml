@@ -6,7 +6,7 @@ import easyAnalysis.App.Elements 1.0 as GenericAppElements
 import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.TabButton {
-    property int tabbarWidth: Generic.Style.mainAreaWidth
+    property int tabbarWidth: Generic.Variables.mainAreaWidth
     width: tabbarWidth / 4 - 1
 
     // Vertical border on the left

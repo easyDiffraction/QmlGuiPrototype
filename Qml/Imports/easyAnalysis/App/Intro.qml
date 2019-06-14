@@ -85,9 +85,7 @@ Dialog {
                 checked: true
                 autoExclusive: false
                 width: 0
-                font.pointSize: repeatFontSize
                 font.bold: true
-                //font.family: Generic.Style.fontFamily
                 text: ""
                 ToolTip.text: "Simulation of diffraction data"
                 onClicked: checked = true
@@ -98,9 +96,7 @@ Dialog {
                 checked: true
                 autoExclusive: false
                 width: 0
-                font.pointSize: repeatFontSize
                 font.bold: true
-                //font.family: Generic.Style.fontFamily
                 text: ""
                 ToolTip.text: "Fitting of diffraction data"
                 onClicked: {

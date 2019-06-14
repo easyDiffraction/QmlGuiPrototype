@@ -18,21 +18,13 @@ ApplicationWindow {
     color: Generic.Style.appBkgColor
     title: Specific.Settings.appName
 
-    minimumWidth: Generic.Style.appWindowWidth
-    minimumHeight: Generic.Style.appWindowHeight
-    x: (Screen.width - width) / 2
-    y: (Screen.height - height) / 2
+    minimumWidth: Generic.Variables.appWindowWidth
+    minimumHeight: Generic.Variables.appWindowHeight
+    x: Generic.Variables.appWindowX
+    y: Generic.Variables.appWindowY
 
     font.family: Generic.Style.fontFamily
     font.pointSize: Generic.Style.fontPointSize
-
-    // Persistent application settings
-    //Settings {
-        //property alias x: window.x
-        //property alias y: window.y
-        //property alias width: window.width
-        //property alias height: window.height
-    //}
 
     // Introduction animation
     GenericApp.Intro {}
@@ -61,7 +53,13 @@ ApplicationWindow {
     }
 
     // Persistent settings
-    Settings { id: settings }
+    Settings {
+        id: settings
+        property alias x: window.x
+        property alias y: window.y
+        property alias width: window.width
+        property alias height: window.height
+    }
 
     // On completed
     Component.onCompleted: {
@@ -75,9 +73,16 @@ ApplicationWindow {
         Generic.Variables.yCalc = GenericLogic.Parse.getColumn(xhr.responseText, 3, 1)
         Generic.Variables.yPreCalc = GenericLogic.Parse.getColumn(xhr.responseText, 4, 1)
 
+        // Define some parameters
+        Generic.Variables.mainAreaWidth = Generic.Variables.appWindowWidth - Generic.Style.appBorderThickness - Generic.Style.sidebarWidth
+
         // Load persistent settings
         Generic.Variables.showIntro = settings.value("showIntro", Generic.Variables.showIntro)
         Generic.Variables.showGuide = settings.value("showGuide", Generic.Variables.showGuide)
+        Generic.Variables.appWindowWidth = settings.value("appWindowWidth", Generic.Variables.appWindowWidth)
+        Generic.Variables.appWindowHeight = settings.value("appWindowHeight", Generic.Variables.appWindowHeight)
+        Generic.Variables.appWindowX = settings.value("appWindowX", (Screen.width - Generic.Variables.appWindowWidth) / 2)
+        Generic.Variables.appWindowY = settings.value("appWindowY", (Screen.height - Generic.Variables.appWindowHeight) / 2)
     }
 
     // On destruction
@@ -85,8 +90,11 @@ ApplicationWindow {
         // Save persistent settings
         settings.setValue("showIntro", Generic.Variables.showIntro)
         settings.setValue("showGuide", Generic.Variables.showGuide)
+        settings.setValue("appWindowWidth", window.width)
+        settings.setValue("appWindowHeight", window.height)
+        settings.setValue("appWindowX", window.x)
+        settings.setValue("appWindowY", window.y)
     }
-
 }
 
 

@@ -9,7 +9,7 @@ import easyAnalysis.App.ContentArea.Buttons 1.0 as GenericAppContentAreaButtons
 import easyAnalysis.Logic 1.0 as GenericLogic
 
 Rectangle {
-    width: Generic.Style.mainAreaWidth // fix
+    width: Generic.Variables.mainAreaWidth // fix
     color: "white"
 
     GenericAppElements.ParametersTable {

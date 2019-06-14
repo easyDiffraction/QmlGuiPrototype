@@ -1,15 +1,18 @@
 pragma Singleton
 import QtQuick 2.12
+import QtQuick.Window 2.12
 //import Qt.labs.settings 1.1
 
 QtObject {
 
-    // Load persistent settings
-    //Settings { id: settings }
-
     // Main
-    property bool showIntro: false//settings.value("showIntro", true)
-    property bool showGuide: false//settings.value("showGuide", true)
+    property bool showIntro: false
+    property bool showGuide: false
+    property int appWindowWidth: 1280
+    property int appWindowHeight: 760
+    property int appWindowX: 0
+    property int appWindowY: 0
+    property int mainAreaWidth: appWindowWidth
 
     // Intro page
     property int introAnimationDuration: 1000

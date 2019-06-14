@@ -18,9 +18,9 @@ Rectangle {
         customFrameVisible: false
         anchors.fill: parent
         model: listModel
-        Controls1.TableViewColumn { role:"x";  title:"TOF";   resizable: false; width: Generic.Style.mainAreaWidth / 4 - 1 }
-        Controls1.TableViewColumn { role:"y";  title:"Yobs";  resizable: false; width: Generic.Style.mainAreaWidth / 4 - 1 }
-        Controls1.TableViewColumn { role:"sy"; title:"sYobs"; resizable: false; width: Generic.Style.mainAreaWidth / 4 - 1 }
+        Controls1.TableViewColumn { role:"x";  title:"TOF";   resizable: false; width: Generic.Variables.mainAreaWidth / 4 - 1 }
+        Controls1.TableViewColumn { role:"y";  title:"Yobs";  resizable: false; width: Generic.Variables.mainAreaWidth / 4 - 1 }
+        Controls1.TableViewColumn { role:"sy"; title:"sYobs"; resizable: false; width: Generic.Variables.mainAreaWidth / 4 - 1 }
         Controls1.TableViewColumn { }
     }
 
