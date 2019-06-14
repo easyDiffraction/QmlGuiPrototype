@@ -82,14 +82,14 @@ QtObject {
     readonly property string dummyIconPath: "dummy.svg"
 
     // Fonts
-    //readonly property string introCondensedFontFamily: encodeSansSemiCondensedRegular.name
-    //property FontLoader encodeSansSemiCondensedExtraLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraLight.ttf" }
-    //property FontLoader encodeSansSemiCondensedRegular: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Regular.ttf" }
-    readonly property string introCondencedThinFontFamily: encodeSansSemiCondensedExtraLight.name
-    readonly property string introCondencedRegularFontFamily: encodeSansSemiCondensedRegular.name
+    //readonly property string introCondensedFontFamily: encodeSansCondensedRegular.name
+    //property FontLoader encodeSansCondensedExtraLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansCondensed-ExtraLight.ttf" }
+    //property FontLoader encodeSansCondensedRegular: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansCondensed-Regular.ttf" }
+    readonly property string introCondencedThinFontFamily: encodeSansCondensedExtraLight.name
+    readonly property string introCondencedRegularFontFamily: encodeSansCondensedRegular.name
     readonly property string introExpandedThinFontFamily: encodeSansExpandedExtraLight.name
-    property FontLoader encodeSansSemiCondensedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-ExtraLight.ttf" }
-    property FontLoader encodeSansSemiCondensedRegular: FontLoader { source: "Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Regular.ttf" }
+    property FontLoader encodeSansCondensedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-ExtraLight.ttf" }
+    property FontLoader encodeSansCondensedRegular: FontLoader { source: "Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Regular.ttf" }
     property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraLight.ttf" }
 
     // Text
