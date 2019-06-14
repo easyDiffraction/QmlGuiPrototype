@@ -46,7 +46,7 @@ ColumnLayout {
                     message: "Click here to add or import a new instrument."
                     toY: (addButton.y + addButton.height + importButton.y) / 2
 
-                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.InstrumentModelIndex ? true : false
+                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.InstrumentModelIndex ? true : false
 
                     GenericAppContentAreaButtons.Add { id: addButtonClone }
                     GenericAppContentAreaButtons.Import { id: importButtonClone }

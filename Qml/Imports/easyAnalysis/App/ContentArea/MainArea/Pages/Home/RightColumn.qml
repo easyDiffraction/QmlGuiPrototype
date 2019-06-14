@@ -65,7 +65,7 @@ ColumnLayout {
             GenericAppElements.CheckBox {
                 text: qsTr("Show User Guides")
                 checked: Generic.Variables.showGuide
-                onCheckStateChanged: Generic.Variables.showGuideCheckBoxChecked = checked
+                onCheckStateChanged: Generic.Variables.showGuide = checked
             }
         }
     }

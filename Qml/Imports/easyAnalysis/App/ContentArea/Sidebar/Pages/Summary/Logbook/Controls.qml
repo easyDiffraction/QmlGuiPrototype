@@ -41,7 +41,7 @@ ColumnLayout {
                     message: "Click here to export a logbook."
                     toY: exportButton.y + exportButton.height / 2
 
-                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.SummaryIndex ? true : false
+                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.SummaryIndex ? true : false
 
                     GenericAppContentAreaButtons.Add { id: exportButtonClone }
                     Component.onCompleted: {

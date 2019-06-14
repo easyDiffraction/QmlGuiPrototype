@@ -8,7 +8,6 @@ QtObject {
     // Main
     property bool showIntro: false
     property bool showGuide: false
-    property bool showGuideCheckBoxChecked: false
     property int appWindowWidth: 1280
     property int appWindowHeight: 760
     property int appWindowX: 0

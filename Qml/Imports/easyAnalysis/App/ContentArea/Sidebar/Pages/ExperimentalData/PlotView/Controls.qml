@@ -52,7 +52,7 @@ ColumnLayout {
                     message: "Click here to add or import new data."
                     toY: (importButton.y + importButton.height + cloudButton.y) / 2
 
-                    visible: Generic.Variables.showGuideCheckBoxChecked && Generic.Variables.toolbarCurrentIndex === Generic.Variables.ExperimentalDataIndex ? true : false
+                    visible: Generic.Variables.showGuide && Generic.Variables.toolbarCurrentIndex === Generic.Variables.ExperimentalDataIndex ? true : false
 
                     GenericAppContentAreaButtons.Import { id: importButtonClone }
                     GenericAppContentAreaButtons.Cloud { id: cloudButtonClone }
