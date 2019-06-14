@@ -211,7 +211,6 @@
         <file>Qml/dummy.svg</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesans/EncodeSans-ExtraLight.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesans/EncodeSans-Regular.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/DESCRIPTION.en_us.html</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Black.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Bold.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-ExtraBold.ttf</file>
@@ -221,11 +220,8 @@
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Regular.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-SemiBold.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Thin.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/FONTLOG.txt</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/METADATA.pb</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/OFL.txt</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/readme.txt</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/DESCRIPTION.en_us.html</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Black.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Bold.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraBold.ttf</file>
@@ -235,10 +231,132 @@
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Regular.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-SemiBold.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Thin.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/FONTLOG.txt</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/METADATA.pb</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/OFL.txt</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/readme.txt</file>
         <file>Qml/Imports/easyAnalysis/Resources/Icons/Settings.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/EncodeSans-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSans/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansCondensed/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansExpanded/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/DESCRIPTION.en_us.html</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/EncodeSansExpanded-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/FONTLOG.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/METADATA.pb</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded_/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiCondensed/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/DESCRIPTION.en_us.html</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/EncodeSansSemiCondensed-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/FONTLOG.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/METADATA.pb</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed_/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/EncodeSansSemiExpanded-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/EncodeSansSemiExpanded/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/LICENSE.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-BoldItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-Italic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-LightItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/OpenSans-SemiBoldItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSans/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSansCondensed/LICENSE.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSansCondensed/OpenSansCondensed-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSansCondensed/OpenSansCondensed-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSansCondensed/OpenSansCondensed-LightItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/OpenSansCondensed/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtMono/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtMono/PTM55FT.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtMono/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-BoldItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-Italic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/LICENSE.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-BlackItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-BoldItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Italic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-LightItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-MediumItalic.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Roboto/Roboto-ThinItalic.ttf</file>
     </qresource>
 </RCC>
