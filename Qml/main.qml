@@ -77,7 +77,6 @@ ApplicationWindow {
         Generic.Variables.mainAreaWidth = Generic.Variables.appWindowWidth - Generic.Style.appBorderThickness - Generic.Style.sidebarWidth
 
         // Load persistent settings
-        console.log("---- load Generic.Variables.showIntro", Generic.Variables.showIntro)
         Generic.Variables.showIntro = settings.value("showIntro", Generic.Variables.showIntro)
         Generic.Variables.showGuide = settings.value("showGuide", Generic.Variables.showGuide)
         Generic.Variables.appWindowWidth = settings.value("appWindowWidth", Generic.Variables.appWindowWidth)
@@ -95,7 +94,6 @@ ApplicationWindow {
         settings.setValue("appWindowHeight", window.height)
         settings.setValue("appWindowX", window.x)
         settings.setValue("appWindowY", window.y)
-        console.log("---- save Generic.Variables.showIntro", Generic.Variables.showIntro)
     }
 }
 

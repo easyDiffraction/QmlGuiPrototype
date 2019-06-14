@@ -54,12 +54,7 @@ ColumnLayout {
             GenericAppElements.CheckBox {
                 text: qsTr("Show Animated Intro")
                 checked: Generic.Variables.showIntro
-
-                onCheckedChanged: {
-                    console.log("---- onCheckStateChanged before Generic.Variables.showIntro", Generic.Variables.showIntro)
-                    Generic.Variables.showIntro = checked
-                    console.log("---- onCheckStateChanged after Generic.Variables.showIntro", Generic.Variables.showIntro)
-                }
+                onCheckedChanged: Generic.Variables.showIntro = checked
             }
 
             GenericAppElements.CheckBox {
