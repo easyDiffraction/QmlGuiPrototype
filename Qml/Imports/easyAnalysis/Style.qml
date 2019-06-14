@@ -90,8 +90,6 @@ QtObject {
     property FontLoader encodeSansCondensedRegular: FontLoader { source: "Resources/Fonts/EncodeSansCondensed/EncodeSansCondensed-Regular.ttf" }
     property FontLoader encodeSansExtraLight: FontLoader { source: "Resources/Fonts/EncodeSans/EncodeSans-ExtraLight.ttf" }
     property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraLight.ttf" }
-    property FontLoader robotoRegular: FontLoader { source: "Resources/Fonts/Roboto/Roboto-Regular.ttf" }
-    property FontLoader robotoBold: FontLoader { source: "Resources/Fonts/Roboto/Roboto-Bold.ttf" } // font.bold: true
     property FontLoader ptSansWebRegular: FontLoader { source: "Resources/Fonts/PtSans/PT_Sans-Web-Regular.ttf" }
     property FontLoader ptSansWebBold: FontLoader { source: "Resources/Fonts/PtSans/PT_Sans-Web-Bold.ttf" } // font.bold: true
     property FontLoader ptMono: FontLoader { source: "Resources/Fonts/PtMono/PTM55FT.ttf" }
