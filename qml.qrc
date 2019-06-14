@@ -185,11 +185,6 @@
         <file>Qml/Imports/easyAnalysis/App/Intro.qml</file>
         <file>Qml/Imports/easyAnalysis/App/qmldir</file>
         <file>Qml/Imports/easyAnalysis/Logic/Misc.js</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encode-sans/EncodeSansExpanded-ExtraLight.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encode-sans/EncodeSansSemiCondensed-ExtraLight.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encode-sans/EncodeSansSemiCondensed-Light.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encode-sans/EncodeSansSemiCondensed-Regular.ttf</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encode-sans/SIL Open Font License.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual.cif</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual.dat</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual.out</file>
@@ -214,5 +209,36 @@
         <file>Qml/Imports/easyDiffraction/Resources/Images/Instruments/dream.png</file>
         <file>Qml/Imports/easyDiffraction/Variables.qml</file>
         <file>Qml/dummy.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesans/EncodeSans-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesans/EncodeSans-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/DESCRIPTION.en_us.html</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/FONTLOG.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/METADATA.pb</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesansexpanded/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/DESCRIPTION.en_us.html</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Black.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Bold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraLight.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Light.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Medium.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Regular.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-SemiBold.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Thin.ttf</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/FONTLOG.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/METADATA.pb</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/OFL.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/encodesanssemicondensed/readme.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Icons/Settings.svg</file>
     </qresource>
 </RCC>
