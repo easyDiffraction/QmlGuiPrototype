@@ -8,8 +8,8 @@ QtObject {
     //Settings { id: settings }
 
     // Main
-    property bool showIntro: true//settings.value("showIntro", true)
-    property bool showGuide: true//settings.value("showGuide", true)
+    property bool showIntro: false//settings.value("showIntro", true)
+    property bool showGuide: false//settings.value("showGuide", true)
 
     // Intro page
     property int introAnimationDuration: 1000

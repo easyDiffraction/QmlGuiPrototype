@@ -2,13 +2,11 @@ import QtQuick 2.12
 import QtQuick.Controls 1.4 as Controls1
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import easyAnalysis 1.0 as Generic
+import QtGraphicalEffects 1.12
 import QtQuick.Controls.impl 2.12
+import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.Elements 1.0 as GenericAppElements
 import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
-
-import QtGraphicalEffects 1.12
-
 
 Controls1.TableView {
     property bool customFrameVisible: true
@@ -20,6 +18,9 @@ Controls1.TableView {
     clip: true
     Layout.fillWidth: true
     implicitHeight: (visibleRowsCount + 1) * Generic.Style.tableRowHeight + Generic.Style.appBorderThickness // add 1 row for header
+
+    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+    verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
     // Custom frame
     frameVisible: false
@@ -79,7 +80,7 @@ Controls1.TableView {
             Text {
                 Layout.fillWidth: true
                 horizontalAlignment: styleData.textAlignment
-                font.pointSize: Generic.Style.tableFontPointSize
+                //font.pointSize: Generic.Style.tableFontPointSize
                 text: textSelector()
                 function textSelector() {
                     if (styleData.value === "Remove") return ""
@@ -157,7 +158,7 @@ Controls1.TableView {
             // TextEdit
             TextEdit {
                 Layout.fillWidth: true
-                font.pointSize: Generic.Style.tableFontPointSize
+                //font.pointSize: Generic.Style.tableFontPointSize
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
                 enabled: styleData.role === "num" || styleData.value[0] === "&" ? false : true
                 color: textColor()
