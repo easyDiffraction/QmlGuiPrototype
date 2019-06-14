@@ -20,14 +20,14 @@ pro_file = '{}'.format(pjoin(PROJECT_FILE))
 
 # Os spceific vars
 if Os() == 'mac':
-    spec = '-spec macx-clang "CONFIG+=x86_64"'
+    spec = '-spec macx-clang "CONFIG+=x86_64" "CONFIG+=qtquickcompiler"'
     compiler = 'make'# -j' # -j$(nproc)
 elif Os() == 'win':
     if branch == 'windows_mingw':
         spec = '-spec win32-g++ "CONFIG+=qtquickcompiler"'
         compiler = 'mingw32-make'# -j' # -j%NUMBER_OF_PROCESSORS%
     elif branch == 'windows_msvc':
-        spec = '-spec win32-msvc "CONFIG+=x64"'
+        spec = '-spec win32-msvc "CONFIG+=x64" "CONFIG+=qtquickcompiler"'
         compiler = 'nmake /NOLOGO'
 elif Os() == 'lin':
     spec = 'PREFIX=/usr'
