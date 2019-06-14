@@ -111,8 +111,8 @@ Dialog {
                 Layout.margins: canvasMargins/2
                 spacing: 20
                 Item { Layout.fillWidth: true }
-                Text { color: "#999"; font.pointSize: 14; text: qsTr("Prev") }
-                Text { color: "#666"; font.pointSize: 14; text: qsTr("Next") }
+                Text { color: "#999"; text: qsTr("Prev") }
+                Text { color: "#666"; text: qsTr("Next") }
                 Item { Layout.fillWidth: true }
             }
         }
