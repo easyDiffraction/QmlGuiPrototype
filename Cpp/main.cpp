@@ -4,7 +4,12 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
     QApplication app(argc, argv);
+
+    app.setOrganizationName("ESS");
+    app.setOrganizationDomain("esss.se");
+    app.setApplicationName("easyDiffraction");
 
     QQmlApplicationEngine engine;
     engine.addImportPath("qrc:Qml/Imports");
