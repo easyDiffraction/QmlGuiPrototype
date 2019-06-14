@@ -1,1 +1,1 @@
-https://github.com/google/fonts/tree/master/ofl/encodesanssemicondensed
+https://fonts.google.com/specimen/Encode+Sans+Semi+Condensed

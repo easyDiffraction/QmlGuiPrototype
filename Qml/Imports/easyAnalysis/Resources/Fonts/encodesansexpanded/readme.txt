@@ -1,1 +1,1 @@
-https://github.com/google/fonts/tree/master/ofl/encodesansexpanded
+https://fonts.google.com/specimen/Encode+Sans+Expanded

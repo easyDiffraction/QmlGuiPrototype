@@ -85,14 +85,15 @@ QtObject {
     //readonly property string introCondensedFontFamily: encodeSansSemiCondensedRegular.name
     //property FontLoader encodeSansSemiCondensedExtraLight: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-ExtraLight.ttf" }
     //property FontLoader encodeSansSemiCondensedRegular: FontLoader { source: "Resources/Fonts/encodesanssemicondensed/EncodeSansSemiCondensed-Regular.ttf" }
-    readonly property string introFontFamily: encodeSansRegular.name
-    property FontLoader encodeSansExtraLight: FontLoader { source: "Resources/Fonts/encodesans/EncodeSans-ExtraLight.ttf" }
-    property FontLoader encodeSansRegular: FontLoader { source: "Resources/Fonts/encodesans/EncodeSans-Regular.ttf" }
-    readonly property string introExpandedFontFamily: encodeSansExpandedRegular.name
-    property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/encodesansexpanded/EncodeSansExpanded-ExtraLight.ttf" }
-    property FontLoader encodeSansExpandedRegular: FontLoader { source: "Resources/Fonts/encodesansexpanded/EncodeSansExpanded-Regular.ttf" }
+    readonly property string introCondencedThinFontFamily: encodeSansSemiCondensedExtraLight.name
+    readonly property string introCondencedRegularFontFamily: encodeSansSemiCondensedRegular.name
+    readonly property string introExpandedThinFontFamily: encodeSansExpandedExtraLight.name
+    property FontLoader encodeSansSemiCondensedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-ExtraLight.ttf" }
+    property FontLoader encodeSansSemiCondensedRegular: FontLoader { source: "Resources/Fonts/EncodeSansSemiCondensed/EncodeSansSemiCondensed-Regular.ttf" }
+    property FontLoader encodeSansExpandedExtraLight: FontLoader { source: "Resources/Fonts/EncodeSansExpanded/EncodeSansExpanded-ExtraLight.ttf" }
 
     // Text
+    readonly property string systemFontFamily: text.font.family
     readonly property int systemFontPointSize: text.font.pointSize
     property Text text: Text {}
 
