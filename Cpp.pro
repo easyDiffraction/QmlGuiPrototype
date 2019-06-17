@@ -4,6 +4,7 @@ ICON = Qml/Imports/easyDiffraction/Resources/Icons/App.icns
 
 QT += quick svg charts
 CONFIG += c++11
+CONFIG -= debug_and_release # get rid from debug and release subfolders on Windows
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
