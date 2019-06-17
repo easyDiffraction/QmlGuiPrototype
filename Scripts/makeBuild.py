@@ -6,15 +6,11 @@ import os
 from functions import *
 from variables import *
 
-print("--makeBuild--")
-
 # Get script arguments
 branch = sys.argv[1] if len(sys.argv) > 1 else 'windows_mingw'
-print(branch)
 
 # Re-create release folder
 RecreateDir(RELEASE_DIR)
-print(RELEASE_DIR)
 
 # Go to release folder
 os.chdir(pjoin(RELEASE_DIR))
