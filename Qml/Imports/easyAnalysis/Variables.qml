@@ -6,8 +6,8 @@ import QtQuick.Window 2.12
 QtObject {
 
     // Main
-    property int showIntro: 0 // bool doesn't work on windows
-    property int showGuide: 0 // bool doesn't work on windows
+    property int showIntro: 1 // bool doesn't work on windows
+    property int showGuide: 1 // bool doesn't work on windows
     property int appWindowWidth: 1280
     property int appWindowHeight: 760
     property int appWindowX: 0
