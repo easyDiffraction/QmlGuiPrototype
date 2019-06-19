@@ -18,8 +18,9 @@ QtObject {
     property int introAnimationDuration: 1000
 
     // Paths
-    property string iconsPath: ""
     property string resourcesPath: ""
+    property string originalIconsPath: ""
+    property string thirdPartyIconsPath: ""
 
     // Content area
     property int toolbarCurrentIndex: -1
