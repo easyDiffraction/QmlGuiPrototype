@@ -61,12 +61,9 @@ Controls1.TableView {
                 Layout.fillWidth: true
                 fillMode: Image.PreserveAspectFit
                 sourceSize: Qt.size( 20, 20 )
-                //source: styleData.role === "del" ? "../Icons/TrashCan.svg" : ""
-                //Component.onCompleted: console.log("A", styleData.role, styleData.value)
                 source: iconSelector()
                 function iconSelector() {
-                    ///console.log("A", styleData.role, styleData.value)
-                    if (styleData.value === "Remove") return Generic.Variables.iconsPath + "TrashCan.svg"
+                    if (styleData.value === "Remove") return Generic.Variables.thirdPartyIconsPath + "trash-alt.svg"
                     return ""
                 }
                 ColorOverlay {
@@ -145,8 +142,8 @@ Controls1.TableView {
                 source: iconSelector()
                 function iconSelector() {
                     ///console.log("B", styleData.role, styleData.value)
-                    if (styleData.value === "sample") return Generic.Variables.iconsPath + "Diamond.svg"
-                    if (styleData.value === "instrument") return Generic.Variables.iconsPath + "Microscope.svg"
+                    if (styleData.value === "sample") return Generic.Variables.thirdPartyIconsPath + "gem.svg"
+                    if (styleData.value === "instrument") return Generic.Variables.thirdPartyIconsPath + "microscope.svg"
                     return ""
                 }
                 ColorOverlay {
@@ -214,7 +211,7 @@ Controls1.TableView {
                 }
                 icon.source: iconSelector()
                 function iconSelector() {
-                    if (styleData.role === "remove") return Generic.Variables.iconsPath + "Minus.svg"
+                    if (styleData.role === "remove") return Generic.Variables.thirdPartyIconsPath + "minus-circle.svg"
                     return ""
                 }
             }

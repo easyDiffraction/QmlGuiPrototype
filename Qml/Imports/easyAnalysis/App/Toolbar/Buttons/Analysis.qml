@@ -4,7 +4,7 @@ import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.Toolbar 1.0 as GenericAppToolbar
 
 GenericAppToolbar.Button {
-    icon.source: Generic.Variables.iconsPath + "Fitting.svg"
+    icon.source: Generic.Variables.thirdPartyIconsPath + "calculator.svg"
     text: qsTr("Analysis")
     ToolTip.text: qsTr("Analysis and modelling page")
     //finished: Generic.Variables.analysisPageFinished
