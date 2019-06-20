@@ -48,7 +48,9 @@ ApplicationWindow {
             const currentFilePath = GenericLogic.Misc.dirFromPath(source.toString())
             Specific.Variables.resourcesPath = currentFilePath + "Imports/easyDiffraction/Resources/"
             Generic.Variables.resourcesPath = currentFilePath + "Imports/easyAnalysis/Resources/"
-            Generic.Variables.iconsPath = Generic.Variables.resourcesPath + "Icons/"
+            //Generic.Variables.thirdPartyIconsPath = Generic.Variables.resourcesPath + "Icons/"
+            Generic.Variables.originalIconsPath = Generic.Variables.resourcesPath + "Icons/"
+            Generic.Variables.thirdPartyIconsPath = Generic.Variables.resourcesPath + "Fonts/Awesome/svgs/"
         }
     }
 
