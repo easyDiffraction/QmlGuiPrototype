@@ -68,9 +68,9 @@ ColumnLayout {
             GenericAppElements.GridLayout {
                 columns: 3
                 rowSpacing: 2
-                Text { text: "System"; color: Generic.Style.sidebarLabelColor; font.pointSize: 12 }
-                Text { text: "Space Group"; color: Generic.Style.sidebarLabelColor; font.pointSize: 12  }
-                Text { text: "Setting"; color: Generic.Style.sidebarLabelColor; font.pointSize: 12  }
+                Text { text: "System"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
+                Text { text: "Space Group"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
+                Text { text: "Setting"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
                 GenericAppElements.ComboBox { currentIndex: 3; model: ["Triclinic", "Monoclinic", "Orthorhombic", "Tetragonal", "Trigonal", "Hexagonal", "Cubic"] }
                 GenericAppElements.ComboBox { currentIndex: 3; model: ["104.   P 4 n c", "105.   P 42 m c", "106.   P 42 b c", "107.   I 4 m m", "108.   I 4 c m", "109.   I 41 m d", "110.   I 41 c d"] }
                 GenericAppElements.ComboBox { currentIndex: 0; model: ["1.   I 4 m m"] }
