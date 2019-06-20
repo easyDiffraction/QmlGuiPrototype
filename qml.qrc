@@ -24,10 +24,7 @@
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/ExperimentalData/qmldir</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/ExperimentalData/TableView.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/ExperimentalData/TextView.qml</file>
-        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home/LeftColumn.qml</file>
-        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home/MiddleColumn.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home/qmldir</file>
-        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home/RightColumn.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/InstrumentModel/qmldir</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/InstrumentModel/WebView.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Linking/JobsTable.qml</file>
@@ -37,8 +34,6 @@
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/SampleModel/TextView.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Summary/Logbook.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Summary/qmldir</file>
-        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home.qml</file>
-        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/qmldir</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/qmldir</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/TabButton.qml</file>
         <file>Qml/Imports/easyAnalysis/App/ContentArea/Pages/Analysis.qml</file>
@@ -165,38 +160,6 @@
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-Bold.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/PT_Sans-Web-Regular.ttf</file>
         <file>Qml/Imports/easyAnalysis/Resources/Fonts/PtSans/readme.txt</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Accept.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Bug.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Circle.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Clipboard.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Cloud.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Data.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Database.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Diamond.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Disk.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Download.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/DownTriangleArrow.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Fitting.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Home.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Instrument.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Link.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Microscope.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Minus.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Notes.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/PausePlay.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Plus.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Question.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Report.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/RightArrow.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/RightTriangleArrow.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/SciCat.png</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Settings.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Stone.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Storage.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/TextFile.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/TrashCan.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/Upload.svg</file>
-        <file>Qml/Imports/easyAnalysis/Resources/Icons/UploadExample.svg</file>
         <file>Qml/Imports/easyAnalysis/qmldir</file>
         <file>Qml/Imports/easyAnalysis/Style.qml</file>
         <file>Qml/Imports/easyAnalysis/Variables.qml</file>
@@ -228,5 +191,52 @@
         <file>Qml/dummy.svg</file>
         <file>Qml/main.qml</file>
         <file>Qml/qtquickcontrols2.conf</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Buttons/Bug.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Buttons/Clone.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Buttons/Create.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Buttons/Open.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Buttons/Save.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Analysis/Editor.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/MainArea/Pages/Home/Project.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Analysis/Editor/Controls.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Analysis/Editor/qmldir</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Analysis/Editor/Settings.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Analysis/Editor.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Home/Project/Controls.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Home/Project/qmldir</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Home/Project.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/ContentArea/Sidebar/Pages/Home/qmldir</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/arrow-circle-right.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/bug.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/calculator.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/check-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/clipboard-list.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/cloud-download-alt.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/copy.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/download.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/file-download.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/file-medical.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/file-upload.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/gem.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/home.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/link.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/microscope.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/minus-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/pause-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/play-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/plus-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/question-circle.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/save.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/server.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/trash-alt.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/svgs/upload.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Fonts/Awesome/LICENSE.txt</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Icons/triangle-down.svg</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Icons/triangle-right.svg</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_refinement.png</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_structure.png</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.dat</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.txt</file>
     </qresource>
 </RCC>
