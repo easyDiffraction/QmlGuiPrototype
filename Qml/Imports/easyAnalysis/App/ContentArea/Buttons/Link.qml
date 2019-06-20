@@ -6,7 +6,7 @@ import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.Button {
     Layout.fillWidth: true
-    icon.source: Generic.Variables.iconsPath + "Link.svg" // https://www.iconfinder.com/icons/216660/link_icon
+    icon.source: Generic.Variables.thirdPartyIconsPath + "link.svg"
     //ToolTip.text: qsTr("")
 }
 

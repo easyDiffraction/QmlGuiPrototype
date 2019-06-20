@@ -6,5 +6,5 @@ import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.Button {
     Layout.fillWidth: true
-    icon.source: Generic.Variables.iconsPath + "Accept.svg" // https://www.iconfinder.com/icons/103183/accept_check_checkround_ok_yes_icon
+    icon.source: Generic.Variables.thirdPartyIconsPath + "check-circle.svg"
 }

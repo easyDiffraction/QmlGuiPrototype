@@ -7,7 +7,7 @@ import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 GenericAppContentArea.Button {
     Layout.fillWidth: true
     highlighted: true
-    icon.source: Generic.Variables.iconsPath + "RightArrow.svg" // https://www.flaticon.com/free-icon/arrow-pointing-right-in-a-circle_25346
+    icon.source: Generic.Variables.thirdPartyIconsPath + "arrow-circle-right.svg"
 }
 
 

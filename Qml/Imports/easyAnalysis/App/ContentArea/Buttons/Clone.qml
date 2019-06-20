@@ -6,8 +6,5 @@ import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.Button {
     Layout.fillWidth: true
-    icon.source: Generic.Variables.thirdPartyIconsPath + "upload.svg"
-    ToolTip.text: qsTr("Import model")
+    icon.source: Generic.Variables.thirdPartyIconsPath + "copy.svg"
 }
-
-
