@@ -31,7 +31,6 @@ QtObject {
     // Table
     readonly property int tableRowHeight: 32
     readonly property int tableColumnSpacing: 16
-    readonly property int tableFontPointSize: 13
     readonly property int maxVisibleRowsCount: 5
 
     readonly property color tableRowColor: "white"

@@ -74,8 +74,6 @@ Dialog {
             ctx.moveTo(20, 10)
             ctx.lineTo(10, 20)
             ctx.stroke()
-
-
         }
 
         ColumnLayout {
@@ -118,83 +116,3 @@ Dialog {
         }
     }
 }
-
-/*
-
-Canvas {
-    property alias content: contentLayout.children
-
-    property int arrowWidth: 10
-    property int arrowHeight: 20
-    property int canvasMargins: 20
-
-    id: canvas
-
-    width: layout.width + arrowWidth
-    height: layout.height
-
-    x: -(width + canvasMargins)
-    //y: -(height + canvasMargins)/2
-    //y: (addButton.y + addButton.height + replaceButton.y - height) / 2
-    //y: (addButton.y + addButton.height + replaceButton.y - height) / 2
-
-    onPaint:{
-        let ctx = canvas.getContext('2d');
-        ctx.fillStyle = Qt.rgba(1, 1, 1, 1)
-
-        ctx.beginPath()
-
-        ctx.moveTo(0, 0)
-        ctx.lineTo(0, height)
-        ctx.lineTo(width - arrowWidth, height)
-        ctx.lineTo(width - arrowWidth, height/2 + arrowHeight/2)
-        ctx.lineTo(width, height/2 )
-        ctx.lineTo(width - arrowWidth, height/2 - arrowHeight/2)
-        ctx.lineTo(width - arrowWidth, 0);
-
-        ctx.fill();
-    }
-
-    ColumnLayout {
-        id: layout
-        spacing: 0
-
-        // Upper circles
-        RowLayout {
-            Layout.margins: canvasMargins/2
-            spacing: 5
-            Item { Layout.fillWidth: true }
-            Text { color: "#999"; font.pointSize: 8; text: "\u25CF" }
-            Text { color: "#ddd"; font.pointSize: 8; text: "\u25CF" }
-            Text { color: "#ddd"; font.pointSize: 8; text: "\u25CF" }
-            Text { color: "#ddd"; font.pointSize: 8; text: "\u25CF" }
-            Item { Layout.fillWidth: true }
-        }
-
-        // Main content
-        ColumnLayout { id: contentLayout; Layout.margins: canvasMargins }
-
-        // Additional spacing
-        Item { height: canvasMargins }
-
-        // Horisontal line
-        GenericAppElements.HorizontalBorder {}
-
-        // Bottom buttons
-        RowLayout {
-            Layout.margins: canvasMargins/2
-            spacing: 20
-            Item { Layout.fillWidth: true }
-            Text { color: "#999"; font.pointSize: 14; text: qsTr("Prev") }
-            Text { color: "#666"; font.pointSize: 14; text: qsTr("Next") }
-            Item { Layout.fillWidth: true }
-        }
-
-    }
-
-
-
-
-}
-
-*/

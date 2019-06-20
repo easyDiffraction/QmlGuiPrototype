@@ -14,6 +14,7 @@ GenericAppElements.ContentAreaStack {
         //GenericMainArea.TabButton { text: qsTr("Simulation"); tabbarWidth: mainArea.width } // fix width
         GenericMainArea.TabButton { text: qsTr("Fitting"); tabbarWidth: mainArea.width } // fix width
         GenericMainArea.TabButton { text: qsTr("Constraints"); tabbarWidth: mainArea.width } // fix width
+        GenericMainArea.TabButton { text: qsTr("Job Editor (RCIF)"); tabbarWidth: mainArea.width } // fix width
     }
 
     mainAreaContent: StackLayout {
@@ -24,6 +25,7 @@ GenericAppElements.ContentAreaStack {
         //GenericMainAreaAnalysis.Simulation { }
         GenericMainAreaAnalysis.Fitting { }
         GenericMainAreaAnalysis.Constraints { }
+        GenericMainAreaAnalysis.Editor { }
     }
 
     sideBarContent: StackLayout {
@@ -31,6 +33,7 @@ GenericAppElements.ContentAreaStack {
         //GenericSidebarAnalysis.Simulation { }
         GenericSidebarAnalysis.Fitting { }
         GenericSidebarAnalysis.Constraints { }
+        GenericSidebarAnalysis.Editor { }
     }
 
 }

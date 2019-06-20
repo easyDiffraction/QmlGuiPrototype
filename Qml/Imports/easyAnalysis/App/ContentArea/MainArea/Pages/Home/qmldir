@@ -1,4 +1,2 @@
 module easyAnalysis.App.ContentArea.MainArea.Pages.Home
-LeftColumn 1.0 LeftColumn.qml
-MiddleColumn 1.0 MiddleColumn.qml
-RightColumn 1.0 RightColumn.qml
+Project 1.0 Project.qml

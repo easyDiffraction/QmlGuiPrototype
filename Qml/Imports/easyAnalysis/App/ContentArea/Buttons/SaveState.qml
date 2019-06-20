@@ -11,7 +11,7 @@ GenericAppContentArea.Button {
     checkable: true
     checked: false
 
-    icon.source: Generic.Variables.iconsPath + "Disk.svg" // https://www.iconfinder.com/icons/111010/disk_icon
+    icon.source: Generic.Variables.thirdPartyIconsPath + "save.svg"
     ToolTip.text: qsTr("Save current state of the project")
 
     contentItem: IconLabel {

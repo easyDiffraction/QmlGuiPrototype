@@ -1,9 +1,12 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
 import QtQuick.Controls.impl 2.12
 import easyAnalysis 1.0 as Generic
 
 Button {
+    property bool fillWidthEqually: false
+
     id: button
 
     icon.width: Generic.Style.buttonHeight / 1.75
@@ -27,6 +30,13 @@ Button {
         color: backgroundColor()
         border.color: button.highlighted ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.appBorderColor
         radius: Generic.Style.toolbarButtonRadius
+    }
+
+    Component.onCompleted: {
+        if (fillWidthEqually) {
+            button.Layout.fillWidth = true
+            implicitWidth = 1
+        }
     }
 
     function backgroundColor() {

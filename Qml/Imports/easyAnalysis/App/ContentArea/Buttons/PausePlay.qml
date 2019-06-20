@@ -6,7 +6,7 @@ import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.Button {
     Layout.fillWidth: true
-    icon.source: Generic.Variables.iconsPath + "PausePlay.svg" // https://www.flaticon.com/free-icon/pause-play-button_27185
+    icon.source: Generic.Variables.thirdPartyIconsPath + "play-circle.svg"
 }
 
 

@@ -30,7 +30,7 @@ Item {
             anchors.leftMargin: 3
             anchors.rightMargin: 4
             padding: 0
-            icon.source: isSample ? Generic.Variables.iconsPath + "Diamond.svg" : Generic.Variables.iconsPath + "Microscope.svg"
+            icon.source: isSample ? Generic.Variables.thirdPartyIconsPath + "gem.svg" : Generic.Variables.thirdPartyIconsPath + "microscope.svg"
 
             background: Rectangle {
                 color: "transparent"

@@ -28,7 +28,7 @@ Column {
         font.weight: Font.DemiBold
         icon.width: Generic.Style.sidebarGroupIndicatorIconSize
         icon.height: Generic.Style.sidebarGroupIndicatorIconSize
-        icon.source: iconSource() //collapsed ? "../Icons/RightTriangleArrow.svg" : "../Icons/DownTriangleArrow.svg"
+        icon.source: iconSource()
         icon.color: Generic.Style.sidebarGroupTitleColor
 
         contentItem: IconLabel {
@@ -114,7 +114,7 @@ Column {
     //////////
     function iconSource() {
         if (!collapsible)
-            return Generic.Variables.iconsPath + "Circle.svg"
-        return collapsed ? Generic.Variables.iconsPath + "RightTriangleArrow.svg" : Generic.Variables.iconsPath + "DownTriangleArrow.svg"
+            return Generic.Variables.thirdPartyIconsPath + "circle.svg"
+        return collapsed ? Generic.Variables.originalIconsPath + "triangle-right.svg" : Generic.Variables.originalIconsPath + "triangle-down.svg"
     }
 }

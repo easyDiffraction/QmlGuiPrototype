@@ -59,7 +59,7 @@ Rectangle {
                 Item { width: 1.5*commonMargin; height: 1 }
                 // Table
                 GenericAppElements.ParametersTable {
-                    width: 700
+                    width: Generic.Variables.mainAreaWidth - 3*commonMargin
                     enabled: false
                     selectable: false
                     visibleRowsCount: 6
@@ -105,8 +105,8 @@ Rectangle {
             ///////////////////////
 
             Column {
-                width: 765
-                height: 580
+                width: Generic.Variables.mainAreaWidth
+                height: width * 0.9
                 GenericAppElements.ChartView {
                     width: parent.width
                     height: parent.height

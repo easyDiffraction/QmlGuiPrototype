@@ -31,10 +31,10 @@ Rectangle {
         Controls1.TableViewColumn { role:"dataIndex"; title:"Experimental Data"; delegate: GenericAppElements.CellComboBox { currentIndex: styleData.value;
                 model: ["cecual_polaris.dat", "cecual_dream.dat", "cecual_d2b.dat", "cecual_01_test.dat", "cecual_02_test.dat", "cecual_03_test.dat", "cecual_04_test.dat"] } }
 
-        Controls1.TableViewColumn { role:"sampleIndex"; title:"Sample Model"; delegate: GenericAppElements.CellComboBox { currentIndex: styleData.value;
+        Controls1.TableViewColumn { role:"sampleIndex"; title:"Sample"; delegate: GenericAppElements.CellComboBox { currentIndex: styleData.value;
                 model: ["CeCuAl3", "Al"] } }
 
-        Controls1.TableViewColumn { role:"instrumentIndex"; title:"Instrument Model"; delegate: GenericAppElements.CellComboBox { currentIndex: styleData.value;
+        Controls1.TableViewColumn { role:"instrumentIndex"; title:"Instrument"; delegate: GenericAppElements.CellComboBox { currentIndex: styleData.value;
                 model: ["POLARIS", "DREAM"] } }
 
         Controls1.TableViewColumn { role:"remove"; title:"Remove"; resizable: false }

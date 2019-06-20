@@ -61,12 +61,9 @@ Controls1.TableView {
                 Layout.fillWidth: true
                 fillMode: Image.PreserveAspectFit
                 sourceSize: Qt.size( 20, 20 )
-                //source: styleData.role === "del" ? "../Icons/TrashCan.svg" : ""
-                //Component.onCompleted: console.log("A", styleData.role, styleData.value)
                 source: iconSelector()
                 function iconSelector() {
-                    ///console.log("A", styleData.role, styleData.value)
-                    if (styleData.value === "Remove") return Generic.Variables.iconsPath + "TrashCan.svg"
+                    if (styleData.value === "Remove") return Generic.Variables.thirdPartyIconsPath + "trash-alt.svg"
                     return ""
                 }
                 ColorOverlay {
@@ -82,7 +79,6 @@ Controls1.TableView {
                 horizontalAlignment: styleData.textAlignment
                 font.family: Generic.Style.fontFamily
                 font.pointSize: Generic.Style.fontPointSize
-                //font.pointSize: Generic.Style.tableFontPointSize
                 text: textSelector()
                 function textSelector() {
                     if (styleData.value === "Remove") return ""
@@ -145,8 +141,8 @@ Controls1.TableView {
                 source: iconSelector()
                 function iconSelector() {
                     ///console.log("B", styleData.role, styleData.value)
-                    if (styleData.value === "sample") return Generic.Variables.iconsPath + "Diamond.svg"
-                    if (styleData.value === "instrument") return Generic.Variables.iconsPath + "Microscope.svg"
+                    if (styleData.value === "sample") return Generic.Variables.thirdPartyIconsPath + "gem.svg"
+                    if (styleData.value === "instrument") return Generic.Variables.thirdPartyIconsPath + "microscope.svg"
                     return ""
                 }
                 ColorOverlay {
@@ -161,7 +157,6 @@ Controls1.TableView {
                 Layout.fillWidth: true
                 font.family: Generic.Style.fontFamily
                 font.pointSize: Generic.Style.fontPointSize
-                //font.pointSize: Generic.Style.tableFontPointSize
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
                 enabled: styleData.role === "num" || styleData.value[0] === "&" ? false : true
                 color: textColor()
@@ -189,7 +184,7 @@ Controls1.TableView {
                 id: button
                 visible: styleData.role === "remove" ? true : false
                 ToolTip.visible: hovered
-                ToolTip.text: qsTr("Remove this row from the table" + styleData.role + styleData.value)
+                ToolTip.text: qsTr("Remove this row from the table")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 padding: 2
@@ -214,7 +209,7 @@ Controls1.TableView {
                 }
                 icon.source: iconSelector()
                 function iconSelector() {
-                    if (styleData.role === "remove") return Generic.Variables.iconsPath + "Minus.svg"
+                    if (styleData.role === "remove") return Generic.Variables.thirdPartyIconsPath + "minus-circle.svg"
                     return ""
                 }
             }

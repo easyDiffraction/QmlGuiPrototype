@@ -5,7 +5,7 @@ import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.ContentArea 1.0 as GenericAppContentArea
 
 GenericAppContentArea.Button {
-    icon.source: Generic.Variables.iconsPath + "Question.svg" // https://www.flaticon.com/free-icon/question-mark-on-a-circular-black-background_25400
+    icon.source: Generic.Variables.thirdPartyIconsPath + "question-circle.svg"
     ToolTip.text: qsTr("Get online help for this page")
 }
 
