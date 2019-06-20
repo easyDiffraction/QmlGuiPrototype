@@ -12,21 +12,26 @@ ColumnLayout {
     property alias settingsContent: settings.children
 
     id: stackLayout
-
     spacing: 0
 
-    // Sidebar including its TabBar
-    TabBar {
-        id: tabbar
+    // Sidebar tabs with bottom border
+    ColumnLayout {
         spacing: 0
-        GenericSidebar.TabButton { text: qsTr("Basic controls") }
-        GenericSidebar.TabButton { text: qsTr("Advanced controls") }
+        visible: settings.children.length
+
+        // Sidebar tabs
+        TabBar {
+            id: tabbar
+            spacing: 0
+            GenericSidebar.TabButton { text: qsTr("Basic controls") }
+            GenericSidebar.TabButton { text: qsTr("Advanced controls") }
+        }
+
+        // tabs bottom border
+        GenericAppElements.HorizontalBorder { height: tabBarContent ? Generic.Style.appBorderThickness : 0 }
     }
 
-    // TabBar bottom border
-    GenericAppElements.HorizontalBorder { height: tabBarContent ? Generic.Style.appBorderThickness : 0 }
-
-    // Sidebar without TabBar
+    // Sidebar area without tabs
     StackLayout {
         id: stack
         // doesn't work with Layout.fillWidth: true; switched to width: parent.width
