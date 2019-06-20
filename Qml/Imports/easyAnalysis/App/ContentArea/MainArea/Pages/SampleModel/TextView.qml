@@ -14,13 +14,13 @@ Rectangle {
 
         TextArea {
             id: textArea
-            anchors.fill: parent
+            //anchors.fill: parent
             padding: 10
             readOnly: true
             //font.family: "Monaco"
             font.family: Generic.Style.monoFontFamily
             //antialiasing: true
-            //wrapMode: Text.WordWrap
+            wrapMode: Text.WordWrap
             text: fileContent()
         }
     }
@@ -31,5 +31,6 @@ Rectangle {
         xhr.send()
         return xhr.responseText
     }
-
 }
+
+

@@ -79,7 +79,6 @@ Controls1.TableView {
                 horizontalAlignment: styleData.textAlignment
                 font.family: Generic.Style.fontFamily
                 font.pointSize: Generic.Style.fontPointSize
-                //font.pointSize: Generic.Style.tableFontPointSize
                 text: textSelector()
                 function textSelector() {
                     if (styleData.value === "Remove") return ""
@@ -158,7 +157,6 @@ Controls1.TableView {
                 Layout.fillWidth: true
                 font.family: Generic.Style.fontFamily
                 font.pointSize: Generic.Style.fontPointSize
-                //font.pointSize: Generic.Style.tableFontPointSize
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
                 enabled: styleData.role === "num" || styleData.value[0] === "&" ? false : true
                 color: textColor()
@@ -186,7 +184,7 @@ Controls1.TableView {
                 id: button
                 visible: styleData.role === "remove" ? true : false
                 ToolTip.visible: hovered
-                ToolTip.text: qsTr("Remove this row from the table" + styleData.role + styleData.value)
+                ToolTip.text: qsTr("Remove this row from the table")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 padding: 2

@@ -69,9 +69,9 @@ ColumnLayout {
             GenericAppElements.GridLayout {
                 columns: 3
                 rowSpacing: 2
-                Text { text: "Facility"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
-                Text { text: "Instrument"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1   }
-                Text { text: "Configuration"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1   }
+                TextEdit { text: "Facility           "; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
+                TextEdit { text: "Instrument    "; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
+                TextEdit { text: "Configuration"; color: Generic.Style.sidebarLabelColor; font.pointSize: Generic.Style.fontPointSize - 1 }
                 GenericAppElements.ComboBox { currentIndex: 0; model: ["ESS", "ISIS", "SNS", "ILL", "MLZ", "Custom"] }
                 GenericAppElements.ComboBox { currentIndex: 2; model: ["BEER", "D2B", "DREAM", "HEIMDAL", "MAGiC", "POLARIS", "Custom neutron", "Custom X-ray"] }
                 GenericAppElements.ComboBox { currentIndex: 0; model: ["Standard"] }

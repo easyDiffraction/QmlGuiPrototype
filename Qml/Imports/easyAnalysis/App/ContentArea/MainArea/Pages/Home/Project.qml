@@ -23,7 +23,7 @@ Rectangle {
                 model: ["structure", "refinement"]
 
                 Rectangle {
-                    height: 250
+                    height: 200
                     width: height
                     color: "white"
                     border.color: Generic.Style.appBorderColor
@@ -33,6 +33,7 @@ Rectangle {
                         fillMode: Image.PreserveAspectFit
                         clip: true
                         antialiasing: true
+                        smooth: true
                         source: Specific.Variables.resourcesPath + "Examples/CeCuAl3_POLARIS/cecual_" + modelData + ".png"
                     }
                 }

@@ -8,8 +8,10 @@ QtObject {
     // Main
     property int showIntro: 1 // bool doesn't work on windows
     property int showGuide: 1 // bool doesn't work on windows
-    property int appWindowWidth: 1280
-    property int appWindowHeight: 760
+    property int appMinWindowWidth: 1280
+    property int appMinWindowHeight: 760
+    property int appWindowWidth: appMinWindowWidth
+    property int appWindowHeight: appMinWindowHeight
     property int appWindowX: 0
     property int appWindowY: 0
     property int mainAreaWidth: appWindowWidth

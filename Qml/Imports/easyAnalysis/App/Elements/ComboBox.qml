@@ -7,7 +7,9 @@ import easyAnalysis 1.0 as Generic
 
 ComboBox {
     id: control
+
     Layout.fillWidth: true
+    implicitWidth: 1
 
     background: Rectangle {
         //width: parent.width

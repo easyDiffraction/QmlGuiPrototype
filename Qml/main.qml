@@ -18,8 +18,8 @@ ApplicationWindow {
     color: Generic.Style.appBkgColor
     title: Specific.Settings.appName
 
-    minimumWidth: Generic.Variables.appWindowWidth
-    minimumHeight: Generic.Variables.appWindowHeight
+    minimumWidth: Generic.Variables.appMinWindowWidth
+    minimumHeight: Generic.Variables.appMinWindowHeight
     x: Generic.Variables.appWindowX
     y: Generic.Variables.appWindowY
 
@@ -75,9 +75,6 @@ ApplicationWindow {
         Generic.Variables.yCalc = GenericLogic.Parse.getColumn(xhr.responseText, 3, 1)
         Generic.Variables.yPreCalc = GenericLogic.Parse.getColumn(xhr.responseText, 4, 1)
 
-        // Define some parameters
-        Generic.Variables.mainAreaWidth = Generic.Variables.appWindowWidth - Generic.Style.appBorderThickness - Generic.Style.sidebarWidth
-
         // Load persistent settings
         Generic.Variables.showIntro = settings.value("showIntro", Generic.Variables.showIntro)
         Generic.Variables.showGuide = settings.value("showGuide", Generic.Variables.showGuide)
@@ -97,6 +94,9 @@ ApplicationWindow {
         settings.setValue("appWindowX", window.x)
         settings.setValue("appWindowY", window.y)
     }
+
+    // Define some parameters
+    onWidthChanged: Generic.Variables.mainAreaWidth = width - Generic.Style.appBorderThickness - Generic.Style.sidebarWidth
 }
 
 
