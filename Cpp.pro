@@ -1,10 +1,14 @@
 TEMPLATE = app
 TARGET = easyDiffraction
-ICON = Qml/Imports/easyDiffraction/Resources/Icons/App.icns
 
 QT += quick svg charts
 CONFIG += c++11
 CONFIG -= debug_and_release # get rid from debug and release subfolders on Windows
+
+# Application icon (mac - ICON, win - RC_ICONS)
+# https://doc.qt.io/qt-5/appicon.html
+RC_ICONS = Qml/Imports/easyDiffraction/Resources/Icons/App.ico
+ICON = Qml/Imports/easyDiffraction/Resources/Icons/App.icns
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
