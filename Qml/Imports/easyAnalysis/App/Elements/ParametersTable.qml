@@ -46,7 +46,6 @@ Controls1.TableView {
             Rectangle {
                 Layout.fillHeight: true
                 width: Generic.Style.appBorderThickness
-                ///color: styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.appBorderColor
                 color: Generic.Style.appBorderColor
             }
 
@@ -54,17 +53,19 @@ Controls1.TableView {
             Item { width: Generic.Style.tableColumnSpacing/2 }
 
             // Icon
-            Image {
-                id: headerCellIcon
-                antialiasing: true
+            Item {
+                visible: styleData.value === "Remove"
                 Layout.alignment: Qt.AlignCenter
-                Layout.fillWidth: true
-                fillMode: Image.PreserveAspectFit
-                sourceSize: Qt.size( 20, 20 )
-                source: iconSelector()
-                function iconSelector() {
-                    if (styleData.value === "Remove") return Generic.Variables.thirdPartyIconsPath + "trash-alt.svg"
-                    return ""
+                height: Generic.Style.tableRowHeight * 0.6
+                width: height
+                Image {
+                    id: headerCellIcon
+                    visible: false
+                    anchors.fill: parent
+                    smooth: true
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    source: Generic.Variables.thirdPartyIconsPath + "trash-alt.svg"
                 }
                 ColorOverlay {
                     source: headerCellIcon
@@ -75,21 +76,16 @@ Controls1.TableView {
 
             // Content
             Text {
+                visible: styleData.value !== "Remove"
                 Layout.fillWidth: true
                 horizontalAlignment: styleData.textAlignment
                 font.family: Generic.Style.fontFamily
                 font.pointSize: Generic.Style.fontPointSize
-                text: textSelector()
-                function textSelector() {
-                    if (styleData.value === "Remove") return ""
-                    return styleData.value
-                }
+                text: styleData.value
             }
 
             // Vertical spacer
             Item { width: Generic.Style.tableColumnSpacing/2 }
-
-
         }
     }
 
@@ -119,35 +115,38 @@ Controls1.TableView {
                 Layout.fillHeight: true
                 width: Generic.Style.appBorderThickness
                 color: selectable && styleData.selected ? Generic.Style.tableHighlightBorderColor : Generic.Style.tableHeaderRowColor
-                //color: Generic.Style.tableColumnBorderColor
             }
 
             // Vertical spacer
             Item {
-                id: leftSpacer;
-                width: Generic.Style.tableColumnSpacing/2
+                id: leftSpacer
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
+                width: Generic.Style.tableColumnSpacing/2
             }
 
+
             // Icon
-            Image {
-                id: icon
+            Item {
                 visible: (styleData.value === "sample") || (styleData.value === "instrument")
-                antialiasing: true
                 Layout.alignment: Qt.AlignCenter
-                Layout.fillWidth: true
-                fillMode: Image.PreserveAspectFit
-                sourceSize: Qt.size( 20, 20 )
-                source: iconSelector()
-                function iconSelector() {
-                    ///console.log("B", styleData.role, styleData.value)
-                    if (styleData.value === "sample") return Generic.Variables.thirdPartyIconsPath + "gem.svg"
-                    if (styleData.value === "instrument") return Generic.Variables.thirdPartyIconsPath + "microscope.svg"
-                    return ""
+                height: Generic.Style.tableRowHeight * 0.6
+                width: height
+                Image {
+                    id: cellIcon
+                    visible: false
+                    anchors.fill: parent
+                    smooth: true
+                    sourceSize.width: parent.width
+                    sourceSize.height: parent.height
+                    source: {
+                        if (styleData.value === "sample") return Generic.Variables.thirdPartyIconsPath + "gem.svg"
+                        if (styleData.value === "instrument") return Generic.Variables.thirdPartyIconsPath + "microscope.svg"
+                        return ""
+                    }
                 }
                 ColorOverlay {
-                    source: icon
-                    anchors.fill: icon
+                    source: cellIcon
+                    anchors.fill: cellIcon
                     color: selectable && styleData.selected ? Generic.Style.buttonIconHighlightedColor : Generic.Style.buttonIconEnabledColor
                 }
             }
@@ -159,23 +158,20 @@ Controls1.TableView {
                 font.pointSize: Generic.Style.fontPointSize
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
                 enabled: styleData.role === "num" || styleData.value[0] === "&" ? false : true
-                color: textColor()
-                text: textSelector()
-                function textSelector() {
-                    //console.log("C", styleData.role, styleData.value, styleData.value[1])
+                color: {
+                    if (!enabled  && styleData.role === "jobName")
+                        return Generic.Style.tableDisabledTextColor
+                    return selectable && styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
+                }
+                text: {
+                    if (styleData.value[0] === "&" && styleData.role === "jobName") return styleData.value.substr(1)
                     if (styleData.value === "sample") return ""
                     if (styleData.value === "instrument") return ""
-                    if (styleData.value[0] === "&" && styleData.role === "jobName") return styleData.value.substr(1)
                     if (styleData.role === "fit") return ""
                     if (styleData.role === "color") return ""
                     if (styleData.role === "min" && !styleData.value) return "-\u221E"
                     if (styleData.role === "max" && !styleData.value) return "+\u221E"
                     return styleData.value
-                }
-                function textColor() {
-                    if (!enabled  && styleData.role === "jobName")
-                        return Generic.Style.tableDisabledTextColor
-                    return selectable && styleData.selected ? Generic.Style.tableHighlightTextColor : Generic.Style.tableTextColor
                 }
             }
 
@@ -197,8 +193,7 @@ Controls1.TableView {
                     anchors.rightMargin: button.rightPadding
                     radius: Generic.Style.toolbarButtonRadius
                     border.color: button.highlighted ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.appBorderColor
-                    color: backgroundColor()
-                    function backgroundColor() {
+                    color: {
                         if (!button.enabled)
                             return Generic.Style.buttonBkgDisabledColor
                         var color1 = button.highlighted ? Generic.Style.buttonBkgHighlightedColor : Generic.Style.buttonBkgEnabledColor
@@ -207,11 +202,7 @@ Controls1.TableView {
                         return Color.blend(color1, color2, alpha)
                     }
                 }
-                icon.source: iconSelector()
-                function iconSelector() {
-                    if (styleData.role === "remove") return Generic.Variables.thirdPartyIconsPath + "minus-circle.svg"
-                    return ""
-                }
+                icon.source: styleData.role === "remove" ? Generic.Variables.thirdPartyIconsPath + "minus-circle.svg" : ""
             }
 
             // Color-box
@@ -232,17 +223,17 @@ Controls1.TableView {
 
             // CheckBox
             CheckBox {
+                visible: styleData.role === "fit"
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                visible: styleData.role === "fit"
                 checked: styleData.value
             }
 
             // Vertical spacer
             Item {
                 id: rightSpacer
-                width: Generic.Style.tableColumnSpacing/2
                 visible: !(styleData.role === "remove") && !(styleData.role === "color")
+                width: Generic.Style.tableColumnSpacing/2
             }
 
 
