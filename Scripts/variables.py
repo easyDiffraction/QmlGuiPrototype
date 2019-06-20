@@ -60,25 +60,14 @@ BUILD_TYPE                  = '$${BUILD_TYPE}'
 BUILD_TYPE_DIR              = BUILD_DIR + [BUILD_TYPE]
 
 # Profile, Debug, Release
-DEBUG_DIR_NAME              = 'Debug'
-PROFILE_DIR_NAME            = 'Profile'
 RELEASE_DIR_NAME            = 'Release'    #+
 RELEASE_DIR                 = BUILD_DIR + [RELEASE_DIR_NAME]    #+
-APP_FILE_TO_DEPLOY          = RELEASE_DIR + [APP_FILE]
-RELEASE_NAMES_TO_DEPLOY     = [APP_FILE]
-RELEASE_PATHS_TO_DEPLOY     = []
-for item in RELEASE_NAMES_TO_DEPLOY:
-    item = RELEASE_DIR + [item]
-    RELEASE_PATHS_TO_DEPLOY.append([pjoin(item)])
+RELEASE_APP_FILE_PATH       = RELEASE_DIR + [APP_FILE]
 
 # Deploy
 DEPLOY_DIR_NAME             = 'Deploy'    #+
 DEPLOY_DIR                  = BUILD_DIR + [DEPLOY_DIR_NAME]    #+
-DEPLOY_NAMES                = [APP_FILE]
-DEPLOY_PATHS                = []
-for item in RELEASE_NAMES_TO_DEPLOY:
-    item = DEPLOY_DIR + [item]
-    DEPLOY_PATHS.append([pjoin(item)])
+DEPLOY_APP_FILE_PATH        = DEPLOY_DIR + [APP_FILE]
 
 # Installer
 INSTALLER_SUFFIX            = 'Installer'

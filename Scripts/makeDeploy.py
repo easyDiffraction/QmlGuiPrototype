@@ -8,26 +8,24 @@ from variables import *
 RecreateDir(DEPLOY_DIR)
 
 # Copy files/dirs for deployment
-dst = DEPLOY_DIR
-for src in RELEASE_PATHS_TO_DEPLOY:
-    Copy(src, dst)
+Copy(RELEASE_APP_FILE_PATH, DEPLOY_DIR)
 
 # Deploy settings
 args = []
 if Os() == 'mac':
     args = ['macdeployqt',
-            '{}'.format(pjoin(APP_FILE_TO_DEPLOY)),
+            '{}'.format(pjoin(DEPLOY_APP_FILE_PATH)),
             '-qmldir={}'.format(pjoin(QML_DIR)),
             '-verbose=1']
 elif Os() == 'win':
     args = ['windeployqt',
-            '{}'.format(pjoin(APP_FILE_TO_DEPLOY)),
+            '{}'.format(pjoin(DEPLOY_APP_FILE_PATH)),
             '-qmldir={}'.format(pjoin(QML_DIR)),
             '--release',
             '--verbose', '1']
 elif Os() == 'lin':
     args = ['linuxdeployqt',
-            '{}'.format(pjoin(APP_FILE_TO_DEPLOY)),
+            '{}'.format(pjoin(DEPLOY_APP_FILE_PATH)),
             '-qmldir={}'.format(pjoin(QML_DIR)),
             '-bundle-non-qt-libs']
     #args = ['linuxdeployqt',
