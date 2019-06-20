@@ -130,6 +130,7 @@ ColumnLayout {
             }
             GenericAppContentAreaButtons.SaveState { checked: true }
             GenericAppContentAreaButtons.Help {}
+            GenericAppContentAreaButtons.Bug {}
         }
     }
 

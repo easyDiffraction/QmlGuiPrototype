@@ -144,6 +144,7 @@ ColumnLayout {
             }
             GenericAppContentAreaButtons.SaveState {}
             GenericAppContentAreaButtons.Help {}
+            GenericAppContentAreaButtons.Bug {}
         }
     }
 
