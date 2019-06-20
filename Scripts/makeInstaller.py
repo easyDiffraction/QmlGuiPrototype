@@ -41,7 +41,7 @@ args = ['binarycreator',
         '-c', pjoin(INSTALLER_CONFIG_FILE),
         '-p', pjoin(INSTALLER_PACKAGES_DIR),
         #'--online-only',
-        #'--offline-only',
+        '--offline-only',
         '--verbose' ]
 result = subprocess.run(args, stdout=subprocess.PIPE).stdout.decode('utf-8')
 #print(result)
