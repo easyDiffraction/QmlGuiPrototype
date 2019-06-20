@@ -15,7 +15,7 @@ Item {
         anchors.leftMargin: 3
         anchors.rightMargin: 4
         padding: 0
-        icon.source: Generic.Variables.iconsPath + "Minus.svg" // https://www.flaticon.com/free-icon/minus-sign-inside-a-black-circle_25336
+        icon.source: Generic.Variables.thirdPartyIconsPath + "minus-circle.svg"
         ToolTip.text: qsTr("Remove this row from the table")
     }
 }
