@@ -1,10 +1,12 @@
 import os
 import sys
-from PySide2.QtCore import QUrl
+from PySide2.QtCore import QUrl, Qt, QCoreApplication
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtWidgets import QApplication
 
 if __name__ == '__main__':
+    QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+
     app = QApplication(sys.argv)
 
     app.setOrganizationName("ESS")
