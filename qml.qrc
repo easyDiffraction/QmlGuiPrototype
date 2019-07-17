@@ -181,7 +181,6 @@
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/TOF_irf_file.irf</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/App.icns</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/App.ico</file>
-        <file>Qml/Imports/easyDiffraction/Resources/Icons/App.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/App.rc</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/App.svg</file>
         <file>Qml/Imports/easyDiffraction/Resources/Images/Instruments/dream.png</file>
@@ -238,5 +237,10 @@
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_structure.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.dat</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.txt</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Icons/convert.txt</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Icons/Logo.png</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Icons/Logo.svg</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Icons/LogoWithPaddings.png</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Icons/LogoWithPaddings.svg</file>
     </qresource>
 </RCC>
