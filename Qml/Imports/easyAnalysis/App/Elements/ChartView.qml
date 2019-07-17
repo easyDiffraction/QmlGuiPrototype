@@ -69,7 +69,7 @@ Column {
             visible: showObs
             axisX: axisX
             axisY: axisY
-            color: Qt.lighter("dodgerblue", 1.4)
+            color: Qt.lighter(Generic.Style.blueColor, 1.4)
             borderColor: color
             borderWidth: 2
             upperSeries: LineSeries { id: obsSeriesUpper }
@@ -82,7 +82,7 @@ Column {
             visible: showCalc
             axisX: axisX
             axisY: axisY
-            color: "coral"
+            color: Generic.Style.redColor
             width: 2
             //useOpenGL: true
         }
@@ -145,7 +145,7 @@ Column {
             ///visible: showDiff
             axisX: axisXdiff
             axisY: axisYdiff
-            color: "yellowgreen"
+            color: Generic.Style.greenColor
             width: 2
             //useOpenGL: true
         }

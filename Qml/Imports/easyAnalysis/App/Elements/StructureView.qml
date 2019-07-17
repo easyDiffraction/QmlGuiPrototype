@@ -23,7 +23,7 @@ Rectangle {
         orthoProjection: false
         //scene.activeCamera.cameraPreset: Camera3D.CameraPresetIsometricLeftHigh
         scene.activeCamera.xRotation: -60.0
-        scene.activeCamera.yRotation: 20.0
+        scene.activeCamera.yRotation: 15.0
         scene.activeCamera.zoomLevel: 110.0
 
         //horizontalAspectRatio: 1.0
@@ -96,7 +96,7 @@ Rectangle {
             mesh: Abstract3DSeries.MeshSphere
             //meshSmooth: true
             itemSize: 0.65
-            baseColor: "#408002"
+            baseColor: Generic.Style.greenColor
             colorStyle: Theme3D.ColorStyleUniform
             ItemModelScatterDataProxy {
                 itemModel: ListModel { id: posCe }
@@ -110,7 +110,7 @@ Rectangle {
         Scatter3DSeries {
             mesh: Abstract3DSeries.MeshSphere
             itemSize: 0.45
-            baseColor: "#FC6666"
+            baseColor: Generic.Style.redColor
             ItemModelScatterDataProxy {
                 itemModel: ListModel { id: posCu1 }
                 xPosRole: "x"
@@ -123,7 +123,7 @@ Rectangle {
         Scatter3DSeries {
             mesh: Abstract3DSeries.MeshSphere
             itemSize: 0.45
-            baseColor: "#FC6666"
+            baseColor: Generic.Style.redColor
             ItemModelScatterDataProxy {
                 itemModel: ListModel { id: posCu2 }
                 xPosRole: "x"
@@ -136,7 +136,7 @@ Rectangle {
         Scatter3DSeries {
             mesh: Abstract3DSeries.MeshSphere
             itemSize: 0.55
-            baseColor: "#0F80FF"
+            baseColor: Generic.Style.blueColor
             ItemModelScatterDataProxy {
                 itemModel: ListModel { id: posAl }
                 xPosRole: "x"

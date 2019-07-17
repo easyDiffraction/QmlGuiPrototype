@@ -19,7 +19,9 @@ QtObject {
     readonly property color mainAreaTabBorderColor: "#ccc"
 
     // Colors
-    readonly property color blueColor: "#0099ff"//"#2293de"//"#1c8fdc"
+    readonly property color blueColor: "#00aaed"//"#0099ff"//"#2293de"//"#1c8fdc"
+    readonly property color redColor: "coral"
+    readonly property color greenColor: "yellowgreen"
 
     // Sidebar
     readonly property int sidebarWidth: 605//554//518
@@ -56,7 +58,7 @@ QtObject {
     readonly property color buttonBkgDisabledColor: "#e1e1e1"
     readonly property color buttonBkgEnabledColor: "#e1e1e1"//"#666"
     readonly property color buttonBkgHighlightedColor: blueColor
-    readonly property color buttonBkgFinishedColor: Qt.lighter(blueColor, 1.7) //Qt.lighter(blueColor, 1.4) //Qt.lighter(blueColor, 1.9) //!!!!
+    readonly property color buttonBkgFinishedColor: Qt.lighter(blueColor, 1.9) //Qt.lighter(blueColor, 1.4) //Qt.lighter(blueColor, 1.9) //!!!!
     readonly property color buttonBkgBlendColor: "white"
     readonly property real buttonBkgBlendAlpha: 0.25
 
@@ -73,7 +75,7 @@ QtObject {
     readonly property color buttonBorderDisabledColor: appBorderColor
     readonly property color buttonBorderEnabledColor: appBorderColor
     readonly property color buttonBorderHighlightedColor: buttonBkgHighlightedColor
-    readonly property color buttonBorderFinishedColor: Qt.lighter(blueColor, 1.6) //Qt.lighter(blueColor, 1.3) //Qt.lighter(blueColor, 1.7) //!!!!
+    readonly property color buttonBorderFinishedColor: Qt.lighter(blueColor, 1.7) //Qt.lighter(blueColor, 1.3) //Qt.lighter(blueColor, 1.7) //!!!!
 
     // Icons
     readonly property string dummyIconPath: "dummy.svg"

@@ -103,12 +103,12 @@ ColumnLayout {
         content: GenericAppElements.ColumnLayout {
             GenericAppElements.ParametersTable {
                 model: ListModel {
-                    ListElement { num:"1"; label:"Ce1"; atom:"Ce"; color:"#408002"; x:"0.00000"; y:"0.00000"; z:"0.00000"; occ:"1.00000" }
-                    ListElement { num:"2"; label:"Cu1"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.92491" }
-                    ListElement { num:"3"; label:"Al1"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.07509" }
-                    ListElement { num:"4"; label:"Cu2"; atom:"Cu"; color:"#0F80FF"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.04446" }
-                    ListElement { num:"5"; label:"Al2"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.95553" }
-                    ListElement { num:"6"; label:"Al3"; atom:"Al"; color:"#FC6666"; x:"0.00000"; y:"0.50000"; z:"0.24981"; occ:"1.00000" }
+                    ListElement { num:"1"; label:"Ce1"; atom:"Ce"; color:"yellowgreen"; x:"0.00000"; y:"0.00000"; z:"0.00000"; occ:"1.00000" }
+                    ListElement { num:"2"; label:"Cu1"; atom:"Cu"; color:"coral";       x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.92491" }
+                    ListElement { num:"3"; label:"Al1"; atom:"Al"; color:"coral";       x:"0.00000"; y:"0.00000"; z:"0.63224"; occ:"0.07509" }
+                    ListElement { num:"4"; label:"Cu2"; atom:"Cu"; color:"coral";       x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.04446" }
+                    ListElement { num:"5"; label:"Al2"; atom:"Al"; color:"coral";       x:"0.00000"; y:"0.00000"; z:"0.40437"; occ:"0.95553" }
+                    ListElement { num:"6"; label:"Al3"; atom:"Al"; color:"#00aaed";     x:"0.00000"; y:"0.50000"; z:"0.24981"; occ:"1.00000" }
                 }
                 Controls1.TableViewColumn { role:"num";     title:"No.";    resizable: false }
                 Controls1.TableViewColumn { role:"label";   title:"Label";  resizable: false }
