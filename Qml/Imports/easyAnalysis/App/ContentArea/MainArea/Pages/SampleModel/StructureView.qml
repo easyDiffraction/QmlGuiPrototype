@@ -1,11 +1,9 @@
 import QtQuick 2.12
-import easyDiffraction 1.0 as Specific
+import QtCharts 2.3
+import easyAnalysis 1.0 as Generic
+import easyAnalysis.App.Elements 1.0 as GenericAppElements
 
-Image {
-    fillMode: Image.PreserveAspectFit
-    clip: true
-    antialiasing: true
-    source: Specific.Variables.resourcesPath + "Examples/CeCuAl3_POLARIS/cecual.png"
+GenericAppElements.StructureView {
 }
 
 
