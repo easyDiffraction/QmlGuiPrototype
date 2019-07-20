@@ -105,7 +105,7 @@ Rectangle {
             ///////////////////////
 
             Column {
-                width: Generic.Variables.mainAreaWidth
+                Layout.fillWidth: true
                 height: width * 0.9
                 GenericAppElements.ChartView {
                     width: parent.width
