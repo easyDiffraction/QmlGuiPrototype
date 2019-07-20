@@ -4,6 +4,7 @@ TARGET = easyDiffraction
 QT += quick svg charts
 CONFIG += c++11
 CONFIG -= debug_and_release # get rid from debug and release subfolders on Windows
+CONFIG += qtquickcompiler # compile your .qml and .js files into the binary and avoid the inclusion of their source code in the resource system
 
 # Application icon (mac - ICON, win - RC_ICONS)
 # https://doc.qt.io/qt-5/appicon.html
