@@ -7,5 +7,6 @@ GenericAppElements.ChartView {
     showObs: true
     showCalc: true
     showDiff: true
+    showBragg: true
 }
 
