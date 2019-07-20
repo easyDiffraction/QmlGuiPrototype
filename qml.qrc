@@ -174,9 +174,7 @@
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual.vesta</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual1.fst</file>
-        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_half-full.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_prof.cif</file>
-        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_quater-full.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta.cif</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/TOF_irf_file.irf</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/App.icns</file>
@@ -236,11 +234,23 @@
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_refinement.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_structure.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.dat</file>
-        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_cif.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/convert.txt</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/Logo.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/Logo.svg</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/LogoWithPaddings.png</file>
         <file>Qml/Imports/easyDiffraction/Resources/Icons/LogoWithPaddings.svg</file>
+        <file>Qml/Imports/easyAnalysis/App/Elements/StructureView.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/cecual_vesta_P1.cif</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/CalcLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/convert.ipynb</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/DiffLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/ObsLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/ObsMinusEsdLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/ObsPlusEsdLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/qmldir</file>
+        <file>Qml/Imports/easyAnalysis/Resources/Icons/bragg.svg</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/BraggScatterSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/DiffMinusEsdLineSeries.qml</file>
+        <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/DiffPlusEsdLineSeries.qml</file>
     </qresource>
 </RCC>
