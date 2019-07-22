@@ -257,7 +257,7 @@ Rectangle {
         text: qsTr("Rotate: Drag with right mouse button pressed") + "  •  " + qsTr("Zoom in/out: Mouse wheel") + "  •  " + qsTr("Reset: Left mouse button")
         font.family: Generic.Style.introThinFontFamily
         font.pointSize: Generic.Style.systemFontPointSize + 1
-        color: "#666"
+        color: "grey"
         background: Rectangle { color: "white"; opacity: 0.9; border.width: 0; radius: Generic.Style.toolbarButtonRadius }
     }
 

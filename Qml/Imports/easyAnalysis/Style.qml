@@ -19,9 +19,12 @@ QtObject {
     readonly property color mainAreaTabBorderColor: "#ccc"
 
     // Colors
+    // https://www.google.com/search?q=rgb+to+hex&oq=rgb+to+hex&aqs=chrome..69i57j69i60j0l4.3070j0j7&sourceid=chrome&ie=UTF-8
     readonly property color blueColor: "#00aaed"//"#0099ff"//"#2293de"//"#1c8fdc"
     readonly property color redColor: "coral"
-    readonly property color greenColor: "yellowgreen"
+    readonly property color greenColor: "#7ab03c"
+    readonly property color ultraLightGreenColor: "#daebc7"
+    readonly property color darkGreenColor: "#669431"
 
     // Sidebar
     readonly property int sidebarWidth: 605//554//518
