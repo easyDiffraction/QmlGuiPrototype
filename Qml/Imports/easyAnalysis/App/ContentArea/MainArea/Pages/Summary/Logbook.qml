@@ -113,6 +113,8 @@ Rectangle {
                     showObs: true
                     showCalc: true
                     showDiff: true
+                    showBragg: true
+                    showInfo: false
                 }
             }
 
