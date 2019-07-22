@@ -6,21 +6,21 @@ import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.Elements 1.0 as GenericAppElements
 import easyDiffraction.Resources.Examples.CeCuAl3_POLARIS 1.0 as SpecificExample
 
-Rectangle {
+ColumnLayout {
     property bool showObs: false
     property bool showCalc: false
     property bool showDiff: false
     property bool showBragg: false
+    property bool showInfo: true
 
-    property real ratio: 0.77
-    property int extraPadding: 12//12
+    property int extraPadding: 12
 
     property int xScaleZoom: 0
     property int yScaleZoom: 0
 
     property font commonFont: Qt.font({ family: Generic.Style.fontFamily, pointSize: Generic.Style.fontPointSize })
 
-    color: "white"
+    spacing: 0
 
     //////////////////////////
     // Top chart (Iobs, Icalc)
@@ -28,15 +28,16 @@ Rectangle {
 
     Rectangle {
         id: topChartContainer
-        anchors.left: parent.left
-        anchors.right: parent.right
-        height: showDiff ? parent.height * ratio : parent.height
+        Layout.fillWidth: true
+        Layout.fillHeight: true
         color: "transparent"
+        clip: true
 
         ChartView {
             id: topChart
             anchors.fill: parent
             anchors.margins: -extraPadding
+            anchors.bottomMargin: showDiff ? -4*extraPadding : -extraPadding
             antialiasing: true // conflicts with useOpenGL: true in ScatterSeries
             ///smooth: true // conflicts with useOpenGL?
             legend.visible: false
@@ -87,14 +88,25 @@ Rectangle {
                 lowerSeries: SpecificExample.ObsMinusEsdLineSeries {}
                 onHovered: {
                     const p = topChart.mapToPosition(point)
-                    const text = qsTr("x: %1,  y: %2").arg(point.x).arg(point.y)
-                    topChartToolTip.x = p.x
-                    topChartToolTip.y = p.y - topChartToolTip.height
-                    topChartToolTip.visible = state
-                    topChartToolTip.contentItem.text = text
-                    topChartToolTip.contentItem.color = Generic.Style.blueColor
-                    topChartToolTip.background.border.color = Generic.Style.blueColor
+                    const text = qsTr("x: %1\ny: %2").arg(point.x).arg(point.y)
+                    infoToolTip.parent = topChart
+                    infoToolTip.x = p.x
+                    infoToolTip.y = p.y - infoToolTip.height
+                    infoToolTip.visible = state
+                    infoToolTip.contentItem.text = text
+                    infoToolTip.contentItem.color = Generic.Style.blueColor
+                    infoToolTip.background.border.color = Qt.lighter(Generic.Style.blueColor, 1.9)
                 }
+            }
+
+            SpecificExample.CalcLineSeries {
+                id: calcSeriesBorder
+                visible: showCalc
+                axisX: axisX
+                axisY: axisY
+                color: "white"
+                opacity: 0.4
+                width: 6.5
             }
 
             SpecificExample.CalcLineSeries {
@@ -110,133 +122,104 @@ Rectangle {
                 //pointLabelsVisible: false
                 onHovered: {
                     const p = topChart.mapToPosition(point)
-                    const text = qsTr("x: %1,  y: %2").arg(point.x).arg(point.y)
-                    topChartToolTip.x = p.x
-                    topChartToolTip.y = p.y - topChartToolTip.height
-                    topChartToolTip.visible = state
-                    topChartToolTip.contentItem.text = text
-                    topChartToolTip.contentItem.color = Generic.Style.redColor
-                    topChartToolTip.background.border.color = Generic.Style.redColor
+                    const text = qsTr("x: %1\ny: %2").arg(point.x).arg(point.y)
+                    infoToolTip.parent = topChart
+                    infoToolTip.x = p.x
+                    infoToolTip.y = p.y - infoToolTip.height
+                    infoToolTip.visible = state
+                    infoToolTip.contentItem.text = text
+                    infoToolTip.contentItem.color = Generic.Style.redColor
+                    infoToolTip.background.border.color = Qt.lighter(Generic.Style.redColor, 1.5)
                 }
             }
-
-            ToolTip {
-                id: topChartToolTip
-            }
         }
-    }
 
-    //////////////////////////////
-    // Bottom chart (Iobs - Icalc)
-    //////////////////////////////
+        ////////////
+        // Zoom area
+        ////////////
 
-    Rectangle {
-        id: bottomChartContainer
-        visible: showDiff
-        anchors.left: topChartContainer.left
-        anchors.right: topChartContainer.right
-        anchors.top: topChartContainer.bottom
-        anchors.bottom: parent.bottom
-        color: "transparent"
-
-        ChartView {
-            id: bottomChart
-            anchors.fill: parent
-            anchors.margins: -extraPadding
-            anchors.topMargin: -extraPadding - 20
-            antialiasing: true // conflicts with useOpenGL: true in ScatterSeries
-            ///smooth: true // conflicts with useOpenGL?
-            legend.visible: false
-            backgroundRoundness: 0
-            backgroundColor: "transparent"
-            titleFont: commonFont
-
-            ValueAxis {
-                id: axisXdiff
-                lineVisible: false
-                tickType: ValueAxis.TicksFixed
-                tickCount: 5
-                minorTickCount: 1
-                min: axisX.min
-                max: axisX.max
-                labelFormat: "%.0f"
-                titleText: "TOF"
-                labelsFont: commonFont
-                titleFont: commonFont
+        // Zoom rectangle
+        Rectangle{
+            id: recZoom
+            visible: false
+            border.color: Generic.Style.blueColor
+            border.width: 1
+            color: Generic.Style.blueColor
+            opacity: 0.2
+            transform: Scale { origin.x: 0; origin.y: 0; xScale: xScaleZoom; yScale: yScaleZoom}
+        }
+        // Left mouse button events
+        MouseArea {
+            anchors.fill: topChartContainer
+            acceptedButtons: Qt.LeftButton
+            onPressed: {
+                recZoom.x = mouseX
+                recZoom.y = mouseY
+                recZoom.visible = true
             }
-
-            ValueAxis {
-                id: axisYdiff
-                lineVisible: false
-                min: -100000
-                max: 100000
-                tickInterval: 100000
-                tickType: ValueAxis.TicksDynamic
-                labelFormat: "%.0f" //"%.0e"
-                titleText: "Iobs - Icalc"
-                //titleVisible: false
-                labelsFont: commonFont
-                titleFont: commonFont
-            }
-
-            /*
-            SpecificExample.DiffLineSeries {
-                id: diffSeries
-                axisX: axisXdiff
-                axisY: axisYdiff
-                color: Generic.Style.greenColor
-                opacity: 0.75
-                width: 2.0
-            }
-            */
-
-            AreaSeries {
-                id: diffArea
-                axisX: axisXdiff
-                axisY: axisYdiff
-                color: Generic.Style.greenColor
-                opacity: 0.4
-                borderColor: Qt.darker(Generic.Style.greenColor, 1.1)
-                borderWidth: 1.5
-                upperSeries: SpecificExample.DiffPlusEsdLineSeries {}
-                lowerSeries: SpecificExample.DiffMinusEsdLineSeries {}
-                onHovered: {
-                    const p = bottomChart.mapToPosition(point)
-                    const text = qsTr("x: %1,  y: %2").arg(point.x).arg(point.y)
-                    bottomChartToolTip.x = p.x
-                    bottomChartToolTip.y = p.y - bottomChartToolTip.height
-                    bottomChartToolTip.visible = state
-                    bottomChartToolTip.contentItem.text = text
-                    bottomChartToolTip.contentItem.color = Generic.Style.greenColor
-                    bottomChartToolTip.background.border.color = Generic.Style.greenColor
+            onMouseXChanged: {
+                if (mouseX > recZoom.x) {
+                    xScaleZoom = 1
+                    recZoom.width = Math.min(mouseX, topChartContainer.width) - recZoom.x
+                } else {
+                    xScaleZoom = -1
+                    recZoom.width = recZoom.x - Math.max(mouseX, 0)
                 }
             }
-
-            ToolTip {
-                id: bottomChartToolTip
+            onMouseYChanged: {
+                if (mouseY > recZoom.y) {
+                    yScaleZoom = 1
+                    recZoom.height = Math.min(mouseY, topChartContainer.height) - recZoom.y
+                } else {
+                    yScaleZoom = -1
+                    recZoom.height = recZoom.y - Math.max(mouseY, 0)
+                }
+            }
+            onReleased: {
+                recZoom.visible = false
+                const x = Math.min(recZoom.x, mouseX) - topChart.anchors.leftMargin
+                const y = Math.min(recZoom.y, mouseY) - topChart.anchors.topMargin
+                const width = recZoom.width
+                const height = recZoom.height
+                topChart.zoomIn(Qt.rect(x, y, width, height))
+                //setAxesNiceNumbers()
+                adjustLeftAxesAnchor()
             }
         }
+        // Right mouse button events
+        MouseArea {
+            anchors.fill: topChartContainer
+            acceptedButtons: Qt.RightButton
+            onClicked: {
+                infoToolTip.visible = false
+                topChart.zoomReset()
+                //setAxesNiceNumbers()
+                adjustLeftAxesAnchor()
+            }
+        }
+
     }
 
     /////////////////////////////
     // Middle chart (Bragg peaks)
     /////////////////////////////
+    // https://doc.qt.io/qt-5/qtcharts-callout-example.html
+    // https://stackoverflow.com/questions/51923764/custom-tooltip-tooltip-in-qml-chartview
 
     Rectangle {
         id: middleChartContainer
         visible: showBragg
-        anchors.left: topChartContainer.left
-        anchors.right: topChartContainer.right
-        anchors.top: topChartContainer.bottom
-        //anchors.bottom: parent.bottom
-        height: 30
+        Layout.fillWidth: true
+        height: 2.5*extraPadding
         color: "transparent"
+        clip: true
 
         ChartView {
             id: middleChart
             anchors.fill: parent
             anchors.margins: -extraPadding
-            anchors.topMargin: -extraPadding - 55
+            anchors.topMargin: -3*extraPadding
+            anchors.bottomMargin: -4*extraPadding
             antialiasing: true // conflicts with useOpenGL: true in ScatterSeries
             ///smooth: true // conflicts with useOpenGL?
             legend.visible: false
@@ -291,83 +274,135 @@ Rectangle {
                 //onClicked: console.log("onClicked: BraggScatterSeries")
                 //onHovered: console.log("onHovered: BraggScatterSeries")
                 onHovered: {
-                    const p = bottomChart.mapToPosition(point)
-                    const text = qsTr("x: %1,  hkl: 0 4 0").arg(point.x)
-                    bottomChartToolTip.x = p.x
-                    bottomChartToolTip.y = p.y - bottomChartToolTip.height
-                    bottomChartToolTip.visible = state
-                    bottomChartToolTip.contentItem.text = text
-                    bottomChartToolTip.contentItem.color = "grey"
-                    bottomChartToolTip.background.border.color = "grey"
+                    const p = middleChart.mapToPosition(point)
+                    const text = qsTr("x: %1\nhkl: 0 4 0").arg(point.x)
+                    infoToolTip.parent = middleChart
+                    infoToolTip.x = p.x
+                    infoToolTip.y = p.y - infoToolTip.height
+                    infoToolTip.visible = state
+                    infoToolTip.contentItem.text = text
+                    infoToolTip.contentItem.color = "grey"
+                    infoToolTip.background.border.color = Qt.lighter("grey", 1.75)
                 }
             }
+        }
+    }
 
-            ToolTip {
-                id: middleChartToolTip
+
+    //////////////////////////////
+    // Bottom chart (Iobs - Icalc)
+    //////////////////////////////
+
+    Rectangle {
+        id: bottomChartContainer
+        visible: showDiff
+        Layout.fillWidth: true
+        height: 150
+        color: "transparent"
+        clip: true
+
+        ChartView {
+            id: bottomChart
+            anchors.fill: parent
+            anchors.margins: -extraPadding
+            anchors.topMargin: -3*extraPadding
+            //anchors.topMargin: -extraPadding// - 20
+            antialiasing: true // conflicts with useOpenGL: true in ScatterSeries
+            ///smooth: true // conflicts with useOpenGL?
+            legend.visible: false
+            backgroundRoundness: 0
+            backgroundColor: "transparent"
+            titleFont: commonFont
+
+            ValueAxis {
+                id: axisXdiff
+                lineVisible: false
+                tickType: ValueAxis.TicksFixed
+                tickCount: 5
+                minorTickCount: 1
+                min: axisX.min
+                max: axisX.max
+                labelFormat: "%.0f"
+                titleText: "TOF"
+                labelsFont: commonFont
+                titleFont: commonFont
+            }
+
+            ValueAxis {
+                id: axisYdiff
+                lineVisible: false
+                min: -100000
+                max: 100000
+                tickInterval: 100000
+                tickType: ValueAxis.TicksDynamic
+                labelFormat: "%.0f" //"%.0e"
+                titleText: "Iobs - Icalc"
+                //titleVisible: false
+                labelsFont: commonFont
+                titleFont: commonFont
+            }
+
+            /*
+            SpecificExample.DiffLineSeries {
+                id: diffSeries
+                axisX: axisXdiff
+                axisY: axisYdiff
+                color: Generic.Style.greenColor
+                opacity: 0.75
+                width: 2.0
+            }
+            */
+
+            AreaSeries {
+                id: diffArea
+                axisX: axisXdiff
+                axisY: axisYdiff
+                color: Generic.Style.greenColor
+                opacity: 0.4
+                borderColor: Generic.Style.darkGreenColor
+                borderWidth: 1.5
+                upperSeries: SpecificExample.DiffPlusEsdLineSeries {}
+                lowerSeries: SpecificExample.DiffMinusEsdLineSeries {}
+                onHovered: {
+                    const p = bottomChart.mapToPosition(point)
+                    const text = qsTr("x: %1\ny: %2").arg(point.x).arg(point.y)
+                    infoToolTip.parent = bottomChart
+                    infoToolTip.x = p.x
+                    infoToolTip.y = p.y - infoToolTip.height
+                    infoToolTip.visible = state
+                    infoToolTip.contentItem.text = text
+                    infoToolTip.contentItem.color = Generic.Style.darkGreenColor
+                    infoToolTip.background.border.color = Generic.Style.ultraLightGreenColor
+                }
             }
         }
     }
 
     ////////////
-    // Zoom area
+    // Info area
     ////////////
 
-    // Zoom rectangle
-    Rectangle{
-        id: recZoom
-        border.color: Generic.Style.blueColor
-        border.width: 1
-        color: Generic.Style.blueColor
-        opacity: 0.2
-        visible: false
-        transform: Scale { origin.x: 0; origin.y: 0; xScale: xScaleZoom; yScale: yScaleZoom}
-    }
-    // Left mouse button events
-    MouseArea {
-        anchors.fill: topChartContainer
-        acceptedButtons: Qt.LeftButton
-        onPressed: {
-            recZoom.x = mouseX
-            recZoom.y = mouseY
-            recZoom.visible = true
-        }
-        onMouseXChanged: {
-            if (mouseX > recZoom.x) {
-                xScaleZoom = 1
-                recZoom.width = Math.min(mouseX, topChartContainer.width) - recZoom.x
-            } else {
-                xScaleZoom = -1
-                recZoom.width = recZoom.x - Math.max(mouseX, 0)
-            }
-        }
-        onMouseYChanged: {
-            if (mouseY > recZoom.y) {
-                yScaleZoom = 1
-                recZoom.height = Math.min(mouseY, topChartContainer.height) - recZoom.y
-            } else {
-                yScaleZoom = -1
-                recZoom.height = recZoom.y - Math.max(mouseY, 0)
-            }
-        }
-        onReleased: {
-            recZoom.visible = false
-            const x = Math.min(recZoom.x, mouseX) - topChart.anchors.leftMargin
-            const y = Math.min(recZoom.y, mouseY) - topChart.anchors.topMargin
-            const width = recZoom.width
-            const height = recZoom.height
-            topChart.zoomIn(Qt.rect(x, y, width, height))
-            //setAxesNiceNumbers()
-            adjustLeftAxesAnchor()
-        }
-    }
-    // Right mouse button events
-    MouseArea {
-        anchors.fill: topChartContainer
-        acceptedButtons: Qt.RightButton
-        onClicked: {
-            topChart.zoomReset()
-            //setAxesNiceNumbers()
-            adjustLeftAxesAnchor()
+    Rectangle {
+        id: infoAreaContainer
+        visible: showInfo
+        Layout.fillWidth: true
+        height: Generic.Style.buttonHeight + Generic.Style.sidebarGroupInnerSpacing + 2*Generic.Style.appBorderThickness
+        color: "transparent"
+
+        Label {
+            id: infoArea
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top
+            height: Generic.Style.buttonHeight
+            leftPadding: font.pointSize
+            rightPadding: font.pointSize
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            text: qsTr("Show coordinates: Hover mouse pointer") + "  •  " + qsTr("Zoom in: Left mouse button") + "  •  " + qsTr("Reset: Right mouse button")
+            font.family: Generic.Style.introThinFontFamily
+            font.pointSize: Generic.Style.systemFontPointSize + 1
+            color: "grey"
+            background: Rectangle { color: "white"; opacity: 0.9; border.width: 0; radius: Generic.Style.toolbarButtonRadius }
         }
     }
 
@@ -379,6 +414,10 @@ Rectangle {
         id: dummyText
         visible: false
         font: commonFont
+    }
+
+    ToolTip {
+        id: infoToolTip
     }
 
     ////////////////
