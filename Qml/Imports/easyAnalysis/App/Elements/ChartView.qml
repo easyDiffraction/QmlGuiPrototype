@@ -418,6 +418,7 @@ ColumnLayout {
 
     ToolTip {
         id: infoToolTip
+        background: Rectangle { color: "white"; opacity: 0.95 }
     }
 
     ////////////////

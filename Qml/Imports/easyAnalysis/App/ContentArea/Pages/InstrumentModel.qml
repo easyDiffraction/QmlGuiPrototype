@@ -8,20 +8,22 @@ import easyAnalysis.App.ContentArea.Sidebar.Pages.InstrumentModel 1.0 as Generic
 
 GenericAppElements.ContentAreaStack {
 
+    /*
     tabBarContent: TabBar {
         spacing: 0
         id: tabBar
         GenericMainArea.TabButton { text: qsTr("Web View"); tabbarWidth: mainArea.width } // fix width
     }
+    */
 
     mainAreaContent: StackLayout {
         id: mainArea
-        currentIndex: tabBar.currentIndex
+        //currentIndex: tabBar.currentIndex
         GenericMainAreaInstrumentModel.WebView { }
     }
 
     sideBarContent: StackLayout {
-        currentIndex: tabBar.currentIndex
+        //currentIndex: tabBar.currentIndex
         GenericSidebarInstrumentModel.WebView { }
     }
 
