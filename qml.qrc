@@ -252,5 +252,6 @@
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/BraggScatterSeries.qml</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/DiffMinusEsdLineSeries.qml</file>
         <file>Qml/Imports/easyDiffraction/Resources/Examples/CeCuAl3_POLARIS/DiffPlusEsdLineSeries.qml</file>
+        <file>Qml/Imports/easyAnalysis/App/Elements/WebView.qml</file>
     </qresource>
 </RCC>

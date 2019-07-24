@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = easyDiffraction
 
-QT += quick svg charts
+QT += quick qml quickcontrols2 svg charts webengine
 CONFIG += c++11
 CONFIG -= debug_and_release # get rid from debug and release subfolders on Windows
 CONFIG += qtquickcompiler # compile your .qml and .js files into the binary and avoid the inclusion of their source code in the resource system
