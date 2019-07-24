@@ -1,7 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import QtCharts 2.12
+import QtCharts 2.3
 import easyAnalysis 1.0 as Generic
 import easyAnalysis.App.Elements 1.0 as GenericAppElements
 import easyDiffraction.Resources.Examples.CeCuAl3_POLARIS 1.0 as SpecificExample
@@ -197,7 +197,6 @@ ColumnLayout {
                 adjustLeftAxesAnchor()
             }
         }
-
     }
 
     /////////////////////////////
