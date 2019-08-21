@@ -1,5 +1,7 @@
-dist: trusty
+dist: xenial
 sudo: required
+
+# See https://github.com/MUME/MMapper/blob/master/.travis.yml
 
 git:
   depth: 1
@@ -14,12 +16,30 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
+            - sourceline: 'ppa:beineri/opt-qt-5.12.3-xenial'
           packages:
-            - gcc-6
-            - g++-6
+            - g++-8
+            - clang-format-6.0
+            - cmake
+            - libminiupnpc-dev
+            - lcov
+            - mesa-common-dev
+            - qt512-meta-full
+      env:
+        - QT=512 MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+        - CLANG_FORMAT=clang-format-6.0
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+
+before_script:
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || . /opt/qt$QT/bin/qt$QT-env.sh'
+  - mkdir build
+  - cd build
+  - cmake --version
+  - cmake .. $MMAPPER_CMAKE_EXTRA -DUSE_CODE_COVERAGE=true
 
 script:
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100 ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 100 ; fi
   - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x build/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then TAG_NAME=${TRAVIS_TAG} CXX="g++-6" CC="gcc-6" ./build/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then ./build/build_linux.sh ; fi
