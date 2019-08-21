@@ -69,8 +69,8 @@ before_script:
 
 script:
   - echo "${PWD}" 
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x Script/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sh Script/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then chmod +x Script/build_osx.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then sh Script/build_osx.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x ../Scripts/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sh ../Scripts/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then chmod +x ../Scripts/build_osx.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then sh ../Scripts/build_osx.sh ; fi
 
