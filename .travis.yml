@@ -10,6 +10,22 @@ language: cpp
 
 matrix:
   include:
+    - os: osx
+      osx_image: xcode10.2
+      compiler: clang
+      addons:
+        homebrew:
+          packages:
+            - cmake
+            - qt5
+            - clang-format
+            - miniupnpc
+            - lcov
+            - openssl
+      env:
+        - MATRIX_EVAL=""
+        - CLANG_FORMAT=clang-format
+
     - os: linux
       compiler: gcc
       addons:
@@ -32,9 +48,20 @@ matrix:
 before_install:
   - eval "${MATRIX_EVAL}"
 
+install:
+  - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt5'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || export PATH=/usr/local/opt/qt5/bin:$PATH'
+  - qmake -v
+
 before_script:
+  # Linux
   - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
   - '[ "$TRAVIS_OS_NAME" != linux ] || . /opt/qt$QT/bin/qt$QT-env.sh'
+  # Mac
+  - '[[ "$TRAVIS_OS_NAME" != osx || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
+  - '[[ "$TRAVIS_OS_NAME" != osx || "$CXX" != g++     ]] || export QMAKESPEC=macx-g++'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || export MMAPPER_CMAKE_EXTRA=-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl'
+  # TODO check clang info
   - mkdir build
   - cd build
   - cmake --version
@@ -44,3 +71,6 @@ script:
   - echo "${PWD}" 
   - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x Script/build_linux.sh ; fi
   - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sh Script/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then chmod +x Script/build_osx.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then sh Script/build_osx.sh ; fi
+
