@@ -38,8 +38,8 @@ before_script:
   - mkdir build
   - cd build
   - cmake --version
-  - cmake .. $MMAPPER_CMAKE_EXTRA -DUSE_CODE_COVERAGE=true
+#  - cmake .. $MMAPPER_CMAKE_EXTRA -DUSE_CODE_COVERAGE=true
 
 script:
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x build/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then ./build/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x ../Script/build_linux.sh ; fi
+  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then ../Script/build_linux.sh ; fi
