@@ -26,6 +26,15 @@ matrix:
         - MATRIX_EVAL=""
         - CLANG_FORMAT=clang-format
 
+    - os: windows
+      before_install:
+        - dir C:/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.17134.0/x64
+        - cmd.exe /C 'cd && "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat"
+           x86 && cd && cd "C:\Users\travis\build\easyDiffraction\QmlGuiPrototype" && dir'
+        - curl -vLO http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe
+        - "./qt-unified-windows-x86-online.exe --verbose --script C:\Users\travis\build\easyDiffraction\QmlGuiPrototype\Scripts\qt-installer-windows.qs"
+        - ls -la C:\Qt\5.12.3\msvc2017\bin\qtenv2.bat
+
     - os: linux
       compiler: gcc
       addons:
@@ -63,14 +72,17 @@ before_script:
   - '[ "$TRAVIS_OS_NAME" != osx ] || export MMAPPER_CMAKE_EXTRA=-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl'
   # TODO check clang info
   - mkdir build
-  - cd build
-  - cmake --version
+  - '[[ "$TRAVIS_OS_NAME" != osx || "$TRAVIS_OS_NAME" != linux ]] || cd build'
+  - '[[ "$TRAVIS_OS_NAME" != osx || "$TRAVIS_OS_NAME" != linux ]] || cmake --version'
+  - '[ "$TRAVIS_OS_NAME" != windows ] || dir build'
 #  - cmake .. $MMAPPER_CMAKE_EXTRA -DUSE_CODE_COVERAGE=true
 
 script:
-  - echo "${PWD}" 
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then chmod +x ../Scripts/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then sh ../Scripts/build_linux.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then chmod +x ../Scripts/build_osx.sh ; fi
-  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then sh ../Scripts/build_osx.sh ; fi
+  - echo "${PWD}"
+  - '[ "$TRAVIS_OS_NAME" != osx ] || chmod +x ../Scripts/build_osx.sh'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || sh ../Scripts/build_osx.sh'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || chmod +x ../Scripts/build_linux.sh'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sh ../Scripts/build_linux.sh'
+  - '[ "$TRAVIS_OS_NAME" != windows ] || echo "Hello from Windows World"'
+
 
