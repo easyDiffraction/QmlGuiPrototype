@@ -10,7 +10,8 @@ language: cpp
 
 matrix:
   include:
-    - os: osx
+    - name: OSX
+      os: osx
       osx_image: xcode10.2
       compiler: clang
       addons:
@@ -26,13 +27,9 @@ matrix:
         - MATRIX_EVAL=""
         - CLANG_FORMAT=clang-format
 
-    - os: windows
-      before_install:
-        - dir C:/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.17134.0/x64
-        - cmd.exe /C 'cd && "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" && cd && cd "C:\Users\travis\build\easyDiffraction\QmlGuiPrototype" && dir'
-        - curl -vLO http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe
-        - "./qt-unified-windows-x86-online.exe --verbose --script C:\Users\travis\build\easyDiffraction\QmlGuiPrototype\Scripts\qt-installer-windows.qs"
-        - ls -la C:\Qt\5.12.3\msvc2017\bin\qtenv2.bat
+    - name: Windows
+      language: shell
+      os: windows
 
     - os: linux
       compiler: gcc
@@ -53,8 +50,14 @@ matrix:
         - QT=512 MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
         - CLANG_FORMAT=clang-format-6.0
 
+# Windows builds are experimental in Travis and are unreliable, do not force it.
+allow_failures:
+  - os: windows
+
 before_install:
   - eval "${MATRIX_EVAL}"
+  - '[ "$TRAVIS_OS_NAME" != windows ] || sh ../Scripts/installQt.sh'
+  - '[ "$TRAVIS_OS_NAME" != windows ] || cmd.exe /C 'cd && "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat"'
 
 install:
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt5'
